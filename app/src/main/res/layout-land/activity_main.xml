@@ -1,4 +1,6 @@
-<!--  MPD XML Starter code Semester B Session 2018 2019  -->
+<!--    Mobile Platform Development Assignment Session 2020/2021 MHI322959/MHI325105-->
+<!--    Student Name : Kirubel Afework-->
+<!--    Student No: S1732434-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"

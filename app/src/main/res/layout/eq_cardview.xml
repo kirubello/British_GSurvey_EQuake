@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--    Mobile Platform Development Assignment Session 2020/2021 MHI322959/MHI325105-->
+<!--    Student Name : Kirubel Afework-->
+<!--    Student No: S1732434-->
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"

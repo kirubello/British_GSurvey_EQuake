@@ -1,3 +1,6 @@
+<!--    Mobile Platform Development Assignment Session 2020/2021 MHI322959/MHI325105-->
+<!--    Student Name : Kirubel Afework-->
+<!--    Student No: S1732434-->
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.British_GSurvey_EQuake" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
