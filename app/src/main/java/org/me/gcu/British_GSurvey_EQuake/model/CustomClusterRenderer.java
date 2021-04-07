@@ -20,7 +20,6 @@ import com.google.maps.android.clustering.ClusterManager;
 import com.google.maps.android.clustering.view.DefaultClusterRenderer;
 import com.google.maps.android.ui.IconGenerator;
 
-import org.me.gcu.British_GSurvey_EQuake.ItemClass;
 import org.me.gcu.British_GSurvey_EQuake.R;
 
 public class CustomClusterRenderer extends DefaultClusterRenderer<ItemClass> {

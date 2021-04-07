@@ -16,7 +16,6 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.me.gcu.British_GSurvey_EQuake.ItemClass;
 import org.me.gcu.British_GSurvey_EQuake.R;
 
 import java.util.LinkedList;

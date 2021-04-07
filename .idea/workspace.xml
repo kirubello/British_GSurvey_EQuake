@@ -13,21 +13,79 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43b3ef73-7591-481c-9c71-900eeb2f1db9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/filter_eqdata.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/classes.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex_archive_input_jar_hashes/debug/out" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex_archive_input_jar_hashes/debug/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/packaged_manifests/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/packaged_manifests/debug/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/org/me/gcu/British_GSurvey_EQuake/ItemClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/org/me/gcu/British_GSurvey_EQuake/MainActivity$Task$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/org/me/gcu/British_GSurvey_EQuake/MainActivity$Task$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/org/me/gcu/British_GSurvey_EQuake/MainActivity$Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/org/me/gcu/British_GSurvey_EQuake/MainActivity$Task.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/org/me/gcu/British_GSurvey_EQuake/MainActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/org/me/gcu/British_GSurvey_EQuake/MainActivity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/org/me/gcu/British_GSurvey_EQuake/model/Adapter$ViewHolder$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/org/me/gcu/British_GSurvey_EQuake/model/Adapter$ViewHolder$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/org/me/gcu/British_GSurvey_EQuake/model/Adapter$ViewHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/org/me/gcu/British_GSurvey_EQuake/model/Adapter$ViewHolder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/org/me/gcu/British_GSurvey_EQuake/model/Adapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/org/me/gcu/British_GSurvey_EQuake/model/Adapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/org/me/gcu/British_GSurvey_EQuake/model/CustomClusterRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/org/me/gcu/British_GSurvey_EQuake/model/CustomClusterRenderer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/org/me/gcu/British_GSurvey_EQuake/model/Details.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/org/me/gcu/British_GSurvey_EQuake/model/Details.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_manifest/debug/out/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_manifest/debug/out/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/debug.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-night-v8.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-night-v8.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/single/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/single/debug.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/dc8b211cec06b823b409419f5f798e69fff00e4b370e1329c070c114ce86b0a4_0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/dc8b211cec06b823b409419f5f798e69fff00e4b370e1329c070c114ce86b0a4_1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/dc8b211cec06b823b409419f5f798e69fff00e4b370e1329c070c114ce86b0a4_2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/dc8b211cec06b823b409419f5f798e69fff00e4b370e1329c070c114ce86b0a4_3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/dc8b211cec06b823b409419f5f798e69fff00e4b370e1329c070c114ce86b0a4_4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/dc8b211cec06b823b409419f5f798e69fff00e4b370e1329c070c114ce86b0a4_5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/org/me/gcu/British_GSurvey_EQuake/ItemClass.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/org/me/gcu/British_GSurvey_EQuake/MainActivity$Task$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/org/me/gcu/British_GSurvey_EQuake/MainActivity$Task$1.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/org/me/gcu/British_GSurvey_EQuake/MainActivity$Task.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/org/me/gcu/British_GSurvey_EQuake/MainActivity$Task.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/org/me/gcu/British_GSurvey_EQuake/MainActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/org/me/gcu/British_GSurvey_EQuake/MainActivity.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/org/me/gcu/British_GSurvey_EQuake/model/Adapter$ViewHolder$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/org/me/gcu/British_GSurvey_EQuake/model/Adapter$ViewHolder$1.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/org/me/gcu/British_GSurvey_EQuake/model/Adapter$ViewHolder.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/org/me/gcu/British_GSurvey_EQuake/model/Adapter$ViewHolder.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/org/me/gcu/British_GSurvey_EQuake/model/Adapter.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/org/me/gcu/British_GSurvey_EQuake/model/Adapter.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/org/me/gcu/British_GSurvey_EQuake/model/CustomClusterRenderer.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/org/me/gcu/British_GSurvey_EQuake/model/CustomClusterRenderer.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/org/me/gcu/British_GSurvey_EQuake/model/Details.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/org/me/gcu/British_GSurvey_EQuake/model/Details.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout-land_activity_details.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout-land_activity_details.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout-land_activity_main.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout-land_activity_main.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout-land_activity_maps.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout-land_activity_maps.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_details.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_details.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_maps.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_maps.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_eq_cardview.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_eq_cardview.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/menu_top_app_bar.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/menu_top_app_bar.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values_values.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values_values.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/runtime_symbol_list/debug/R.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/runtime_symbol_list/debug/R.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/compileDebugJavaWithJavac/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileDebugJavaWithJavac/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/me/gcu/British_GSurvey_EQuake/ItemClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/me/gcu/British_GSurvey_EQuake/model/ItemClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/org/me/gcu/British_GSurvey_EQuake/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/me/gcu/British_GSurvey_EQuake/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/me/gcu/British_GSurvey_EQuake/MapsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/me/gcu/British_GSurvey_EQuake/MapsActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_maps.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_maps.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/me/gcu/British_GSurvey_EQuake/model/Adapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/me/gcu/British_GSurvey_EQuake/model/Adapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/me/gcu/British_GSurvey_EQuake/model/CustomClusterRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/me/gcu/British_GSurvey_EQuake/model/CustomClusterRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +137,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android-custom-viewC:/Users/afewo/.gradle/caches/modules-2/files-2.1/androidx.appcompat/appcompat/1.2.0/13e8ff89631c2e101eb6bddd12c2fb4bbd74b15d/appcompat-1.2.0-sources.jar!/androidx/appcompat/widget/ActionBarOverlayLayout.java_SELECTED" value="ActionBarOverlayLayout" />
     <property name="android-custom-viewC:/Users/afewo/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED" value="RecyclerView" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../ASMapTest/ASMapTest" />
     <property name="multi-representation-previewC:/Users/afewo/.gradle/caches/modules-2/files-2.1/androidx.appcompat/appcompat/1.2.0/13e8ff89631c2e101eb6bddd12c2fb4bbd74b15d/appcompat-1.2.0-sources.jar!/androidx/appcompat/widget/ActionBarOverlayLayout.java_selected" value="Custom views" />
     <property name="multi-representation-previewC:/Users/afewo/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_selected" value="Custom views" />
     <property name="project.structure.last.edited" value="Project" />
@@ -231,14 +289,22 @@
       <option name="project" value="LOCAL" />
       <updated>1617758130007</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="6 commit corrected codes">
+      <created>1617761627833</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1617761627833</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="third commit" />
     <MESSAGE value="4 commit" />
     <MESSAGE value="5 commit added my details" />
-    <option name="LAST_COMMIT_MESSAGE" value="5 commit added my details" />
+    <MESSAGE value="6 commit corrected codes" />
+    <option name="LAST_COMMIT_MESSAGE" value="6 commit corrected codes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="224" y="0" width="1322" height="1040" key="#PSD" timestamp="1617760096984">
@@ -346,10 +412,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="350" y="118" key="AndroidThemeDialog/0.0.1536.824/3840.523.1920.1040@0.0.1536.824" timestamp="1616803784770" />
-    <state x="166" y="0" key="CommitChangelistDialog2" timestamp="1617758129228">
+    <state x="166" y="0" key="CommitChangelistDialog2" timestamp="1617761626438">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="166" y="0" key="CommitChangelistDialog2/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617758129228" />
+    <state x="166" y="0" key="CommitChangelistDialog2/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617761626438" />
     <state width="830" height="458" key="DebuggerActiveHint" timestamp="1617643735760">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -358,15 +424,16 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="149" y="65" key="DiffContextDialog/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617756144131" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1617752261850">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1617815084255">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/-1920.540.1536.824@0.0.1536.824" timestamp="1617063806939" />
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/1920.-720.1280.639@0.0.1536.824" timestamp="1617300972694" />
     <state x="4526" y="211" key="FileChooserDialogImpl/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1617446532496" />
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617752261850" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/3840.0.1920.999@0.0.1536.824" timestamp="1617815084255" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617762359852" />
     <state x="4389" y="741" key="FileChooserDialogImpl/0.0.1536.824/3840.574.1536.824@3840.574.1536.824" timestamp="1616880980228" />
-    <state width="1492" height="279" key="GridCell.Tab.0.bottom" timestamp="1617759598273">
+    <state width="1492" height="279" key="GridCell.Tab.0.bottom" timestamp="1617761795386">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1340" height="399" key="GridCell.Tab.0.bottom/0.0.1536.824/-1600.-67.1600.1160@-1600.-67.1600.1160" timestamp="1610463254763" />
@@ -375,14 +442,14 @@
     <state width="1492" height="220" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.-720.1280.639@0.0.1536.824" timestamp="1617670738698" />
     <state width="1491" height="302" key="GridCell.Tab.0.bottom/0.0.1536.824/3840.0.1920.1040@0.0.1536.824" timestamp="1617025433217" />
     <state width="1877" height="372" key="GridCell.Tab.0.bottom/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1617637535814" />
-    <state width="1492" height="279" key="GridCell.Tab.0.bottom/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617759598273" />
+    <state width="1492" height="279" key="GridCell.Tab.0.bottom/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617761795386" />
     <state width="1538" height="488" key="GridCell.Tab.0.bottom/0.0.1536.824/3840.523.1920.1040@0.0.1536.824" timestamp="1616803536035" />
     <state width="1492" height="238" key="GridCell.Tab.0.bottom/0.0.1536.824/3840.574.1536.824@0.0.1536.824" timestamp="1616893220679" />
     <state width="1491" height="524" key="GridCell.Tab.0.bottom/0.0.1536.824/3840.574.1536.824@3840.574.1536.824" timestamp="1616891769848" />
     <state width="1492" height="230" key="GridCell.Tab.0.bottom/0.0.1536.824/3840.575.1680.1010@0.0.1536.824" timestamp="1616880173280" />
     <state width="1492" height="279" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1617731173437" />
     <state width="1557" height="235" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1920.1160@0.0.1600.860" timestamp="1617225433028" />
-    <state width="1492" height="279" key="GridCell.Tab.0.center" timestamp="1617759598273">
+    <state width="1492" height="279" key="GridCell.Tab.0.center" timestamp="1617761795386">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1340" height="399" key="GridCell.Tab.0.center/0.0.1536.824/-1600.-67.1600.1160@-1600.-67.1600.1160" timestamp="1610463254763" />
@@ -391,14 +458,14 @@
     <state width="1492" height="220" key="GridCell.Tab.0.center/0.0.1536.824/1920.-720.1280.639@0.0.1536.824" timestamp="1617670738698" />
     <state width="1491" height="302" key="GridCell.Tab.0.center/0.0.1536.824/3840.0.1920.1040@0.0.1536.824" timestamp="1617025433217" />
     <state width="1877" height="372" key="GridCell.Tab.0.center/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1617637535813" />
-    <state width="1492" height="279" key="GridCell.Tab.0.center/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617759598273" />
+    <state width="1492" height="279" key="GridCell.Tab.0.center/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617761795386" />
     <state width="1538" height="488" key="GridCell.Tab.0.center/0.0.1536.824/3840.523.1920.1040@0.0.1536.824" timestamp="1616803536035" />
     <state width="1492" height="238" key="GridCell.Tab.0.center/0.0.1536.824/3840.574.1536.824@0.0.1536.824" timestamp="1616893220679" />
     <state width="1491" height="524" key="GridCell.Tab.0.center/0.0.1536.824/3840.574.1536.824@3840.574.1536.824" timestamp="1616891769848" />
     <state width="1492" height="230" key="GridCell.Tab.0.center/0.0.1536.824/3840.575.1680.1010@0.0.1536.824" timestamp="1616880173280" />
     <state width="1492" height="279" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1617731173437" />
     <state width="1557" height="235" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1920.1160@0.0.1600.860" timestamp="1617225433028" />
-    <state width="1492" height="279" key="GridCell.Tab.0.left" timestamp="1617759598272">
+    <state width="1492" height="279" key="GridCell.Tab.0.left" timestamp="1617761795386">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1340" height="399" key="GridCell.Tab.0.left/0.0.1536.824/-1600.-67.1600.1160@-1600.-67.1600.1160" timestamp="1610463254762" />
@@ -407,14 +474,14 @@
     <state width="1492" height="220" key="GridCell.Tab.0.left/0.0.1536.824/1920.-720.1280.639@0.0.1536.824" timestamp="1617670738698" />
     <state width="1491" height="302" key="GridCell.Tab.0.left/0.0.1536.824/3840.0.1920.1040@0.0.1536.824" timestamp="1617025433217" />
     <state width="1877" height="372" key="GridCell.Tab.0.left/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1617637535813" />
-    <state width="1492" height="279" key="GridCell.Tab.0.left/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617759598272" />
+    <state width="1492" height="279" key="GridCell.Tab.0.left/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617761795386" />
     <state width="1538" height="488" key="GridCell.Tab.0.left/0.0.1536.824/3840.523.1920.1040@0.0.1536.824" timestamp="1616803536035" />
     <state width="1492" height="238" key="GridCell.Tab.0.left/0.0.1536.824/3840.574.1536.824@0.0.1536.824" timestamp="1616893220678" />
     <state width="1491" height="524" key="GridCell.Tab.0.left/0.0.1536.824/3840.574.1536.824@3840.574.1536.824" timestamp="1616891769847" />
     <state width="1492" height="230" key="GridCell.Tab.0.left/0.0.1536.824/3840.575.1680.1010@0.0.1536.824" timestamp="1616880173280" />
     <state width="1492" height="279" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1617731173437" />
     <state width="1557" height="235" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1920.1160@0.0.1600.860" timestamp="1617225433028" />
-    <state width="1492" height="279" key="GridCell.Tab.0.right" timestamp="1617759598273">
+    <state width="1492" height="279" key="GridCell.Tab.0.right" timestamp="1617761795386">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1340" height="399" key="GridCell.Tab.0.right/0.0.1536.824/-1600.-67.1600.1160@-1600.-67.1600.1160" timestamp="1610463254763" />
@@ -423,7 +490,7 @@
     <state width="1492" height="220" key="GridCell.Tab.0.right/0.0.1536.824/1920.-720.1280.639@0.0.1536.824" timestamp="1617670738698" />
     <state width="1491" height="302" key="GridCell.Tab.0.right/0.0.1536.824/3840.0.1920.1040@0.0.1536.824" timestamp="1617025433217" />
     <state width="1877" height="372" key="GridCell.Tab.0.right/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1617637535814" />
-    <state width="1492" height="279" key="GridCell.Tab.0.right/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617759598273" />
+    <state width="1492" height="279" key="GridCell.Tab.0.right/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617761795386" />
     <state width="1538" height="488" key="GridCell.Tab.0.right/0.0.1536.824/3840.523.1920.1040@0.0.1536.824" timestamp="1616803536035" />
     <state width="1492" height="238" key="GridCell.Tab.0.right/0.0.1536.824/3840.574.1536.824@0.0.1536.824" timestamp="1616893220679" />
     <state width="1491" height="524" key="GridCell.Tab.0.right/0.0.1536.824/3840.574.1536.824@3840.574.1536.824" timestamp="1616891769848" />

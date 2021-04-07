@@ -1,0 +1,71 @@
+<ViewSwitcher
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/vwSwitch" >
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dip"
+        android:text="Map Options Screen"
+        android:layout_gravity="center"
+        android:id="@+id/screen2Label"
+        />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Select the map Type"
+        android:layout_gravity="center"
+        />
+
+    <RadioGroup
+        android:id="@+id/mapTypeGroup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        <RadioButton
+            android:text="Normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/normalViewRadio"
+            />
+        <RadioButton
+            android:text="Terrain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/terrainViewRadio"
+            />
+        <RadioButton
+            android:text="Satellite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/satelliteViewRadio"
+            />
+        <RadioButton
+            android:text="Hybrid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hybridViewRadio"       />
+
+    </RadioGroup>
+    <CheckBox
+        android:id="@+id/panZoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pan/Zoom"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dip"
+        android:text="Goto Map Screen"
+        android:layout_gravity="center"
+        android:id="@+id/screen2Button"
+        />
+</LinearLayout>
+    </ViewSwitcher>

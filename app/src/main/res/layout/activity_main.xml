@@ -1,81 +1,96 @@
 <!--    Mobile Platform Development Assignment Session 2020/2021 MHI322959/MHI325105-->
 <!--    Student Name : Kirubel Afework-->
 <!--    Student No: S1732434-->
+<ViewSwitcher xmlns:android="http://schemas.android.com/apk/res/android"
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/vwSwitch"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    android:layout_height="fill_parent">
 
-
-
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:background="@drawable/rounded_edit"-->
-<!--        android:layout_margin="8dp"-->
-<!--        android:layout_alignParentTop="true" >-->
-
-<!--        <Button-->
-<!--            android:layout_width="40dp"-->
-<!--            android:layout_height="40dp"-->
-<!--            android:background="@drawable/search"-->
-<!--            android:onClick="onSearch" />-->
-<!--        <EditText-->
-<!--            android:id="@+id/editLocation"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:layout_weight="1"-->
-<!--            android:hint="Type Location" />-->
-
-<!--    </LinearLayout>-->
-    <LinearLayout
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-
-        <include
-            layout="@layout/activity_maps"
-            android:layout_width="match_parent"
-            android:layout_height="281dp" />
-
-        <Button
-            android:id="@+id/startButton"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Press to get data" />
-
-        <TextView
-            android:id="@+id/acknowledgement"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Contains British Geological Survey materials ©NERC 2019"
-            android:textSize="16sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical">
 
 
-        <Spinner
-            android:id="@+id/spinner1"
-            android:layout_width="wrap_content"
+        <!--    <LinearLayout-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:background="@drawable/rounded_edit"-->
+        <!--        android:layout_margin="8dp"-->
+        <!--        android:layout_alignParentTop="true" >-->
+
+        <!--        <Button-->
+        <!--            android:layout_width="40dp"-->
+        <!--            android:layout_height="40dp"-->
+        <!--            android:background="@drawable/search"-->
+        <!--            android:onClick="onSearch" />-->
+        <!--        <EditText-->
+        <!--            android:id="@+id/editLocation"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:hint="Type Location" />-->
+
+        <!--    </LinearLayout>-->
+        <LinearLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@android:drawable/btn_dropdown"
-            android:spinnerMode="dropdown" />
+            android:orientation="vertical">
 
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            <include
+                layout="@layout/activity_maps"
+                android:layout_width="match_parent"
+                android:layout_height="281dp" />
+
+            <Button
+                android:id="@+id/screen1Button"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="View Data details" />
+
+            <TextView
+                android:id="@+id/acknowledgement"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Contains British Geological Survey materials ©NERC 2019"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dropdown" />
+
+            <Button
+
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="View Data details" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dip"
+                android:text="Goto Map Screen"
+                android:layout_gravity="center"
+                android:id="@+id/screen2Button"                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+
     </LinearLayout>
-
-
-
-
-</LinearLayout>
+</ViewSwitcher>

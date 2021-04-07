@@ -18,6 +18,7 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ViewSwitcher;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -35,6 +36,7 @@ import com.google.maps.android.clustering.ClusterManager;
 
 import org.me.gcu.British_GSurvey_EQuake.model.Adapter;
 import org.me.gcu.British_GSurvey_EQuake.model.CustomClusterRenderer;
+import org.me.gcu.British_GSurvey_EQuake.model.ItemClass;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
@@ -53,10 +55,14 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     private static final String[] paths = {"All Earthquakes", "1.0+ Earthquakes", "2.5+ Earthquakes", "4.5+ Earthquakes", "Significant Earthquakes"};
 
     private TextView rawDataDisplay;
+
     private Button startButton;
     private String result = "";
     private String url1 = "";
     private String urlSource = "http://quakes.bgs.ac.uk/feeds/MhSeismology.xml";
+    private Button s1Button;
+    private Button s2Button;
+    private ViewSwitcher viewSwitcher;
     RecyclerView recyclerView;
     Adapter adapter;
 
@@ -86,10 +92,23 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         Log.e("MyTag", "in onCreate");
         // Set up the raw links to the graphical components
         rawDataDisplay = (TextView) findViewById(R.id.rawDataDisplay);
-        startButton = (Button) findViewById(R.id.startButton);
-        startButton.setOnClickListener(this);
-        Log.e("MyTag", "after startButton");
-        // More Code goes here
+
+//        startButton = (Button) findViewById(R.id.startButton);
+//
+//        startButton.setOnClickListener(this);
+
+        viewSwitcher =  findViewById(R.id.vwSwitch);
+
+        if (viewSwitcher == null)
+        {
+            Toast.makeText(getApplicationContext(), "Null ViewSwicther", Toast.LENGTH_LONG);
+            Log.e(getPackageName(), "null pointer");
+        }
+
+        s1Button = findViewById(R.id.screen1Button);
+        s2Button = findViewById(R.id.screen2Button);
+        s1Button.setOnClickListener(this);
+        s2Button.setOnClickListener(this);
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.mMap);
@@ -102,12 +121,21 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
+        startProgress();
     }
 
     public void onClick(View aview) {
         Log.e("MyTag", "in onClick");
         mMap.clear();
-        startProgress();
+        if (aview == s1Button)
+        {
+            viewSwitcher.showNext();
+        }
+        else
+        if (aview == s2Button)
+        {
+            viewSwitcher.showPrevious();
+        }
 
         //    show();
         Log.e("MyTag", "after startProgress");
