@@ -1,8 +1,8 @@
 //package org.me.gcu.British_GSurvey_EQuake;
 //
-//import androidx.fragment.app.FragmentActivity;
-//
 //import android.os.Bundle;
+//
+//import androidx.fragment.app.FragmentActivity;
 //
 //import com.google.android.gms.maps.CameraUpdateFactory;
 //import com.google.android.gms.maps.GoogleMap;
@@ -17,7 +17,7 @@
 //    private static final LatLng glasgow = new LatLng(	55.860916,-4.251433);
 //    @Override
 //    protected void onCreate(Bundle savedInstanceState) {
-//     //   super.onCreate(savedInstanceState);
+//   super.onCreate(savedInstanceState);
 //        setContentView(R.layout.activity_maps);
 //        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
 //        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()

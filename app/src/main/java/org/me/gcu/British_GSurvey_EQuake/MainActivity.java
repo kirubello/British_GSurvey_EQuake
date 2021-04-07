@@ -3,6 +3,7 @@ package org.me.gcu.British_GSurvey_EQuake;
     Student Name : Kirubel Afework
 *   Student No: S1732434
 */
+
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -156,7 +157,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
                 //
                 while ((inputLine = in.readLine()) != null) {
                     result = result + inputLine;
-                    Log.e("MyTag", inputLine);
 
                 }
                 list(result);
@@ -190,16 +190,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     private void list(String result) {
         alist = parseData(this.result);
 
-        // Write list to Log for testing
-        if (alist != null) {
-            Log.e("MyTag", "List not null");
-            for (Object o : alist) {
-                Log.e("MyTag", o.toString());
-            }
-        } else {
-            Log.e("MyTag", "List is null");
-        }
-
     }
 
     public void show() {
@@ -216,9 +206,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
             ItemClass offsetItem = new ItemClass(lat, lng, "" + Title, "Magnitude:" + Magnitude, alist.get(i).getMagnitude());
             clusterManager.addItem(offsetItem);
 
-
-//            // below line is use to move our camera to the specific location.
-            // mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(try1, 4));
         }
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -230,20 +217,14 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
 
     private void setUpClusterer() {
 
-        // Initialize the manager with the context and the map.
-        // (Activity extends context, so we can pass 'this' in the constructor.)
         clusterManager = new ClusterManager<ItemClass>(this, mMap);
 
         CustomClusterRenderer renderer = new CustomClusterRenderer(this, mMap, clusterManager);
         clusterManager.setRenderer(renderer);
 
-
-        //   clusterManager.getMarkerCollection().setOnInfoWindowAdapter(new CustomInfoViewAdapter(LayoutInflater.from(this)));
-
         mMap.setOnCameraIdleListener(clusterManager);
         mMap.setOnMarkerClickListener(clusterManager);
 
-        // Add cluster items (markers) to the cluster manager.
         show();
 
         // Position the map.
@@ -254,8 +235,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     private LinkedList<ItemClass> parseData(String result) {
 
         ItemClass itemClass = null;
-        // LinkedList<ItemClass> alist = null;
-        try {
+           try {
             XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
             factory.setNamespaceAware(true);
             XmlPullParser xpp = factory.newPullParser();
@@ -264,24 +244,19 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
             while (eventType != XmlPullParser.END_DOCUMENT) {
                 // Found a start tag
                 if (eventType == XmlPullParser.START_DOCUMENT) {
-                    System.out.println("Start document");
+
                 } else if (eventType == XmlPullParser.START_TAG) {
-                    // Check which Tag we have
-//                    if (xpp.getName().equalsIgnoreCase("rss"))
-//                    {
-//
-//                    }
-//                    else
+
                     if (xpp.getName().equalsIgnoreCase("channel")) {
                         alist = new LinkedList<ItemClass>();
                     } else if (xpp.getName().equalsIgnoreCase("item")) {
-                        Log.e("MyTag", "Item Start Tag found");
+
                         itemClass = new ItemClass();
                     } else if (xpp.getName().equalsIgnoreCase("title")) {
                         // Now just get the associated text
                         String temp = xpp.nextText();
                         // Do something with text
-                        Log.e("MyTag", "Title is " + temp);
+
                         if (!(temp.equals("Recent UK earthquakes") || temp.equals("BGS Logo"))) {
                             itemClass.setTitle(temp);
                         }
@@ -291,7 +266,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
                             // Now just get the associated text
                             String temp = xpp.nextText();
                             // Do something with text
-                            Log.e("MyTag", "Link is " + temp);
+
                             if (!temp.equals("http://earthquakes.bgs.ac.uk/")) {
                                 itemClass.setLink(temp);
                             }
@@ -301,7 +276,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
                                 // Now just get the associated text
                                 String temp = xpp.nextText();
                                 // Do something with text
-                                Log.e("MyTag", "Description is " + temp);
+
                                 if (!temp.equals("Recent UK seismic events recorded by the BGS Seismology team")) {
                                     itemClass.setDescription(temp);
                                     String[] description = temp.split(";");
@@ -315,7 +290,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
                                     // Now just get the associated text
                                     String temp = xpp.nextText();
                                     // Do something with text
-                                    Log.e("MyTag", "Published Date  is " + temp);
+
 //                                    if (!temp.equals("Recent UK seismic events recorded by the BGS Seismology team")) {
                                     itemClass.setPubDate(temp);
 //                                    }
@@ -325,7 +300,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
                                         // Now just get the associated text
                                         String temp = xpp.nextText();
                                         // Do something with text
-                                        Log.e("MyTag", "geo:lat  is " + temp);
+
 //                                        if (!temp.equals("Recent UK seismic events recorded by the BGS Seismology team")) {
                                         itemClass.setLat(Double.parseDouble(temp));
 //                                        }
@@ -335,21 +310,20 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
                                             // Now just get the associated text
                                             String temp = xpp.nextText();
                                             // Do something with text
-                                            Log.e("MyTag", "geo:long is " + temp);
+
 //                                            if (!temp.equals("Recent UK seismic events recorded by the BGS Seismology team")) {
                                             itemClass.setLng(Double.parseDouble(temp));
 //                                            }
                                         }
                 } else if (eventType == XmlPullParser.END_TAG) {
                     if (xpp.getName().equalsIgnoreCase("item")) {
-                        Log.e("MyTag", "itemClass is " + itemClass.toString());
+
                         alist.add(itemClass);
-                        // clusterManager.addItems(alist);
-                        //     clusterManager.cluster();
+
                     } else if (xpp.getName().equalsIgnoreCase("channel")) {
                         int size;
                         size = alist.size();
-                        Log.e("MyTag", "channel  size is " + size);
+
                     }
                 }
 
@@ -365,9 +339,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
             Log.e("MyTag", "IO error during parsing");
         }
 
-        Log.e("MyTag", "End document");
-
-        return alist;
+           return alist;
 
 
     }
@@ -376,15 +348,13 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        // Add a marker in Sydney and move the camera
+        // Add a marker in Glasgow and move the camera
         LatLng glasgow = new LatLng(55.8642, 4.2518);
 
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(glasgow, 0));
-//        mMap.getMinZoomLevel();
-//        mMap.setTrafficEnabled(true);
-//        mMap.moveCamera(CameraUpdateFactory.newLatLng(glasgow));
-        //mMap.addMarker(new MarkerOptions().position(glasgow).title("Glasgow"));
-        // mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(glasgow, 5));
+
+        mMap.setTrafficEnabled(true);
+
 
         mMap.getMinZoomLevel();
         mMap.setTrafficEnabled(true);
@@ -395,10 +365,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
             return;
         }
         mMap.setMyLocationEnabled(true);
-//        mMap.getUiSettings().setMyLocationButtonEnabled(false);
-//        mMap.getUiSettings().setCompassEnabled(true);
-//        mMap.getUiSettings().setRotateGesturesEnabled(true);
-//        mMap.getUiSettings().setTiltGesturesEnabled(true);
+        mMap.getUiSettings().setMyLocationButtonEnabled(false);
+        mMap.getUiSettings().setCompassEnabled(true);
+        mMap.getUiSettings().setRotateGesturesEnabled(true);
+        mMap.getUiSettings().setTiltGesturesEnabled(true);
 
 
         enableMyLocation(mMap); // Enable location tracking.
