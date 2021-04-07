@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFAFA"
+    android:padding="10dp">
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="351dp"
+        android:layout_height="118dp"
+        android:background="@drawable/background"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <!--     date/ magnitude/depth/location/lat/lng   <>-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/eq_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/backgroundgreen"
+            android:padding="5dp">
+
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+
+                android:text="location"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/mag"
+                android:layout_width="79dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Mag"
+                android:textColor="@android:color/white"
+                android:textSize="35dp"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/location" />
+
+            <TextView
+                android:id="@+id/depth2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="200dp"
+                android:layout_marginBottom="84dp"
+                android:text="Depth:"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/location"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/depth"
+                android:layout_width="78dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="120dp"
+                android:layout_marginBottom="84dp"
+                android:text="depth"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/location"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/category2"
+                android:layout_width="62dp"
+                android:layout_height="22dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="56dp"
+                android:layout_marginBottom="84dp"
+                android:text="Category:"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/location"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/cat"
+                android:layout_width="46dp"
+                android:layout_height="22dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="category"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/category2"
+                app:layout_constraintTop_toBottomOf="@+id/location" />
+
+            <TextView
+                android:id="@+id/latlng2"
+                android:layout_width="36dp"
+                android:layout_height="19dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="204dp"
+                android:text="(X,Y):"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/depth2" />
+
+            <TextView
+                android:id="@+id/latlng"
+                android:layout_width="193dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="lat lng "
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/depth2" />
+
+            <TextView
+                android:id="@+id/pubdate"
+                android:layout_width="315dp"
+                android:layout_height="21dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+
+                android:text="published date"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/latlng" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

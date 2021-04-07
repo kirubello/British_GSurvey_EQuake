@@ -1,0 +1,88 @@
+<!--  MPD XML Starter code Semester B Session 2018 2019  -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="368dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="354dp"-->
+        <!--            android:layout_height="40dp"-->
+        <!--            android:layout_alignParentTop="true"-->
+        <!--            android:layout_margin="8dp"-->
+        <!--            android:background="@drawable/rounded_edit">-->
+
+        <!--            <Button-->
+        <!--                android:layout_width="32dp"-->
+        <!--                android:layout_height="40dp"-->
+        <!--                android:background="@drawable/search"-->
+        <!--                android:onClick="onSearch" />-->
+
+        <!--            <EditText-->
+        <!--                android:id="@+id/editLocation"-->
+        <!--                android:layout_width="302dp"-->
+        <!--                android:layout_height="40dp"-->
+        <!--                android:layout_weight="1"-->
+        <!--                android:hint="Type Location" />-->
+
+        <!--        </LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <include
+                layout="@layout/activity_maps"
+                android:layout_width="match_parent"
+                android:layout_height="319dp" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/acknowledgement"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Contains British Geological Survey materials ©NERC 2019"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="106dp"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown" />
+
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="wrap_content"
+            android:layout_height="31dp"
+            android:text="Press to get data"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/rawDataDisplay"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Raw Data is Displayed here"
+            android:textSize="14sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</LinearLayout>
