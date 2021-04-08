@@ -15,3 +15,6 @@ org/me/gcu/British_GSurvey_EQuake/db/Task.java
  org.me.gcu.British_GSurvey_EQuake.db.Task$1
 org/me/gcu/British_GSurvey_EQuake/MainActivity.java
  org.me.gcu.British_GSurvey_EQuake.MainActivity
+ org.me.gcu.British_GSurvey_EQuake.MainActivity$1
+ org.me.gcu.British_GSurvey_EQuake.MainActivity$2
+ org.me.gcu.British_GSurvey_EQuake.MainActivity$3

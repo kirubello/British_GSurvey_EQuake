@@ -6,6 +6,7 @@
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the "MyLocation" functionality.
     -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -15,11 +16,11 @@
         android:label="British Earthquake Visualization"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.British_GSurvey_EQuake"
+        android:theme="@style/Theme.MaterialComponents"
         android:usesCleartextTraffic="true">
-        <activity
-            android:name=".MainActivity2"
-            android:label="@string/title_activity_main2"></activity>
+<!--        <activity-->
+<!--            android:name=".MainActivity2"-->
+<!--            android:label="@string/title_activity_main2"></activity>-->
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

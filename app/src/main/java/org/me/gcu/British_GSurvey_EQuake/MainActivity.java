@@ -5,6 +5,7 @@ package org.me.gcu.British_GSurvey_EQuake;
 */
 
 import android.Manifest;
+import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,9 +21,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewSwitcher;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -32,6 +33,10 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
+import com.google.android.material.datepicker.CalendarConstraints;
+import com.google.android.material.datepicker.DateValidatorPointBackward;
+import com.google.android.material.datepicker.MaterialDatePicker;
+import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener;
 import com.google.maps.android.clustering.ClusterManager;
 
 import org.me.gcu.British_GSurvey_EQuake.db.Task;
@@ -39,7 +44,9 @@ import org.me.gcu.British_GSurvey_EQuake.model.Adapter;
 import org.me.gcu.British_GSurvey_EQuake.model.CustomClusterRenderer;
 import org.me.gcu.British_GSurvey_EQuake.model.ItemClass;
 
+import java.util.Calendar;
 import java.util.LinkedList;
+import java.util.TimeZone;
 
 public class MainActivity extends AppCompatActivity implements OnClickListener, OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener, AdapterView.OnItemSelectedListener {
 
@@ -49,9 +56,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     private Spinner spinner;
     private static final String[] paths = {"All Earthquakes", "1.0+ Earthquakes", "2.5+ Earthquakes", "4.5+ Earthquakes", "Significant Earthquakes"};
 
- public TextView rawDataDisplay;
+    public TextView rawDataDisplay;
+    private TextView dateDisplay;
 
-    private Button startButton;
+    private Button dateRange;
     private String result = "";
     private String url1 = "";
     private String urlSource = "http://quakes.bgs.ac.uk/feeds/MhSeismology.xml";
@@ -87,15 +95,15 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         Log.e("MyTag", "in onCreate");
         // Set up the raw links to the graphical components
         rawDataDisplay = (TextView) findViewById(R.id.rawDataDisplay);
+        dateDisplay= findViewById(R.id.dateDisplay);
 
 //        startButton = (Button) findViewById(R.id.startButton);
 //
 //        startButton.setOnClickListener(this);
 
-        viewSwitcher =  findViewById(R.id.vwSwitch);
+        viewSwitcher = findViewById(R.id.vwSwitch);
 
-        if (viewSwitcher == null)
-        {
+        if (viewSwitcher == null) {
             Toast.makeText(getApplicationContext(), "Null ViewSwicther", Toast.LENGTH_LONG);
             Log.e(getPackageName(), "null pointer");
         }
@@ -118,29 +126,64 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         spinner.setOnItemSelectedListener(this);
         startProgress();
 
+        dateRange = findViewById(R.id.date_Rangepicker);
+
+
+        Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("UTC"));
+        calendar.clear();
+
+        long today = MaterialDatePicker.todayInUtcMilliseconds();
+
+
+        calendar.setTimeInMillis(today);
+
+        calendar.set(Calendar.MONTH, Calendar.JANUARY);
+        long january = calendar.getTimeInMillis();
+
+        calendar.set(Calendar.MONTH, Calendar.DECEMBER);
+        long december = calendar.getTimeInMillis();
+
+        CalendarConstraints.Builder constraintBuilder = new CalendarConstraints.Builder();
+        constraintBuilder.setStart(january);
+        constraintBuilder.setEnd(today);
+        constraintBuilder.setValidator(DateValidatorPointBackward.now());
+
+        MaterialDatePicker.Builder  builder = MaterialDatePicker.Builder.datePicker();
+         builder.setTitleText("select a date");
+         builder.setSelection(today);
+         builder.setCalendarConstraints(constraintBuilder.build());
+
+       final  MaterialDatePicker materialDatePicker = builder.build();
+
+        dateRange.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                materialDatePicker.show(getSupportFragmentManager(), "date_picker");
+            }
+        });
+
+        materialDatePicker.addOnPositiveButtonClickListener(new MaterialPickerOnPositiveButtonClickListener() {
+            @Override
+            public void onPositiveButtonClick(Object selection) {
+dateDisplay.setText("Selected date"+ materialDatePicker.getHeaderText());
+            }
+        });
 
     }
 
     public void onClick(View aview) {
         Log.e("MyTag", "in onClick");
         mMap.clear();
-        if (aview == s1Button)
-        {
+        if (aview == s1Button) {
             viewSwitcher.showNext();
-        }
-        else
-        if (aview == s2Button)
-        {
+        } else if (aview == s2Button) {
             viewSwitcher.showPrevious();
         }
-
-        //    show();
-        Log.e("MyTag", "after startProgress");
     }
 
     public void startProgress() {
         // Run network access on a separate thread;
-        new Thread(new Task(urlSource,this)).start();
+        new Thread(new Task(urlSource, this)).start();
     }
 
     @Override
@@ -150,72 +193,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
                 Toast.LENGTH_SHORT).show();
     }
 
-
-//    private class Task implements Runnable {
-//        private String url;
-//
-//        public Task(String aurl) {
-//            url = aurl;
-//        }
-//
-//        @Override
-//        public void run() {
-//
-//            URL aurl;
-//            URLConnection yc;
-//            BufferedReader in = null;
-//            String inputLine = "";
-//
-//
-//            Log.e("MyTag", "in run");
-//
-//            try {
-//                Log.e("MyTag", "in try");
-//                aurl = new URL(url);
-//                yc = aurl.openConnection();
-//                in = new BufferedReader(new InputStreamReader(yc.getInputStream()));
-//                Log.e("MyTag", "after ready");
-//                //
-//                // Now read the data. Make sure that there are no specific hedrs
-//                // in the data file that you need to ignore.
-//                // The useful data that you need is in each of the item entries
-//                //
-//                while ((inputLine = in.readLine()) != null) {
-//                    result = result + inputLine;
-//
-//                }
-//                list(result);
-//                in.close();
-//                // return result;
-//            } catch (IOException ae) {
-//                Log.e("MyTag", "ioexception in run");
-//            }
-//
-//            //
-//            // Now that you have the xml data you can parse it
-//            //
-//
-//            // Now update the TextView to display raw XML data
-//            // Probably not the best way to update TextView
-//            // but we are just getting started !
-//
-//            MainActivity.this.runOnUiThread(new Runnable() {
-//                public void run() {
-//                    Log.d("UI thread", "I am the UI thread");
-//
-//                    //       rawDataDisplay.setText(result);
-//
-//                    setUpClusterer();
-//                }
-//            });
-//
-//        }
-//    }
-
-//    private void list(String result) {
-//        alist = parseData(this.result);
-//
-//    }
 
     public void show() {
 
@@ -253,121 +230,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         show();
 
         // Position the map.
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(55.8642, 4.2518), 3));
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(55.8642, -5.2518), 4));
 
     }
 
- //    private LinkedList<ItemClass> parseData(String result) {
-//
-//        ItemClass itemClass = null;
-//           try {
-//            XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
-//            factory.setNamespaceAware(true);
-//            XmlPullParser xpp = factory.newPullParser();
-//            xpp.setInput(new StringReader(result));
-//            int eventType = xpp.getEventType();
-//            while (eventType != XmlPullParser.END_DOCUMENT) {
-//                // Found a start tag
-//                if (eventType == XmlPullParser.START_DOCUMENT) {
-//
-//                } else if (eventType == XmlPullParser.START_TAG) {
-//
-//                    if (xpp.getName().equalsIgnoreCase("channel")) {
-//                        alist = new LinkedList<ItemClass>();
-//                    } else if (xpp.getName().equalsIgnoreCase("item")) {
-//
-//                        itemClass = new ItemClass();
-//                    } else if (xpp.getName().equalsIgnoreCase("title")) {
-//                        // Now just get the associated text
-//                        String temp = xpp.nextText();
-//                        // Do something with text
-//
-//                        if (!(temp.equals("Recent UK earthquakes") || temp.equals("BGS Logo"))) {
-//                            itemClass.setTitle(temp);
-//                        }
-//                    } else
-//                        // Check which Tag we have
-//                        if (xpp.getName().equalsIgnoreCase("link")) {
-//                            // Now just get the associated text
-//                            String temp = xpp.nextText();
-//                            // Do something with text
-//
-//                            if (!temp.equals("http://earthquakes.bgs.ac.uk/")) {
-//                                itemClass.setLink(temp);
-//                            }
-//                        } else
-//                            // Check which Tag we have
-//                            if (xpp.getName().equalsIgnoreCase("description")) {
-//                                // Now just get the associated text
-//                                String temp = xpp.nextText();
-//                                // Do something with text
-//
-//                                if (!temp.equals("Recent UK seismic events recorded by the BGS Seismology team")) {
-//                                    itemClass.setDescription(temp);
-//                                    String[] description = temp.split(";");
-//                                    itemClass.setLocation(description[1].split(":")[1]);
-//                                    itemClass.setDepth(description[3].split(":")[1]);
-//                                    itemClass.setMagnitude(Double.parseDouble(description[4].split(":")[1]));
-//                                }
-//                            } else
-//                                // Check which Tag we have
-//                                if (xpp.getName().equalsIgnoreCase("pubDate")) {
-//                                    // Now just get the associated text
-//                                    String temp = xpp.nextText();
-//                                    // Do something with text
-//
-////                                    if (!temp.equals("Recent UK seismic events recorded by the BGS Seismology team")) {
-//                                    itemClass.setPubDate(temp);
-////                                    }
-//                                } else
-//                                    // Check which Tag we have
-//                                    if (xpp.getName().equalsIgnoreCase("lat")) {
-//                                        // Now just get the associated text
-//                                        String temp = xpp.nextText();
-//                                        // Do something with text
-//
-////                                        if (!temp.equals("Recent UK seismic events recorded by the BGS Seismology team")) {
-//                                        itemClass.setLat(Double.parseDouble(temp));
-////                                        }
-//                                    } else
-//                                        // Check which Tag we have
-//                                        if (xpp.getName().equalsIgnoreCase("long")) {
-//                                            // Now just get the associated text
-//                                            String temp = xpp.nextText();
-//                                            // Do something with text
-//
-////                                            if (!temp.equals("Recent UK seismic events recorded by the BGS Seismology team")) {
-//                                            itemClass.setLng(Double.parseDouble(temp));
-////                                            }
-//                                        }
-//                } else if (eventType == XmlPullParser.END_TAG) {
-//                    if (xpp.getName().equalsIgnoreCase("item")) {
-//
-//                        alist.add(itemClass);
-//
-//                    } else if (xpp.getName().equalsIgnoreCase("channel")) {
-//                        int size;
-//                        size = alist.size();
-//
-//                    }
-//                }
-//
-//                // Get the next event
-//                eventType = xpp.next();
-//
-//            } // End of while
-//
-//            //return alist;
-//        } catch (XmlPullParserException ae1) {
-//            Log.e("MyTag", "Parsing error" + ae1.toString());
-//        } catch (IOException ae1) {
-//            Log.e("MyTag", "IO error during parsing");
-//        }
-//
-//           return alist;
-//
-//
-//    }
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
@@ -376,7 +242,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         // Add a marker in Glasgow and move the camera
         LatLng glasgow = new LatLng(55.8642, 4.2518);
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(glasgow, 0));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(glasgow, 1));
 
         mMap.setTrafficEnabled(true);
 
@@ -385,19 +251,35 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         mMap.setTrafficEnabled(true);
         mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
 
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission
+                (this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
 
 
+            new AlertDialog.Builder(this)
+                    .setPositiveButton(R.string.text_location_permission, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            //Prompt the user once explanation has been shown
+                            ActivityCompat.requestPermissions(MainActivity.this,
+                                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                                    REQUEST_LOCATION_PERMISSION);
+                        }
+                    })
+                    .create()
+                    .show();
             return;
         }
         mMap.setMyLocationEnabled(true);
-        mMap.getUiSettings().setMyLocationButtonEnabled(false);
+        mMap.getUiSettings().setMyLocationButtonEnabled(true);
+
+
         mMap.getUiSettings().setCompassEnabled(true);
         mMap.getUiSettings().setRotateGesturesEnabled(true);
         mMap.getUiSettings().setTiltGesturesEnabled(true);
 
 
-        enableMyLocation(mMap); // Enable location tracking.
+        // Enable location tracking.
         //  setMapLongClick(mMap); // Set a long click listener for the map;
 
         googleMap.setOnInfoWindowClickListener(this);
@@ -405,6 +287,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     }
 
 
+    //
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.top_app_bar, menu);
@@ -468,18 +351,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
 
-    }
-
-    private void enableMyLocation(GoogleMap map) {
-        if (ContextCompat.checkSelfPermission(this,
-                Manifest.permission.ACCESS_FINE_LOCATION)
-                == PackageManager.PERMISSION_GRANTED) {
-            map.setMyLocationEnabled(true);
-        } else {
-            ActivityCompat.requestPermissions(this, new String[]
-                            {Manifest.permission.ACCESS_FINE_LOCATION},
-                    REQUEST_LOCATION_PERMISSION);
-        }
     }
 
 

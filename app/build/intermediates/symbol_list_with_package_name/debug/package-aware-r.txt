@@ -1984,7 +1984,8 @@ id custom
 id customPanel
 id cut
 id dark
-id date_Rpicker
+id dateDisplay
+id date_Rangepicker
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -2624,6 +2625,7 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string search_menu_title
 string status_bar_notification_info_overflow
+string text_location_permission
 string title_activity_main2
 string title_activity_maps
 string title_dashboard
@@ -3098,6 +3100,7 @@ style Theme_MaterialComponents_Light_NoActionBar
 style Theme_MaterialComponents_Light_NoActionBar_Bridge
 style Theme_MaterialComponents_NoActionBar
 style Theme_MaterialComponents_NoActionBar_Bridge
+style Theme_MaterialComponets
 style ThemeOverlay_AppCompat
 style ThemeOverlay_AppCompat_ActionBar
 style ThemeOverlay_AppCompat_Dark
