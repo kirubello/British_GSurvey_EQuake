@@ -34,27 +34,22 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.maps.android.clustering.ClusterManager;
 
+import org.me.gcu.British_GSurvey_EQuake.db.Task;
 import org.me.gcu.British_GSurvey_EQuake.model.Adapter;
 import org.me.gcu.British_GSurvey_EQuake.model.CustomClusterRenderer;
 import org.me.gcu.British_GSurvey_EQuake.model.ItemClass;
-import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserException;
-import org.xmlpull.v1.XmlPullParserFactory;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.StringReader;
-import java.net.URL;
-import java.net.URLConnection;
 import java.util.LinkedList;
 
 public class MainActivity extends AppCompatActivity implements OnClickListener, OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener, AdapterView.OnItemSelectedListener {
 
+    public LinkedList<ItemClass> alist;
+    public ClusterManager<ItemClass> clusterManager;
+
     private Spinner spinner;
     private static final String[] paths = {"All Earthquakes", "1.0+ Earthquakes", "2.5+ Earthquakes", "4.5+ Earthquakes", "Significant Earthquakes"};
 
-    private TextView rawDataDisplay;
+ public TextView rawDataDisplay;
 
     private Button startButton;
     private String result = "";
@@ -63,12 +58,12 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     private Button s1Button;
     private Button s2Button;
     private ViewSwitcher viewSwitcher;
+
     RecyclerView recyclerView;
     Adapter adapter;
 
 
-    private ClusterManager<ItemClass> clusterManager;
-    LinkedList<ItemClass> alist = null;
+    //LinkedList<ItemClass> alist = null;
 
     private static final int REQUEST_LOCATION_PERMISSION = 1;
 
@@ -122,6 +117,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
         startProgress();
+
+
     }
 
     public void onClick(View aview) {
@@ -143,7 +140,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
 
     public void startProgress() {
         // Run network access on a separate thread;
-        new Thread(new Task(urlSource)).start();
+        new Thread(new Task(urlSource,this)).start();
     }
 
     @Override
@@ -154,71 +151,71 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     }
 
 
-    private class Task implements Runnable {
-        private String url;
+//    private class Task implements Runnable {
+//        private String url;
+//
+//        public Task(String aurl) {
+//            url = aurl;
+//        }
+//
+//        @Override
+//        public void run() {
+//
+//            URL aurl;
+//            URLConnection yc;
+//            BufferedReader in = null;
+//            String inputLine = "";
+//
+//
+//            Log.e("MyTag", "in run");
+//
+//            try {
+//                Log.e("MyTag", "in try");
+//                aurl = new URL(url);
+//                yc = aurl.openConnection();
+//                in = new BufferedReader(new InputStreamReader(yc.getInputStream()));
+//                Log.e("MyTag", "after ready");
+//                //
+//                // Now read the data. Make sure that there are no specific hedrs
+//                // in the data file that you need to ignore.
+//                // The useful data that you need is in each of the item entries
+//                //
+//                while ((inputLine = in.readLine()) != null) {
+//                    result = result + inputLine;
+//
+//                }
+//                list(result);
+//                in.close();
+//                // return result;
+//            } catch (IOException ae) {
+//                Log.e("MyTag", "ioexception in run");
+//            }
+//
+//            //
+//            // Now that you have the xml data you can parse it
+//            //
+//
+//            // Now update the TextView to display raw XML data
+//            // Probably not the best way to update TextView
+//            // but we are just getting started !
+//
+//            MainActivity.this.runOnUiThread(new Runnable() {
+//                public void run() {
+//                    Log.d("UI thread", "I am the UI thread");
+//
+//                    //       rawDataDisplay.setText(result);
+//
+//                    setUpClusterer();
+//                }
+//            });
+//
+//        }
+//    }
 
-        public Task(String aurl) {
-            url = aurl;
-        }
-
-        @Override
-        public void run() {
-
-            URL aurl;
-            URLConnection yc;
-            BufferedReader in = null;
-            String inputLine = "";
-
-
-            Log.e("MyTag", "in run");
-
-            try {
-                Log.e("MyTag", "in try");
-                aurl = new URL(url);
-                yc = aurl.openConnection();
-                in = new BufferedReader(new InputStreamReader(yc.getInputStream()));
-                Log.e("MyTag", "after ready");
-                //
-                // Now read the data. Make sure that there are no specific hedrs
-                // in the data file that you need to ignore.
-                // The useful data that you need is in each of the item entries
-                //
-                while ((inputLine = in.readLine()) != null) {
-                    result = result + inputLine;
-
-                }
-                list(result);
-                in.close();
-                // return result;
-            } catch (IOException ae) {
-                Log.e("MyTag", "ioexception in run");
-            }
-
-            //
-            // Now that you have the xml data you can parse it
-            //
-
-            // Now update the TextView to display raw XML data
-            // Probably not the best way to update TextView
-            // but we are just getting started !
-
-            MainActivity.this.runOnUiThread(new Runnable() {
-                public void run() {
-                    Log.d("UI thread", "I am the UI thread");
-
-                    //       rawDataDisplay.setText(result);
-
-                    setUpClusterer();
-                }
-            });
-
-        }
-    }
-
-    private void list(String result) {
-        alist = parseData(this.result);
-
-    }
+//    private void list(String result) {
+//        alist = parseData(this.result);
+//
+//    }
 
     public void show() {
 
@@ -243,7 +240,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         clusterManager.cluster();
     }
 
-    private void setUpClusterer() {
+    public void setUpClusterer() {
 
         clusterManager = new ClusterManager<ItemClass>(this, mMap);
 
@@ -260,117 +257,117 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
 
     }
 
-    private LinkedList<ItemClass> parseData(String result) {
-
-        ItemClass itemClass = null;
-           try {
-            XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
-            factory.setNamespaceAware(true);
-            XmlPullParser xpp = factory.newPullParser();
-            xpp.setInput(new StringReader(result));
-            int eventType = xpp.getEventType();
-            while (eventType != XmlPullParser.END_DOCUMENT) {
-                // Found a start tag
-                if (eventType == XmlPullParser.START_DOCUMENT) {
-
-                } else if (eventType == XmlPullParser.START_TAG) {
-
-                    if (xpp.getName().equalsIgnoreCase("channel")) {
-                        alist = new LinkedList<ItemClass>();
-                    } else if (xpp.getName().equalsIgnoreCase("item")) {
-
-                        itemClass = new ItemClass();
-                    } else if (xpp.getName().equalsIgnoreCase("title")) {
-                        // Now just get the associated text
-                        String temp = xpp.nextText();
-                        // Do something with text
-
-                        if (!(temp.equals("Recent UK earthquakes") || temp.equals("BGS Logo"))) {
-                            itemClass.setTitle(temp);
-                        }
-                    } else
-                        // Check which Tag we have
-                        if (xpp.getName().equalsIgnoreCase("link")) {
-                            // Now just get the associated text
-                            String temp = xpp.nextText();
-                            // Do something with text
-
-                            if (!temp.equals("http://earthquakes.bgs.ac.uk/")) {
-                                itemClass.setLink(temp);
-                            }
-                        } else
-                            // Check which Tag we have
-                            if (xpp.getName().equalsIgnoreCase("description")) {
-                                // Now just get the associated text
-                                String temp = xpp.nextText();
-                                // Do something with text
-
-                                if (!temp.equals("Recent UK seismic events recorded by the BGS Seismology team")) {
-                                    itemClass.setDescription(temp);
-                                    String[] description = temp.split(";");
-                                    itemClass.setLocation(description[1].split(":")[1]);
-                                    itemClass.setDepth(description[3].split(":")[1]);
-                                    itemClass.setMagnitude(Double.parseDouble(description[4].split(":")[1]));
-                                }
-                            } else
-                                // Check which Tag we have
-                                if (xpp.getName().equalsIgnoreCase("pubDate")) {
-                                    // Now just get the associated text
-                                    String temp = xpp.nextText();
-                                    // Do something with text
-
-//                                    if (!temp.equals("Recent UK seismic events recorded by the BGS Seismology team")) {
-                                    itemClass.setPubDate(temp);
-//                                    }
-                                } else
-                                    // Check which Tag we have
-                                    if (xpp.getName().equalsIgnoreCase("lat")) {
-                                        // Now just get the associated text
-                                        String temp = xpp.nextText();
-                                        // Do something with text
-
-//                                        if (!temp.equals("Recent UK seismic events recorded by the BGS Seismology team")) {
-                                        itemClass.setLat(Double.parseDouble(temp));
+ //    private LinkedList<ItemClass> parseData(String result) {
+//
+//        ItemClass itemClass = null;
+//           try {
+//            XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
+//            factory.setNamespaceAware(true);
+//            XmlPullParser xpp = factory.newPullParser();
+//            xpp.setInput(new StringReader(result));
+//            int eventType = xpp.getEventType();
+//            while (eventType != XmlPullParser.END_DOCUMENT) {
+//                // Found a start tag
+//                if (eventType == XmlPullParser.START_DOCUMENT) {
+//
+//                } else if (eventType == XmlPullParser.START_TAG) {
+//
+//                    if (xpp.getName().equalsIgnoreCase("channel")) {
+//                        alist = new LinkedList<ItemClass>();
+//                    } else if (xpp.getName().equalsIgnoreCase("item")) {
+//
+//                        itemClass = new ItemClass();
+//                    } else if (xpp.getName().equalsIgnoreCase("title")) {
+//                        // Now just get the associated text
+//                        String temp = xpp.nextText();
+//                        // Do something with text
+//
+//                        if (!(temp.equals("Recent UK earthquakes") || temp.equals("BGS Logo"))) {
+//                            itemClass.setTitle(temp);
+//                        }
+//                    } else
+//                        // Check which Tag we have
+//                        if (xpp.getName().equalsIgnoreCase("link")) {
+//                            // Now just get the associated text
+//                            String temp = xpp.nextText();
+//                            // Do something with text
+//
+//                            if (!temp.equals("http://earthquakes.bgs.ac.uk/")) {
+//                                itemClass.setLink(temp);
+//                            }
+//                        } else
+//                            // Check which Tag we have
+//                            if (xpp.getName().equalsIgnoreCase("description")) {
+//                                // Now just get the associated text
+//                                String temp = xpp.nextText();
+//                                // Do something with text
+//
+//                                if (!temp.equals("Recent UK seismic events recorded by the BGS Seismology team")) {
+//                                    itemClass.setDescription(temp);
+//                                    String[] description = temp.split(";");
+//                                    itemClass.setLocation(description[1].split(":")[1]);
+//                                    itemClass.setDepth(description[3].split(":")[1]);
+//                                    itemClass.setMagnitude(Double.parseDouble(description[4].split(":")[1]));
+//                                }
+//                            } else
+//                                // Check which Tag we have
+//                                if (xpp.getName().equalsIgnoreCase("pubDate")) {
+//                                    // Now just get the associated text
+//                                    String temp = xpp.nextText();
+//                                    // Do something with text
+//
+////                                    if (!temp.equals("Recent UK seismic events recorded by the BGS Seismology team")) {
+//                                    itemClass.setPubDate(temp);
+////                                    }
+//                                } else
+//                                    // Check which Tag we have
+//                                    if (xpp.getName().equalsIgnoreCase("lat")) {
+//                                        // Now just get the associated text
+//                                        String temp = xpp.nextText();
+//                                        // Do something with text
+//
+////                                        if (!temp.equals("Recent UK seismic events recorded by the BGS Seismology team")) {
+//                                        itemClass.setLat(Double.parseDouble(temp));
+////                                        }
+//                                    } else
+//                                        // Check which Tag we have
+//                                        if (xpp.getName().equalsIgnoreCase("long")) {
+//                                            // Now just get the associated text
+//                                            String temp = xpp.nextText();
+//                                            // Do something with text
+//
+////                                            if (!temp.equals("Recent UK seismic events recorded by the BGS Seismology team")) {
+//                                            itemClass.setLng(Double.parseDouble(temp));
+////                                            }
 //                                        }
-                                    } else
-                                        // Check which Tag we have
-                                        if (xpp.getName().equalsIgnoreCase("long")) {
-                                            // Now just get the associated text
-                                            String temp = xpp.nextText();
-                                            // Do something with text
-
-//                                            if (!temp.equals("Recent UK seismic events recorded by the BGS Seismology team")) {
-                                            itemClass.setLng(Double.parseDouble(temp));
-//                                            }
-                                        }
-                } else if (eventType == XmlPullParser.END_TAG) {
-                    if (xpp.getName().equalsIgnoreCase("item")) {
-
-                        alist.add(itemClass);
-
-                    } else if (xpp.getName().equalsIgnoreCase("channel")) {
-                        int size;
-                        size = alist.size();
-
-                    }
-                }
-
-                // Get the next event
-                eventType = xpp.next();
-
-            } // End of while
-
-            //return alist;
-        } catch (XmlPullParserException ae1) {
-            Log.e("MyTag", "Parsing error" + ae1.toString());
-        } catch (IOException ae1) {
-            Log.e("MyTag", "IO error during parsing");
-        }
-
-           return alist;
-
-
-    }
+//                } else if (eventType == XmlPullParser.END_TAG) {
+//                    if (xpp.getName().equalsIgnoreCase("item")) {
+//
+//                        alist.add(itemClass);
+//
+//                    } else if (xpp.getName().equalsIgnoreCase("channel")) {
+//                        int size;
+//                        size = alist.size();
+//
+//                    }
+//                }
+//
+//                // Get the next event
+//                eventType = xpp.next();
+//
+//            } // End of while
+//
+//            //return alist;
+//        } catch (XmlPullParserException ae1) {
+//            Log.e("MyTag", "Parsing error" + ae1.toString());
+//        } catch (IOException ae1) {
+//            Log.e("MyTag", "IO error during parsing");
+//        }
+//
+//           return alist;
+//
+//
+//    }
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
@@ -389,6 +386,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+
 
             return;
         }

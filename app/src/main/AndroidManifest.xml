@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--    Mobile Platform Development Assignment Session 2020/2021 MHI322959/MHI325105-->
-<!--    Student Name : Kirubel Afework-->
-<!--    Student No: S1732434-->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.me.gcu.British_GSurvey_EQuake">
-
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -16,12 +12,14 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="British Earthquake Visualization"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.British_GSurvey_EQuake"
         android:usesCleartextTraffic="true">
-
+        <activity
+            android:name=".MainActivity2"
+            android:label="@string/title_activity_main2"></activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -31,21 +29,18 @@
              You can define the keys for the debug and release targets in src/debug/ and src/release/.
         -->
         <meta-data
-
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
-
-<!--        <activity-->
-<!--            android:name=".MapsActivity"-->
-<!--            android:label="@string/title_activity_maps"></activity>-->
-        <activity android:name="org.me.gcu.British_GSurvey_EQuake.MainActivity">
+            android:value="@string/google_maps_key" /> <!-- <activity -->
+        <!-- android:name=".MapsActivity" -->
+        <!-- android:label="@string/title_activity_maps"></activity> -->
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="org.me.gcu.British_GSurvey_EQuake.model.Details">
+        <activity android:name=".model.Details">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="org.me.gcu.British_GSurvey_EQuake.MainActivity" />

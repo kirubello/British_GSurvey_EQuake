@@ -7,4 +7,11 @@
     <string name="lat_long_snippet">Lat: %1$.5f, Long: %2$.5f</string>
     <string name="dropped_pin">Dropped Pin</string>
     <string name="item_clustering">Clustering</string>
+    <string name="contains_british_geological_survey_materials_nerc_2019">Contains British Geological Survey materials ©NERC 2019</string>
+    <string name="view_data_details">View Data details</string>
+    <string name="goto_map_screen">Goto Map Screen</string>
+    <string name="title_activity_main2">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>

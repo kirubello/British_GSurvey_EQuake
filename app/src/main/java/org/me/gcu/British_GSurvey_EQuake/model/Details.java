@@ -40,7 +40,5 @@ public class Details extends AppCompatActivity {
         textTitle.setText(title);
         textTitle = findViewById(R.id.pubdate);
         textTitle.setText(pubdate);
-
-
     }
 }

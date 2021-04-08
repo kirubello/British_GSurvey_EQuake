@@ -41,4 +41,9 @@
                     </group>
                 </menu>
             </item>
-    </menu>
+    <item
+        android:id="@+id/app_bar_switch"
+        android:title="Switch"
+        app:actionLayout="@layout/switch_item"
+        app:showAsAction="always" />
+</menu>

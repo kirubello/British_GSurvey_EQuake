@@ -1,149 +1,148 @@
 1<?xml version="1.0" encoding="utf-8"?>
-2<!-- Mobile Platform Development Assignment Session 2020/2021 MHI322959/MHI325105 -->
-3<!-- Student Name : Kirubel Afework -->
-4<!-- Student No: S1732434 -->
-5<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-6    package="org.me.gcu.British_GSurvey_EQuake"
-7    android:versionCode="1"
-8    android:versionName="1.0" >
-9
-10    <uses-sdk
-11        android:minSdkVersion="23"
-11-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml
-12        android:targetSdkVersion="30" />
-12-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml
-13
-14    <!--
-15         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
-16         Google Maps Android API v2, but you must specify either coarse or fine
-17         location permissions for the "MyLocation" functionality.
-18    -->
-19    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-19-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:13:5-79
-19-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:13:22-76
-20    <uses-permission android:name="android.permission.INTERNET" />
-20-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:14:5-67
-20-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:14:22-64
-21
-22    <!-- Include required permissions for Google Maps API to run. -->
-23    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-23-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\2d547673e05a0f4359ea410021e8e7c2\jetified-play-services-maps-17.0.0\AndroidManifest.xml:23:5-79
-23-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\2d547673e05a0f4359ea410021e8e7c2\jetified-play-services-maps-17.0.0\AndroidManifest.xml:23:22-76
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="org.me.gcu.British_GSurvey_EQuake"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+8-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml
+10    <!--
+11         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+12         Google Maps Android API v2, but you must specify either coarse or fine
+13         location permissions for the "MyLocation" functionality.
+14    -->
+15    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+15-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:9:5-79
+15-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:9:22-76
+16    <uses-permission android:name="android.permission.INTERNET" />
+16-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:10:5-67
+16-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:10:22-64
+17
+18    <!-- Include required permissions for Google Maps API to run. -->
+19    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+19-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\2d547673e05a0f4359ea410021e8e7c2\jetified-play-services-maps-17.0.0\AndroidManifest.xml:23:5-79
+19-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\2d547673e05a0f4359ea410021e8e7c2\jetified-play-services-maps-17.0.0\AndroidManifest.xml:23:22-76
+20
+21    <uses-feature
+21-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\2d547673e05a0f4359ea410021e8e7c2\jetified-play-services-maps-17.0.0\AndroidManifest.xml:26:5-28:35
+22        android:glEsVersion="0x00020000"
+22-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\2d547673e05a0f4359ea410021e8e7c2\jetified-play-services-maps-17.0.0\AndroidManifest.xml:27:9-41
+23        android:required="true" />
+23-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\2d547673e05a0f4359ea410021e8e7c2\jetified-play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
 24
-25    <uses-feature
-25-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\2d547673e05a0f4359ea410021e8e7c2\jetified-play-services-maps-17.0.0\AndroidManifest.xml:26:5-28:35
-26        android:glEsVersion="0x00020000"
-26-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\2d547673e05a0f4359ea410021e8e7c2\jetified-play-services-maps-17.0.0\AndroidManifest.xml:27:9-41
-27        android:required="true" />
-27-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\2d547673e05a0f4359ea410021e8e7c2\jetified-play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
-28
-29    <application
-29-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:16:5-53:19
-30        android:allowBackup="true"
-30-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:17:9-35
-31        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-31-->[androidx.core:core:1.3.1] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\b234a824af7fd98a5c54fc0522824a91\core-1.3.1\AndroidManifest.xml:24:18-86
-32        android:debuggable="true"
-33        android:extractNativeLibs="false"
-34        android:icon="@mipmap/ic_launcher"
-34-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:18:9-43
-35        android:label="@string/app_name"
-35-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:19:9-41
-36        android:roundIcon="@mipmap/ic_launcher_round"
-36-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:20:9-54
-37        android:supportsRtl="true"
-37-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:21:9-35
-38        android:testOnly="true"
-39        android:theme="@style/Theme.British_GSurvey_EQuake"
-39-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:22:9-60
-40        android:usesCleartextTraffic="true" >
-40-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:23:9-44
-41
-42        <!--
-43             The API key for Google Maps-based APIs is defined as a string resource.
-44             (See the file "res/values/google_maps_api.xml").
-45             Note that the API key is linked to the encryption key used to sign the APK.
-46             You need a different API key for each encryption key, including the release key that is used to
-47             sign the APK for publishing.
-48             You can define the keys for the debug and release targets in src/debug/ and src/release/.
-49        -->
-50        <meta-data
-50-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:33:9-36:55
-51            android:name="com.google.android.geo.API_KEY"
-51-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:35:13-58
-52            android:value="@string/google_maps_key" />
-52-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:36:13-52
-53
-54        <!-- <activity -->
-55        <!-- android:name=".MapsActivity" -->
-56        <!-- android:label="@string/title_activity_maps"></activity> -->
-57        <activity android:name="org.me.gcu.British_GSurvey_EQuake.MainActivity" >
-57-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:41:9-47:20
-57-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:41:19-80
-58            <intent-filter>
-58-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:42:13-46:29
-59                <action android:name="android.intent.action.MAIN" />
-59-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:43:17-69
-59-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:43:25-66
-60
-61                <category android:name="android.intent.category.LAUNCHER" />
-61-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:45:17-77
-61-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:45:27-74
-62            </intent-filter>
-63        </activity>
-64        <activity android:name="org.me.gcu.British_GSurvey_EQuake.model.Details" >
-64-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:48:9-52:20
-64-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:48:19-81
-65            <meta-data
-65-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:49:13-51:82
-66                android:name="android.support.PARENT_ACTIVITY"
-66-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:50:17-63
-67                android:value="org.me.gcu.British_GSurvey_EQuake.MainActivity" />
-67-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:51:17-79
-68        </activity>
-69        <!-- Needs to be explicitly declared on P+ -->
-70        <uses-library
-70-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\2d547673e05a0f4359ea410021e8e7c2\jetified-play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
-71            android:name="org.apache.http.legacy"
-71-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\2d547673e05a0f4359ea410021e8e7c2\jetified-play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
-72            android:required="false" />
-72-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\2d547673e05a0f4359ea410021e8e7c2\jetified-play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
+25    <application
+25-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:12:5-48:19
+26        android:allowBackup="true"
+26-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:13:9-35
+27        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+27-->[androidx.core:core:1.3.1] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\b234a824af7fd98a5c54fc0522824a91\core-1.3.1\AndroidManifest.xml:24:18-86
+28        android:debuggable="true"
+29        android:extractNativeLibs="false"
+30        android:icon="@mipmap/ic_launcher"
+30-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:14:9-43
+31        android:label="British Earthquake Visualization"
+31-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:15:9-57
+32        android:roundIcon="@mipmap/ic_launcher_round"
+32-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:16:9-54
+33        android:supportsRtl="true"
+33-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:17:9-35
+34        android:testOnly="true"
+35        android:theme="@style/Theme.British_GSurvey_EQuake"
+35-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:18:9-60
+36        android:usesCleartextTraffic="true" >
+36-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:19:9-44
+37        <activity
+37-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:20:9-22:69
+38            android:name="org.me.gcu.British_GSurvey_EQuake.MainActivity2"
+38-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:21:13-42
+39            android:label="@string/title_activity_main2" />
+39-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:22:13-57
+40        <!--
+41             The API key for Google Maps-based APIs is defined as a string resource.
+42             (See the file "res/values/google_maps_api.xml").
+43             Note that the API key is linked to the encryption key used to sign the APK.
+44             You need a different API key for each encryption key, including the release key that is used to
+45             sign the APK for publishing.
+46             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+47        -->
+48        <meta-data
+48-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:31:9-33:55
+49            android:name="com.google.android.geo.API_KEY"
+49-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:32:13-58
+50            android:value="@string/google_maps_key" /> <!-- <activity -->
+50-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:33:13-52
+51        <!-- android:name=".MapsActivity" -->
+52        <!-- android:label="@string/title_activity_maps"></activity> -->
+53        <activity android:name="org.me.gcu.British_GSurvey_EQuake.MainActivity" >
+53-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:36:9-42:20
+53-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:36:19-47
+54            <intent-filter>
+54-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:37:13-41:29
+55                <action android:name="android.intent.action.MAIN" />
+55-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:38:17-69
+55-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:38:25-66
+56
+57                <category android:name="android.intent.category.LAUNCHER" />
+57-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:40:17-77
+57-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:40:27-74
+58            </intent-filter>
+59        </activity>
+60        <activity android:name="org.me.gcu.British_GSurvey_EQuake.model.Details" >
+60-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:43:9-47:20
+60-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:43:19-48
+61            <meta-data
+61-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:44:13-46:82
+62                android:name="android.support.PARENT_ACTIVITY"
+62-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:45:17-63
+63                android:value="org.me.gcu.British_GSurvey_EQuake.MainActivity" />
+63-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:46:17-79
+64        </activity>
+65        <!-- Needs to be explicitly declared on P+ -->
+66        <uses-library
+66-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\2d547673e05a0f4359ea410021e8e7c2\jetified-play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
+67            android:name="org.apache.http.legacy"
+67-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\2d547673e05a0f4359ea410021e8e7c2\jetified-play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
+68            android:required="false" />
+68-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\2d547673e05a0f4359ea410021e8e7c2\jetified-play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
+69
+70        <meta-data
+70-->[com.google.maps.android:android-maps-utils:2.2.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\254a692456f89a4b6d8d6da5c57b7ed6\jetified-android-maps-utils-2.2.0\AndroidManifest.xml:12:9-14:69
+71            android:name="com.google.android.gms.version"
+71-->[com.google.maps.android:android-maps-utils:2.2.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\254a692456f89a4b6d8d6da5c57b7ed6\jetified-android-maps-utils-2.2.0\AndroidManifest.xml:13:13-58
+72            android:value="@integer/google_play_services_version" />
+72-->[com.google.maps.android:android-maps-utils:2.2.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\254a692456f89a4b6d8d6da5c57b7ed6\jetified-android-maps-utils-2.2.0\AndroidManifest.xml:14:13-66
 73
-74        <meta-data
-74-->[com.google.maps.android:android-maps-utils:2.2.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\254a692456f89a4b6d8d6da5c57b7ed6\jetified-android-maps-utils-2.2.0\AndroidManifest.xml:12:9-14:69
-75            android:name="com.google.android.gms.version"
-75-->[com.google.maps.android:android-maps-utils:2.2.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\254a692456f89a4b6d8d6da5c57b7ed6\jetified-android-maps-utils-2.2.0\AndroidManifest.xml:13:13-58
-76            android:value="@integer/google_play_services_version" />
-76-->[com.google.maps.android:android-maps-utils:2.2.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\254a692456f89a4b6d8d6da5c57b7ed6\jetified-android-maps-utils-2.2.0\AndroidManifest.xml:14:13-66
-77
-78        <provider
-78-->[com.squareup.picasso:picasso:2.71828] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\1d67ea8a7b43679528dac81250f1cc65\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
-79            android:name="com.squareup.picasso.PicassoProvider"
-79-->[com.squareup.picasso:picasso:2.71828] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\1d67ea8a7b43679528dac81250f1cc65\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
-80            android:authorities="org.me.gcu.British_GSurvey_EQuake.com.squareup.picasso"
-80-->[com.squareup.picasso:picasso:2.71828] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\1d67ea8a7b43679528dac81250f1cc65\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
-81            android:exported="false" />
-81-->[com.squareup.picasso:picasso:2.71828] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\1d67ea8a7b43679528dac81250f1cc65\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
-82
-83        <activity
-83-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\af7ff4cdb9585a03f0fe804445629944\jetified-play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
-84            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-84-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\af7ff4cdb9585a03f0fe804445629944\jetified-play-services-base-17.0.0\AndroidManifest.xml:24:13-79
-85            android:exported="false"
-85-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\af7ff4cdb9585a03f0fe804445629944\jetified-play-services-base-17.0.0\AndroidManifest.xml:25:13-37
-86            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-86-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\af7ff4cdb9585a03f0fe804445629944\jetified-play-services-base-17.0.0\AndroidManifest.xml:26:13-72
-87
-88        <provider
-88-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\cc1b78387f68e50f131a6131e4d6d2b5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
-89            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-89-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\cc1b78387f68e50f131a6131e4d6d2b5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
-90            android:authorities="org.me.gcu.British_GSurvey_EQuake.lifecycle-process"
-90-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\cc1b78387f68e50f131a6131e4d6d2b5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
-91            android:exported="false"
-91-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\cc1b78387f68e50f131a6131e4d6d2b5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
-92            android:multiprocess="true" />
-92-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\cc1b78387f68e50f131a6131e4d6d2b5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
-93    </application>
-94
-95</manifest>
+74        <provider
+74-->[com.squareup.picasso:picasso:2.71828] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\1d67ea8a7b43679528dac81250f1cc65\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+75            android:name="com.squareup.picasso.PicassoProvider"
+75-->[com.squareup.picasso:picasso:2.71828] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\1d67ea8a7b43679528dac81250f1cc65\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+76            android:authorities="org.me.gcu.British_GSurvey_EQuake.com.squareup.picasso"
+76-->[com.squareup.picasso:picasso:2.71828] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\1d67ea8a7b43679528dac81250f1cc65\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+77            android:exported="false" />
+77-->[com.squareup.picasso:picasso:2.71828] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\1d67ea8a7b43679528dac81250f1cc65\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+78
+79        <activity
+79-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\af7ff4cdb9585a03f0fe804445629944\jetified-play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+80            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+80-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\af7ff4cdb9585a03f0fe804445629944\jetified-play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+81            android:exported="false"
+81-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\af7ff4cdb9585a03f0fe804445629944\jetified-play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+82            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+82-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\af7ff4cdb9585a03f0fe804445629944\jetified-play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+83
+84        <provider
+84-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\cc1b78387f68e50f131a6131e4d6d2b5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+85            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+85-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\cc1b78387f68e50f131a6131e4d6d2b5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
+86            android:authorities="org.me.gcu.British_GSurvey_EQuake.lifecycle-process"
+86-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\cc1b78387f68e50f131a6131e4d6d2b5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+87            android:exported="false"
+87-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\cc1b78387f68e50f131a6131e4d6d2b5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+88            android:multiprocess="true" />
+88-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\cc1b78387f68e50f131a6131e4d6d2b5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+89    </application>
+90
+91</manifest>

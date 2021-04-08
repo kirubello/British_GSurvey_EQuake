@@ -13,7 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43b3ef73-7591-481c-9c71-900eeb2f1db9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/filter_eqdata.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/org/me/gcu/British_GSurvey_EQuake/db/Task.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
@@ -24,68 +24,266 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_customview_customview_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_drawerlayout_drawerlayout_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_fragment_fragment_1_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_savedstate_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_material_material_1_3_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/British_GSurvey_EQuake.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/British_GSurvey_EQuake.app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/classes.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex_archive_input_jar_hashes/debug/out" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex_archive_input_jar_hashes/debug/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/merge-state" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/org/me/gcu/British_GSurvey_EQuake/ItemClass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/org/me/gcu/British_GSurvey_EQuake/MainActivity$Task$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/org/me/gcu/British_GSurvey_EQuake/MainActivity$Task$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/org/me/gcu/British_GSurvey_EQuake/MainActivity$Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/org/me/gcu/British_GSurvey_EQuake/MainActivity$Task.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/javaResources0" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/javaResources0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/org/me/gcu/British_GSurvey_EQuake/MainActivity$Task$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/org/me/gcu/British_GSurvey_EQuake/MainActivity$Task.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/org/me/gcu/British_GSurvey_EQuake/MainActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/org/me/gcu/British_GSurvey_EQuake/MainActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/org/me/gcu/British_GSurvey_EQuake/model/Adapter$ViewHolder$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/org/me/gcu/British_GSurvey_EQuake/model/Adapter$ViewHolder$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/org/me/gcu/British_GSurvey_EQuake/model/Adapter$ViewHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/org/me/gcu/British_GSurvey_EQuake/model/Adapter$ViewHolder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/org/me/gcu/British_GSurvey_EQuake/model/Adapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/org/me/gcu/British_GSurvey_EQuake/model/Adapter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/org/me/gcu/British_GSurvey_EQuake/model/CustomClusterRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/org/me/gcu/British_GSurvey_EQuake/model/CustomClusterRenderer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/org/me/gcu/British_GSurvey_EQuake/model/Details.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/org/me/gcu/British_GSurvey_EQuake/model/Details.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_java_res/debug/out.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_java_res/debug/out.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_manifest/debug/out/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_manifest/debug/out/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/debug.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-af.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-af.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-am.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-am.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ar.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ar.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-as.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-as.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-az.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-az.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-b+es+419.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-b+es+419.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-b+sr+Latn.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-b+sr+Latn.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-be.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-be.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-bg.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-bg.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-bn.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-bn.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-bs.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-bs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ca.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ca.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-cs.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-cs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-da.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-da.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-de.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-de.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-el.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-el.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rAU.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rAU.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rGB.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rGB.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rIN.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-en-rIN.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-es-rUS.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-es-rUS.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-es.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-es.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-et.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-et.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-eu.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-eu.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-fa.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-fa.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-fi.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-fi.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-fr-rCA.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-fr-rCA.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-fr.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-fr.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-gl.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-gl.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-gu.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-gu.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h320dp-port-v13.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h320dp-port-v13.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h360dp-land-v13.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h360dp-land-v13.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h480dp-land-v13.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h480dp-land-v13.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h550dp-port-v13.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h550dp-port-v13.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-h600dp-port-v13.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hi.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hi.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hr.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hr.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hu.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hu.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hy.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-hy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-in.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-in.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-is.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-is.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-it.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-it.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-iw.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-iw.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ja.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ja.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ka.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ka.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-kk.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-kk.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-km.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-km.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-kn.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-kn.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ko.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ko.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ky.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ky.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-land.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-land.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-large-v4.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-large-v4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ldrtl-v17.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ldrtl-v17.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-lo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-lo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-lt.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-lt.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-lv.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-lv.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-mk.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-mk.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ml.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ml.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-mn.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-mn.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-mr.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-mr.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ms.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ms.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-my.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-my.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-nb.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-nb.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ne.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ne.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-night-v8.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-night-v8.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-nl.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-nl.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-or.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-or.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pa.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pa.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pl.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pl.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pt-rBR.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pt-rBR.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pt-rPT.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pt-rPT.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pt.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-pt.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ro.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ro.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ru.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ru.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-si.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-si.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sk.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sk.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sl.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sl.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-small-v4.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-small-v4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sq.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sq.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sr.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sr.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sv.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sv.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sw.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sw.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sw600dp-v13.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-sw600dp-v13.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ta.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ta.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-te.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-te.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-th.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-th.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-tl.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-tl.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-tr.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-tr.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-uk.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-uk.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ur.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-ur.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-uz.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-uz.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v21.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v21.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v23.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v23.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v28.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-v28.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-vi.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-vi.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-w320dp-land-v13.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-w320dp-land-v13.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-w360dp-port-v13.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-w360dp-port-v13.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-w480dp-port-v13.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-w480dp-port-v13.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-w550dp-land-v13.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-w600dp-land-v13.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-w600dp-land-v13.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-zh-rCN.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-zh-rCN.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-zh-rHK.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-zh-rHK.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-zh-rTW.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-zh-rTW.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-zu.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-zu.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/single/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/single/debug.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/navigation_json/debug/navigation.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/navigation_json/debug/navigation.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/packaged_manifests/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/packaged_manifests/debug/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/dc8b211cec06b823b409419f5f798e69fff00e4b370e1329c070c114ce86b0a4_0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/dc8b211cec06b823b409419f5f798e69fff00e4b370e1329c070c114ce86b0a4_1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/dc8b211cec06b823b409419f5f798e69fff00e4b370e1329c070c114ce86b0a4_2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/dc8b211cec06b823b409419f5f798e69fff00e4b370e1329c070c114ce86b0a4_3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/dc8b211cec06b823b409419f5f798e69fff00e4b370e1329c070c114ce86b0a4_4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/dc8b211cec06b823b409419f5f798e69fff00e4b370e1329c070c114ce86b0a4_5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/org/me/gcu/British_GSurvey_EQuake/ItemClass.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/org/me/gcu/British_GSurvey_EQuake/MainActivity$Task$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/org/me/gcu/British_GSurvey_EQuake/MainActivity$Task$1.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/org/me/gcu/British_GSurvey_EQuake/MainActivity$Task.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/org/me/gcu/British_GSurvey_EQuake/MainActivity$Task.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/org/me/gcu/British_GSurvey_EQuake/MainActivity$Task$1.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/org/me/gcu/British_GSurvey_EQuake/MainActivity$Task.dex" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/org/me/gcu/British_GSurvey_EQuake/MainActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/org/me/gcu/British_GSurvey_EQuake/MainActivity.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/org/me/gcu/British_GSurvey_EQuake/model/Adapter$ViewHolder$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/org/me/gcu/British_GSurvey_EQuake/model/Adapter$ViewHolder$1.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/org/me/gcu/British_GSurvey_EQuake/model/Adapter$ViewHolder.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/org/me/gcu/British_GSurvey_EQuake/model/Adapter$ViewHolder.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/org/me/gcu/British_GSurvey_EQuake/model/Adapter.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/org/me/gcu/British_GSurvey_EQuake/model/Adapter.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/org/me/gcu/British_GSurvey_EQuake/model/CustomClusterRenderer.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/org/me/gcu/British_GSurvey_EQuake/model/CustomClusterRenderer.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/org/me/gcu/British_GSurvey_EQuake/model/Details.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/project_dex_archive/debug/out/org/me/gcu/British_GSurvey_EQuake/model/Details.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout-land_activity_details.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout-land_activity_details.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout-land_activity_main.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout-land_activity_main.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout-land_activity_maps.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout-land_activity_maps.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_details.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_details.xml.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_maps.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_maps.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_eq_cardview.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_eq_cardview.xml.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/menu_top_app_bar.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/menu_top_app_bar.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-af_values-af.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-af_values-af.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-am_values-am.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-am_values-am.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ar_values-ar.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ar_values-ar.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-as_values-as.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-as_values-as.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-az_values-az.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-az_values-az.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-b+sr+Latn_values-b+sr+Latn.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-b+sr+Latn_values-b+sr+Latn.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-be_values-be.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-be_values-be.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-bg_values-bg.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-bg_values-bg.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-bn_values-bn.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-bn_values-bn.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-bs_values-bs.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-bs_values-bs.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ca_values-ca.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ca_values-ca.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-cs_values-cs.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-cs_values-cs.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-da_values-da.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-da_values-da.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-de_values-de.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-de_values-de.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-el_values-el.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-el_values-el.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-en-rAU_values-en-rAU.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-en-rAU_values-en-rAU.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-en-rGB_values-en-rGB.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-en-rGB_values-en-rGB.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-en-rIN_values-en-rIN.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-en-rIN_values-en-rIN.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-es-rUS_values-es-rUS.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-es-rUS_values-es-rUS.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-es_values-es.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-es_values-es.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-et_values-et.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-et_values-et.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-eu_values-eu.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-eu_values-eu.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-fa_values-fa.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-fa_values-fa.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-fi_values-fi.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-fi_values-fi.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-fr-rCA_values-fr-rCA.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-fr-rCA_values-fr-rCA.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-fr_values-fr.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-fr_values-fr.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-gl_values-gl.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-gl_values-gl.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-gu_values-gu.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-gu_values-gu.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-h320dp-port-v13_values-h320dp-port-v13.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-h320dp-port-v13_values-h320dp-port-v13.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-h550dp-port-v13_values-h550dp-port-v13.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-h550dp-port-v13_values-h550dp-port-v13.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-h600dp-port-v13_values-h600dp-port-v13.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-hi_values-hi.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-hi_values-hi.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-hr_values-hr.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-hr_values-hr.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-hu_values-hu.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-hu_values-hu.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-hy_values-hy.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-hy_values-hy.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-in_values-in.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-in_values-in.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-is_values-is.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-is_values-is.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-it_values-it.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-it_values-it.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-iw_values-iw.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-iw_values-iw.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ja_values-ja.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ja_values-ja.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ka_values-ka.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ka_values-ka.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-kk_values-kk.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-kk_values-kk.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-km_values-km.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-km_values-km.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-kn_values-kn.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-kn_values-kn.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ko_values-ko.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ko_values-ko.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ky_values-ky.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ky_values-ky.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-land_values-land.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-land_values-land.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-lo_values-lo.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-lo_values-lo.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-lt_values-lt.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-lt_values-lt.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-lv_values-lv.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-lv_values-lv.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-mk_values-mk.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-mk_values-mk.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ml_values-ml.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ml_values-ml.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-mn_values-mn.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-mn_values-mn.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-mr_values-mr.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-mr_values-mr.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ms_values-ms.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ms_values-ms.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-my_values-my.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-my_values-my.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-nb_values-nb.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-nb_values-nb.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ne_values-ne.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ne_values-ne.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-night-v8_values-night-v8.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-night-v8_values-night-v8.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-nl_values-nl.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-nl_values-nl.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-or_values-or.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-or_values-or.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-pa_values-pa.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-pa_values-pa.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-pl_values-pl.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-pl_values-pl.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-pt-rBR_values-pt-rBR.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-pt-rBR_values-pt-rBR.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-pt-rPT_values-pt-rPT.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-pt-rPT_values-pt-rPT.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-pt_values-pt.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-pt_values-pt.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ro_values-ro.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ro_values-ro.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ru_values-ru.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ru_values-ru.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-si_values-si.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-si_values-si.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-sk_values-sk.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-sk_values-sk.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-sl_values-sl.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-sl_values-sl.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-sq_values-sq.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-sq_values-sq.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-sr_values-sr.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-sr_values-sr.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-sv_values-sv.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-sv_values-sv.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-sw_values-sw.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-sw_values-sw.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ta_values-ta.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ta_values-ta.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-te_values-te.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-te_values-te.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-th_values-th.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-th_values-th.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-tl_values-tl.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-tl_values-tl.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-tr_values-tr.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-tr_values-tr.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-uk_values-uk.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-uk_values-uk.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ur_values-ur.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-ur_values-ur.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-uz_values-uz.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-uz_values-uz.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-v21_values-v21.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-v21_values-v21.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-vi_values-vi.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-vi_values-vi.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-w320dp-land-v13_values-w320dp-land-v13.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-w320dp-land-v13_values-w320dp-land-v13.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-w550dp-land-v13_values-w550dp-land-v13.arsc.flat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-w600dp-land-v13_values-w600dp-land-v13.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-w600dp-land-v13_values-w600dp-land-v13.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-zh-rCN_values-zh-rCN.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-zh-rCN_values-zh-rCN.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-zh-rHK_values-zh-rHK.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-zh-rHK_values-zh-rHK.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-zh-rTW_values-zh-rTW.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-zh-rTW_values-zh-rTW.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-zu_values-zu.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-zu_values-zu.arsc.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values_values.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values_values.arsc.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/runtime_symbol_list/debug/R.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/runtime_symbol_list/debug/R.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/compileDebugJavaWithJavac/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileDebugJavaWithJavac/source-classes-mapping.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/me/gcu/British_GSurvey_EQuake/ItemClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/me/gcu/British_GSurvey_EQuake/model/ItemClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/org/me/gcu/British_GSurvey_EQuake/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/me/gcu/British_GSurvey_EQuake/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/me/gcu/British_GSurvey_EQuake/model/Adapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/me/gcu/British_GSurvey_EQuake/model/Adapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/me/gcu/British_GSurvey_EQuake/model/CustomClusterRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/me/gcu/British_GSurvey_EQuake/model/CustomClusterRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/me/gcu/British_GSurvey_EQuake/model/Details.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/me/gcu/British_GSurvey_EQuake/model/Details.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/top_app_bar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/top_app_bar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,9 +302,22 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="British_GSurvey_EQuake" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="British_GSurvey_EQuake" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -131,19 +342,19 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_API_28" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-04-06T08:49:44.588Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="RFCM90FGYLH" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-04-08T15:03:33.689Z" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android-custom-viewC:/Users/afewo/.gradle/caches/modules-2/files-2.1/androidx.appcompat/appcompat/1.2.0/13e8ff89631c2e101eb6bddd12c2fb4bbd74b15d/appcompat-1.2.0-sources.jar!/androidx/appcompat/widget/ActionBarOverlayLayout.java_SELECTED" value="ActionBarOverlayLayout" />
     <property name="android-custom-viewC:/Users/afewo/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED" value="RecyclerView" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../ASMapTest/ASMapTest" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../MaterialDatePicker/MaterialDatePicker" />
     <property name="multi-representation-previewC:/Users/afewo/.gradle/caches/modules-2/files-2.1/androidx.appcompat/appcompat/1.2.0/13e8ff89631c2e101eb6bddd12c2fb4bbd74b15d/appcompat-1.2.0-sources.jar!/androidx/appcompat/widget/ActionBarOverlayLayout.java_selected" value="Custom views" />
     <property name="multi-representation-previewC:/Users/afewo/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_selected" value="Custom views" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Dependencies" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="PsdUISettings">
     <option name="RESOLVED_DEPENDENCIES_MINIMIZE" value="true" />
@@ -151,8 +362,11 @@
     <option name="LAST_EDITED_BUILD_TYPE" value="release" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="org.me.gcu.equakestartercode" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\EQuakeStarterCode\app\src\main\res\layout" />
+      <recent name="E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\EQuakeStarterCode\app\src\main\res\drawable" />
+      <recent name="E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\EQuakeStarterCode\app\src\main\java\org\me\gcu\equakestartercode\model" />
+      <recent name="E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\EQuakeStarterCode\app\src\main\java\org\me\gcu\equakestartercode" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\EQuakeStarterCode\app\src\main\res\layout" />
@@ -162,17 +376,17 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="org.me.gcu.equakestartercode" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\EQuakeStarterCode\app\src\main\res\layout" />
-      <recent name="E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\EQuakeStarterCode\app\src\main\res\drawable" />
-      <recent name="E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\EQuakeStarterCode\app\src\main\java\org\me\gcu\equakestartercode\model" />
-      <recent name="E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\EQuakeStarterCode\app\src\main\java\org\me\gcu\equakestartercode" />
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.me.gcu.equakestartercode.model" />
+    </key>
+    <key name="android.template.968905647">
+      <recent name="org.me.gcu.British_GSurvey_EQuake" />
     </key>
     <key name="android.template.651332932">
       <recent name="org.me.gcu.equakestartercode" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="org.me.gcu.equakestartercode.model" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.me.gcu.equakestartercode" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">
@@ -299,6 +513,16 @@
     <option name="localTasksCounter" value="5" />
     <servers />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="third commit" />
     <MESSAGE value="4 commit" />
@@ -307,11 +531,12 @@
     <option name="LAST_COMMIT_MESSAGE" value="6 commit corrected codes" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="224" y="0" width="1322" height="1040" key="#PSD" timestamp="1617760096984">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="4107" y="0" width="1653" height="999" key="#PSD" timestamp="1617877876083">
+      <screen x="3840" y="0" width="1920" height="999" />
     </state>
     <state x="287" y="159" key="#PSD/0.0.1536.824/1920.-720.1280.639@0.0.1536.824" timestamp="1616719308141" />
     <state x="4120" y="0" width="1322" height="1040" key="#PSD/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1617445828800" />
+    <state x="4107" y="0" width="1653" height="999" key="#PSD/0.0.1536.824/3840.0.1920.999@3840.0.1920.999" timestamp="1617877876083" />
     <state x="224" y="0" key="#PSD/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617760096984" />
     <state x="4525" y="232" key="#Template" timestamp="1617029435549">
       <screen x="3840" y="0" width="1920" height="1040" />
@@ -348,12 +573,13 @@
     </state>
     <state x="131" y="217" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617758111562" />
     <state x="131" y="217" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1616847661058" />
-    <state x="1053" y="239" key="#com.intellij.ide.util.MemberChooser" timestamp="1617495167223">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="5156" y="290" key="#com.intellij.ide.util.MemberChooser" timestamp="1617881324624">
+      <screen x="3840" y="0" width="1920" height="999" />
     </state>
     <state x="1053" y="239" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/-1680.645.1680.1010@0.0.1536.824" timestamp="1616861507193" />
     <state x="1053" y="218" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/1920.-720.1280.639@0.0.1536.824" timestamp="1617321386535" />
     <state x="5156" y="302" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1617463421929" />
+    <state x="5156" y="290" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/3840.0.1920.999@3840.0.1920.999" timestamp="1617881324624" />
     <state x="1053" y="239" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617495167223" />
     <state x="1053" y="239" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/3840.523.1920.1040@0.0.1536.824" timestamp="1616802806696" />
     <state x="1097" y="228" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860/1600.0.1920.1160@0.0.1600.860" timestamp="1617221496898" />
@@ -371,23 +597,29 @@
       <screen x="3840" y="0" width="1920" height="1040" />
     </state>
     <state x="4412" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1617631086931" />
-    <state x="500" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1617659220749">
+    <state x="500" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1617821905244">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="500" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/-1680.645.1680.1010@0.0.1536.824" timestamp="1616864872636" />
     <state x="500" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/1920.-720.1280.639@0.0.1536.824" timestamp="1617659220749" />
+    <state x="500" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/3840.0.1920.999@0.0.1536.824" timestamp="1617821905244" />
     <state x="4530" y="267" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1617029801538">
       <screen x="3840" y="0" width="1920" height="1040" />
     </state>
     <state x="4530" y="267" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1617029801538" />
+    <state x="5118" y="252" key="#xdebugger.XInspectDialog" timestamp="1617892313251">
+      <screen x="3840" y="0" width="1920" height="999" />
+    </state>
+    <state x="5118" y="252" key="#xdebugger.XInspectDialog/0.0.1536.824/3840.0.1920.999@3840.0.1920.999" timestamp="1617892313251" />
     <state x="4555" y="223" key="#xdebugger.evaluate" timestamp="1616938272968">
       <screen x="3840" y="0" width="1920" height="1040" />
     </state>
     <state x="4555" y="223" key="#xdebugger.evaluate/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1616938272968" />
-    <state x="-1445" y="182" width="1208" height="630" key="AVDManager" timestamp="1611845443772">
-      <screen x="-1600" y="-67" width="1600" height="1160" />
+    <state x="4026" y="214" width="1450" height="543" key="AVDManager" timestamp="1617893015627">
+      <screen x="3840" y="0" width="1920" height="999" />
     </state>
     <state x="-1445" y="182" width="1208" height="630" key="AVDManager/0.0.1536.824/-1600.-67.1600.1160@-1600.-67.1600.1160" timestamp="1611845443772" />
+    <state x="4026" y="214" width="1450" height="543" key="AVDManager/0.0.1536.824/3840.0.1920.999@3840.0.1920.999" timestamp="1617893015627" />
     <state x="4380" y="275" key="AndroidCreateResourceDirectoryDialog" timestamp="1617448909395">
       <screen x="3840" y="0" width="1920" height="1040" />
     </state>
@@ -396,17 +628,19 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="350" y="168" key="AndroidCreateResourceFileDialog/0.0.1536.824/3840.523.1920.1040@0.0.1536.824" timestamp="1616805871126" />
-    <state x="925" y="393" key="AndroidCreateXmlResourceDialog" timestamp="1617549683985">
+    <state x="925" y="393" key="AndroidCreateXmlResourceDialog" timestamp="1617830921091">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="925" y="393" key="AndroidCreateXmlResourceDialog/0.0.1536.824/-1680.645.1680.1010@0.0.1536.824" timestamp="1616861668191" />
-    <state x="925" y="393" key="AndroidCreateXmlResourceDialog/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617549683985" />
+    <state x="4996" y="476" key="AndroidCreateXmlResourceDialog/0.0.1536.824/3840.0.1920.999@3840.0.1920.999" timestamp="1617817805103" />
+    <state x="925" y="393" key="AndroidCreateXmlResourceDialog/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617830921091" />
     <state x="897" y="332" key="AndroidCreateXmlResourceDialog/0.0.1536.824/3840.523.1920.1040@0.0.1536.824" timestamp="1616805115906" />
     <state x="925" y="393" key="AndroidCreateXmlResourceDialog/0.0.1536.824@0.0.1536.824" timestamp="1616847382706" />
-    <state x="588" y="160" key="AndroidProcessChooserDialog" timestamp="1617669955150">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="4575" y="194" key="AndroidProcessChooserDialog" timestamp="1617893486305">
+      <screen x="3840" y="0" width="1920" height="999" />
     </state>
     <state x="588" y="160" key="AndroidProcessChooserDialog/0.0.1536.824/1920.-720.1280.639@0.0.1536.824" timestamp="1617669955150" />
+    <state x="4575" y="194" key="AndroidProcessChooserDialog/0.0.1536.824/3840.0.1920.999@3840.0.1920.999" timestamp="1617893486305" />
     <state x="588" y="160" key="AndroidProcessChooserDialog/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617554396461" />
     <state x="350" y="118" key="AndroidThemeDialog" timestamp="1616803784770">
       <screen x="0" y="0" width="1536" height="824" />
@@ -420,21 +654,23 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="830" height="458" key="DebuggerActiveHint/0.0.1536.824/1920.-720.1280.639@0.0.1536.824" timestamp="1617643735760" />
-    <state x="149" y="65" key="DiffContextDialog" timestamp="1617756144131">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="4026" y="79" width="1228" height="687" key="DiffContextDialog" timestamp="1617893015627">
+      <screen x="3840" y="0" width="1920" height="999" />
     </state>
+    <state x="4026" y="79" width="1228" height="687" key="DiffContextDialog/0.0.1536.824/3840.0.1920.999@3840.0.1920.999" timestamp="1617893015627" />
     <state x="149" y="65" key="DiffContextDialog/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617756144131" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1617815084255">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="4526" y="202" key="FileChooserDialogImpl" timestamp="1617892924060">
+      <screen x="3840" y="0" width="1920" height="999" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/-1920.540.1536.824@0.0.1536.824" timestamp="1617063806939" />
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/1920.-720.1280.639@0.0.1536.824" timestamp="1617300972694" />
     <state x="4526" y="211" key="FileChooserDialogImpl/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1617446532496" />
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/3840.0.1920.999@0.0.1536.824" timestamp="1617815084255" />
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617762359852" />
+    <state x="4526" y="202" key="FileChooserDialogImpl/0.0.1536.824/3840.0.1920.999@3840.0.1920.999" timestamp="1617892924060" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617832462020" />
     <state x="4389" y="741" key="FileChooserDialogImpl/0.0.1536.824/3840.574.1536.824@3840.574.1536.824" timestamp="1616880980228" />
-    <state width="1492" height="279" key="GridCell.Tab.0.bottom" timestamp="1617761795386">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="916" height="279" key="GridCell.Tab.0.bottom" timestamp="1617894521021">
+      <screen x="3840" y="0" width="1920" height="999" />
     </state>
     <state width="1340" height="399" key="GridCell.Tab.0.bottom/0.0.1536.824/-1600.-67.1600.1160@-1600.-67.1600.1160" timestamp="1610463254763" />
     <state width="1497" height="476" key="GridCell.Tab.0.bottom/0.0.1536.824/-1680.645.1680.1010@0.0.1536.824" timestamp="1616868871420" />
@@ -442,15 +678,17 @@
     <state width="1492" height="220" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.-720.1280.639@0.0.1536.824" timestamp="1617670738698" />
     <state width="1491" height="302" key="GridCell.Tab.0.bottom/0.0.1536.824/3840.0.1920.1040@0.0.1536.824" timestamp="1617025433217" />
     <state width="1877" height="372" key="GridCell.Tab.0.bottom/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1617637535814" />
-    <state width="1492" height="279" key="GridCell.Tab.0.bottom/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617761795386" />
+    <state width="1492" height="279" key="GridCell.Tab.0.bottom/0.0.1536.824/3840.0.1920.999@0.0.1536.824" timestamp="1617822370087" />
+    <state width="916" height="279" key="GridCell.Tab.0.bottom/0.0.1536.824/3840.0.1920.999@3840.0.1920.999" timestamp="1617894521021" />
+    <state width="1492" height="279" key="GridCell.Tab.0.bottom/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617834954923" />
     <state width="1538" height="488" key="GridCell.Tab.0.bottom/0.0.1536.824/3840.523.1920.1040@0.0.1536.824" timestamp="1616803536035" />
     <state width="1492" height="238" key="GridCell.Tab.0.bottom/0.0.1536.824/3840.574.1536.824@0.0.1536.824" timestamp="1616893220679" />
     <state width="1491" height="524" key="GridCell.Tab.0.bottom/0.0.1536.824/3840.574.1536.824@3840.574.1536.824" timestamp="1616891769848" />
     <state width="1492" height="230" key="GridCell.Tab.0.bottom/0.0.1536.824/3840.575.1680.1010@0.0.1536.824" timestamp="1616880173280" />
-    <state width="1492" height="279" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1617731173437" />
+    <state width="721" height="279" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1617884728319" />
     <state width="1557" height="235" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1920.1160@0.0.1600.860" timestamp="1617225433028" />
-    <state width="1492" height="279" key="GridCell.Tab.0.center" timestamp="1617761795386">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="916" height="279" key="GridCell.Tab.0.center" timestamp="1617894521021">
+      <screen x="3840" y="0" width="1920" height="999" />
     </state>
     <state width="1340" height="399" key="GridCell.Tab.0.center/0.0.1536.824/-1600.-67.1600.1160@-1600.-67.1600.1160" timestamp="1610463254763" />
     <state width="1497" height="476" key="GridCell.Tab.0.center/0.0.1536.824/-1680.645.1680.1010@0.0.1536.824" timestamp="1616868871420" />
@@ -458,15 +696,17 @@
     <state width="1492" height="220" key="GridCell.Tab.0.center/0.0.1536.824/1920.-720.1280.639@0.0.1536.824" timestamp="1617670738698" />
     <state width="1491" height="302" key="GridCell.Tab.0.center/0.0.1536.824/3840.0.1920.1040@0.0.1536.824" timestamp="1617025433217" />
     <state width="1877" height="372" key="GridCell.Tab.0.center/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1617637535813" />
-    <state width="1492" height="279" key="GridCell.Tab.0.center/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617761795386" />
+    <state width="1492" height="279" key="GridCell.Tab.0.center/0.0.1536.824/3840.0.1920.999@0.0.1536.824" timestamp="1617822370087" />
+    <state width="916" height="279" key="GridCell.Tab.0.center/0.0.1536.824/3840.0.1920.999@3840.0.1920.999" timestamp="1617894521021" />
+    <state width="1492" height="279" key="GridCell.Tab.0.center/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617834954923" />
     <state width="1538" height="488" key="GridCell.Tab.0.center/0.0.1536.824/3840.523.1920.1040@0.0.1536.824" timestamp="1616803536035" />
     <state width="1492" height="238" key="GridCell.Tab.0.center/0.0.1536.824/3840.574.1536.824@0.0.1536.824" timestamp="1616893220679" />
     <state width="1491" height="524" key="GridCell.Tab.0.center/0.0.1536.824/3840.574.1536.824@3840.574.1536.824" timestamp="1616891769848" />
     <state width="1492" height="230" key="GridCell.Tab.0.center/0.0.1536.824/3840.575.1680.1010@0.0.1536.824" timestamp="1616880173280" />
-    <state width="1492" height="279" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1617731173437" />
+    <state width="721" height="279" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1617884728318" />
     <state width="1557" height="235" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1920.1160@0.0.1600.860" timestamp="1617225433028" />
-    <state width="1492" height="279" key="GridCell.Tab.0.left" timestamp="1617761795386">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="916" height="279" key="GridCell.Tab.0.left" timestamp="1617894521021">
+      <screen x="3840" y="0" width="1920" height="999" />
     </state>
     <state width="1340" height="399" key="GridCell.Tab.0.left/0.0.1536.824/-1600.-67.1600.1160@-1600.-67.1600.1160" timestamp="1610463254762" />
     <state width="1497" height="476" key="GridCell.Tab.0.left/0.0.1536.824/-1680.645.1680.1010@0.0.1536.824" timestamp="1616868871420" />
@@ -474,15 +714,17 @@
     <state width="1492" height="220" key="GridCell.Tab.0.left/0.0.1536.824/1920.-720.1280.639@0.0.1536.824" timestamp="1617670738698" />
     <state width="1491" height="302" key="GridCell.Tab.0.left/0.0.1536.824/3840.0.1920.1040@0.0.1536.824" timestamp="1617025433217" />
     <state width="1877" height="372" key="GridCell.Tab.0.left/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1617637535813" />
-    <state width="1492" height="279" key="GridCell.Tab.0.left/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617761795386" />
+    <state width="1492" height="279" key="GridCell.Tab.0.left/0.0.1536.824/3840.0.1920.999@0.0.1536.824" timestamp="1617822370087" />
+    <state width="916" height="279" key="GridCell.Tab.0.left/0.0.1536.824/3840.0.1920.999@3840.0.1920.999" timestamp="1617894521021" />
+    <state width="1492" height="279" key="GridCell.Tab.0.left/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617834954923" />
     <state width="1538" height="488" key="GridCell.Tab.0.left/0.0.1536.824/3840.523.1920.1040@0.0.1536.824" timestamp="1616803536035" />
     <state width="1492" height="238" key="GridCell.Tab.0.left/0.0.1536.824/3840.574.1536.824@0.0.1536.824" timestamp="1616893220678" />
     <state width="1491" height="524" key="GridCell.Tab.0.left/0.0.1536.824/3840.574.1536.824@3840.574.1536.824" timestamp="1616891769847" />
     <state width="1492" height="230" key="GridCell.Tab.0.left/0.0.1536.824/3840.575.1680.1010@0.0.1536.824" timestamp="1616880173280" />
-    <state width="1492" height="279" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1617731173437" />
+    <state width="721" height="279" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1617884728318" />
     <state width="1557" height="235" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1920.1160@0.0.1600.860" timestamp="1617225433028" />
-    <state width="1492" height="279" key="GridCell.Tab.0.right" timestamp="1617761795386">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="916" height="279" key="GridCell.Tab.0.right" timestamp="1617894521021">
+      <screen x="3840" y="0" width="1920" height="999" />
     </state>
     <state width="1340" height="399" key="GridCell.Tab.0.right/0.0.1536.824/-1600.-67.1600.1160@-1600.-67.1600.1160" timestamp="1610463254763" />
     <state width="1497" height="476" key="GridCell.Tab.0.right/0.0.1536.824/-1680.645.1680.1010@0.0.1536.824" timestamp="1616868871420" />
@@ -490,86 +732,99 @@
     <state width="1492" height="220" key="GridCell.Tab.0.right/0.0.1536.824/1920.-720.1280.639@0.0.1536.824" timestamp="1617670738698" />
     <state width="1491" height="302" key="GridCell.Tab.0.right/0.0.1536.824/3840.0.1920.1040@0.0.1536.824" timestamp="1617025433217" />
     <state width="1877" height="372" key="GridCell.Tab.0.right/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1617637535814" />
-    <state width="1492" height="279" key="GridCell.Tab.0.right/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617761795386" />
+    <state width="1492" height="279" key="GridCell.Tab.0.right/0.0.1536.824/3840.0.1920.999@0.0.1536.824" timestamp="1617822370087" />
+    <state width="916" height="279" key="GridCell.Tab.0.right/0.0.1536.824/3840.0.1920.999@3840.0.1920.999" timestamp="1617894521021" />
+    <state width="1492" height="279" key="GridCell.Tab.0.right/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617834954923" />
     <state width="1538" height="488" key="GridCell.Tab.0.right/0.0.1536.824/3840.523.1920.1040@0.0.1536.824" timestamp="1616803536035" />
     <state width="1492" height="238" key="GridCell.Tab.0.right/0.0.1536.824/3840.574.1536.824@0.0.1536.824" timestamp="1616893220679" />
     <state width="1491" height="524" key="GridCell.Tab.0.right/0.0.1536.824/3840.574.1536.824@3840.574.1536.824" timestamp="1616891769848" />
     <state width="1492" height="230" key="GridCell.Tab.0.right/0.0.1536.824/3840.575.1680.1010@0.0.1536.824" timestamp="1616880173280" />
-    <state width="1492" height="279" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1617731173437" />
+    <state width="721" height="279" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1617884728318" />
     <state width="1557" height="235" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1920.1160@0.0.1600.860" timestamp="1617225433028" />
-    <state width="1492" height="218" key="GridCell.Tab.1.bottom" timestamp="1617745475997">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="916" height="280" key="GridCell.Tab.1.bottom" timestamp="1617894203944">
+      <screen x="3840" y="0" width="1920" height="999" />
     </state>
     <state width="1497" height="476" key="GridCell.Tab.1.bottom/0.0.1536.824/-1680.645.1680.1010@0.0.1536.824" timestamp="1616868871421" />
     <state width="1496" height="226" key="GridCell.Tab.1.bottom/0.0.1536.824/-1920.540.1536.824@0.0.1536.824" timestamp="1617062652124" />
     <state width="1492" height="220" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.-720.1280.639@0.0.1536.824" timestamp="1617670738698" />
     <state width="1491" height="302" key="GridCell.Tab.1.bottom/0.0.1536.824/3840.0.1920.1040@0.0.1536.824" timestamp="1617025433218" />
     <state width="1877" height="295" key="GridCell.Tab.1.bottom/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1617632894517" />
-    <state width="1492" height="218" key="GridCell.Tab.1.bottom/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617745475997" />
+    <state width="916" height="280" key="GridCell.Tab.1.bottom/0.0.1536.824/3840.0.1920.999@3840.0.1920.999" timestamp="1617894203944" />
+    <state width="1492" height="218" key="GridCell.Tab.1.bottom/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617834950636" />
     <state width="1538" height="488" key="GridCell.Tab.1.bottom/0.0.1536.824/3840.523.1920.1040@0.0.1536.824" timestamp="1616803536036" />
     <state width="1492" height="238" key="GridCell.Tab.1.bottom/0.0.1536.824/3840.574.1536.824@0.0.1536.824" timestamp="1616893229765" />
     <state width="1491" height="524" key="GridCell.Tab.1.bottom/0.0.1536.824/3840.574.1536.824@3840.574.1536.824" timestamp="1616891769848" />
     <state width="1492" height="230" key="GridCell.Tab.1.bottom/0.0.1536.824/3840.575.1680.1010@0.0.1536.824" timestamp="1616880173281" />
     <state width="1491" height="302" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1617020001178" />
     <state width="1557" height="235" key="GridCell.Tab.1.bottom/0.0.1600.860/1600.0.1920.1160@0.0.1600.860" timestamp="1617225433029" />
-    <state width="1492" height="218" key="GridCell.Tab.1.center" timestamp="1617745475997">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="916" height="280" key="GridCell.Tab.1.center" timestamp="1617894203944">
+      <screen x="3840" y="0" width="1920" height="999" />
     </state>
     <state width="1497" height="476" key="GridCell.Tab.1.center/0.0.1536.824/-1680.645.1680.1010@0.0.1536.824" timestamp="1616868871421" />
     <state width="1496" height="226" key="GridCell.Tab.1.center/0.0.1536.824/-1920.540.1536.824@0.0.1536.824" timestamp="1617062652124" />
     <state width="1492" height="220" key="GridCell.Tab.1.center/0.0.1536.824/1920.-720.1280.639@0.0.1536.824" timestamp="1617670738698" />
     <state width="1491" height="302" key="GridCell.Tab.1.center/0.0.1536.824/3840.0.1920.1040@0.0.1536.824" timestamp="1617025433217" />
     <state width="1877" height="295" key="GridCell.Tab.1.center/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1617632894517" />
-    <state width="1492" height="218" key="GridCell.Tab.1.center/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617745475997" />
+    <state width="916" height="280" key="GridCell.Tab.1.center/0.0.1536.824/3840.0.1920.999@3840.0.1920.999" timestamp="1617894203944" />
+    <state width="1492" height="218" key="GridCell.Tab.1.center/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617834950636" />
     <state width="1538" height="488" key="GridCell.Tab.1.center/0.0.1536.824/3840.523.1920.1040@0.0.1536.824" timestamp="1616803536035" />
     <state width="1492" height="238" key="GridCell.Tab.1.center/0.0.1536.824/3840.574.1536.824@0.0.1536.824" timestamp="1616893229764" />
     <state width="1491" height="524" key="GridCell.Tab.1.center/0.0.1536.824/3840.574.1536.824@3840.574.1536.824" timestamp="1616891769848" />
     <state width="1492" height="230" key="GridCell.Tab.1.center/0.0.1536.824/3840.575.1680.1010@0.0.1536.824" timestamp="1616880173281" />
     <state width="1491" height="302" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1617020001178" />
     <state width="1557" height="235" key="GridCell.Tab.1.center/0.0.1600.860/1600.0.1920.1160@0.0.1600.860" timestamp="1617225433029" />
-    <state width="1492" height="218" key="GridCell.Tab.1.left" timestamp="1617745475997">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="916" height="280" key="GridCell.Tab.1.left" timestamp="1617894203944">
+      <screen x="3840" y="0" width="1920" height="999" />
     </state>
     <state width="1497" height="476" key="GridCell.Tab.1.left/0.0.1536.824/-1680.645.1680.1010@0.0.1536.824" timestamp="1616868871420" />
     <state width="1496" height="226" key="GridCell.Tab.1.left/0.0.1536.824/-1920.540.1536.824@0.0.1536.824" timestamp="1617062652124" />
     <state width="1492" height="220" key="GridCell.Tab.1.left/0.0.1536.824/1920.-720.1280.639@0.0.1536.824" timestamp="1617670738698" />
     <state width="1491" height="302" key="GridCell.Tab.1.left/0.0.1536.824/3840.0.1920.1040@0.0.1536.824" timestamp="1617025433217" />
     <state width="1877" height="295" key="GridCell.Tab.1.left/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1617632894517" />
-    <state width="1492" height="218" key="GridCell.Tab.1.left/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617745475997" />
+    <state width="916" height="280" key="GridCell.Tab.1.left/0.0.1536.824/3840.0.1920.999@3840.0.1920.999" timestamp="1617894203944" />
+    <state width="1492" height="218" key="GridCell.Tab.1.left/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617834950636" />
     <state width="1538" height="488" key="GridCell.Tab.1.left/0.0.1536.824/3840.523.1920.1040@0.0.1536.824" timestamp="1616803536035" />
     <state width="1492" height="238" key="GridCell.Tab.1.left/0.0.1536.824/3840.574.1536.824@0.0.1536.824" timestamp="1616893229764" />
     <state width="1491" height="524" key="GridCell.Tab.1.left/0.0.1536.824/3840.574.1536.824@3840.574.1536.824" timestamp="1616891769848" />
     <state width="1492" height="230" key="GridCell.Tab.1.left/0.0.1536.824/3840.575.1680.1010@0.0.1536.824" timestamp="1616880173281" />
     <state width="1491" height="302" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1617020001178" />
     <state width="1557" height="235" key="GridCell.Tab.1.left/0.0.1600.860/1600.0.1920.1160@0.0.1600.860" timestamp="1617225433028" />
-    <state width="1492" height="218" key="GridCell.Tab.1.right" timestamp="1617745475997">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="916" height="280" key="GridCell.Tab.1.right" timestamp="1617894203944">
+      <screen x="3840" y="0" width="1920" height="999" />
     </state>
     <state width="1497" height="476" key="GridCell.Tab.1.right/0.0.1536.824/-1680.645.1680.1010@0.0.1536.824" timestamp="1616868871421" />
     <state width="1496" height="226" key="GridCell.Tab.1.right/0.0.1536.824/-1920.540.1536.824@0.0.1536.824" timestamp="1617062652124" />
     <state width="1492" height="220" key="GridCell.Tab.1.right/0.0.1536.824/1920.-720.1280.639@0.0.1536.824" timestamp="1617670738698" />
     <state width="1491" height="302" key="GridCell.Tab.1.right/0.0.1536.824/3840.0.1920.1040@0.0.1536.824" timestamp="1617025433217" />
     <state width="1877" height="295" key="GridCell.Tab.1.right/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1617632894517" />
-    <state width="1492" height="218" key="GridCell.Tab.1.right/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617745475997" />
+    <state width="916" height="280" key="GridCell.Tab.1.right/0.0.1536.824/3840.0.1920.999@3840.0.1920.999" timestamp="1617894203944" />
+    <state width="1492" height="218" key="GridCell.Tab.1.right/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617834950636" />
     <state width="1538" height="488" key="GridCell.Tab.1.right/0.0.1536.824/3840.523.1920.1040@0.0.1536.824" timestamp="1616803536035" />
     <state width="1492" height="238" key="GridCell.Tab.1.right/0.0.1536.824/3840.574.1536.824@0.0.1536.824" timestamp="1616893229765" />
     <state width="1491" height="524" key="GridCell.Tab.1.right/0.0.1536.824/3840.574.1536.824@3840.574.1536.824" timestamp="1616891769848" />
     <state width="1492" height="230" key="GridCell.Tab.1.right/0.0.1536.824/3840.575.1680.1010@0.0.1536.824" timestamp="1616880173281" />
     <state width="1491" height="302" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1617020001178" />
     <state width="1557" height="235" key="GridCell.Tab.1.right/0.0.1600.860/1600.0.1920.1160@0.0.1600.860" timestamp="1617225433029" />
-    <state x="369" y="115" key="SettingsEditor" timestamp="1617760199418">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="4751" y="202" key="RollbackChangesDialog" timestamp="1617892967184">
+      <screen x="3840" y="0" width="1920" height="999" />
+    </state>
+    <state x="4751" y="202" key="RollbackChangesDialog/0.0.1536.824/3840.0.1920.999@3840.0.1920.999" timestamp="1617892967184" />
+    <state x="4301" y="139" key="SettingsEditor" timestamp="1617893015303">
+      <screen x="3840" y="0" width="1920" height="999" />
     </state>
     <state x="4301" y="165" key="SettingsEditor/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1617445724756" />
+    <state x="4301" y="139" key="SettingsEditor/0.0.1536.824/3840.0.1920.999@3840.0.1920.999" timestamp="1617893015303" />
     <state x="369" y="115" key="SettingsEditor/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617760199418" />
     <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1616941063879">
       <screen x="3840" y="0" width="1920" height="1040" />
     </state>
     <state width="968" height="528" key="XDebugger.FullValuePopup/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1616941063879" />
-    <state x="94" y="94" width="1349" height="637" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1617751564757">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="3667" y="279" width="1687" height="698" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1617892926794">
+      <screen x="3840" y="0" width="1920" height="999" />
     </state>
     <state x="94" y="94" width="1349" height="637" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824/1920.-720.1280.639@0.0.1536.824" timestamp="1616716383507" />
+    <state x="94" y="94" width="1349" height="637" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824/3840.0.1920.999@0.0.1536.824" timestamp="1617822075588" />
+    <state x="3667" y="279" width="1687" height="698" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824/3840.0.1920.999@3840.0.1920.999" timestamp="1617892926794" />
     <state x="94" y="94" width="1349" height="637" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617751564757" />
     <state x="94" y="94" width="1349" height="637" key="com.intellij.history.integration.ui.views.RecentChangeDialog" timestamp="1617757036379">
       <screen x="0" y="0" width="1536" height="824" />
@@ -580,18 +835,19 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="319" y="142" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617557261578" />
-    <state x="164" y="-6" width="853" height="532" key="dock-window-1" timestamp="1617661511227">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="4370" y="178" width="581" height="351" key="dock-window-1" timestamp="1617895208859">
+      <screen x="3840" y="0" width="1920" height="999" />
     </state>
     <state x="254" y="92" width="1024" height="686" key="dock-window-1/0.0.1536.824/-1920.540.1536.824@0.0.1536.824" timestamp="1617119618333" />
     <state x="164" y="-6" width="853" height="532" key="dock-window-1/0.0.1536.824/1920.-720.1280.639@0.0.1536.824" timestamp="1617661511227" />
     <state x="294" y="0" width="1254" height="831" key="dock-window-1/0.0.1536.824/3840.0.1280.680@0.0.1536.824" timestamp="1616794380165" />
     <state x="762" y="0" width="779" height="830" key="dock-window-1/0.0.1536.824/3840.0.1920.1040@0.0.1536.824" timestamp="1617630609144" />
     <state x="762" y="0" width="779" height="830" key="dock-window-1/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1617623972566" />
+    <state x="4370" y="178" width="581" height="351" key="dock-window-1/0.0.1536.824/3840.0.1920.999@3840.0.1920.999" timestamp="1617895208859" />
     <state x="254" y="92" width="1024" height="686" maximized="true" key="dock-window-1/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617120313306" />
     <state x="237" y="-15" width="1024" height="686" key="dock-window-1/0.0.1536.824/3840.574.1536.824@0.0.1536.824" timestamp="1617047120333" />
     <state x="223" y="-15" width="1024" height="686" key="dock-window-1/0.0.1536.824/3840.574.1536.824@3840.574.1536.824" timestamp="1616882703042" />
-    <state x="206" y="70" width="1024" height="686" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1616929675386" />
+    <state x="-6" y="0" width="779" height="830" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1617883700400" />
     <state x="4517" y="-23" width="418" height="274" maximized="true" key="dock-window-2" timestamp="1616795016480">
       <screen x="3840" y="0" width="1280" height="680" />
     </state>
@@ -605,28 +861,44 @@
     </state>
     <state x="476" y="12" width="585" height="801" key="find.popup/0.0.1536.824/1920.-720.1280.639@0.0.1536.824" timestamp="1617668404736" />
     <state x="476" y="12" width="769" height="801" key="find.popup/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617750991801" />
-    <state x="450" y="208" key="psd.add.library.dependency.panel.dimension" timestamp="1617735374615">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="4403" y="252" key="psd.add.library.dependency.panel.dimension" timestamp="1617877837164">
+      <screen x="3840" y="0" width="1920" height="999" />
     </state>
     <state x="4402" y="263" key="psd.add.library.dependency.panel.dimension/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1617445769833" />
+    <state x="4403" y="252" key="psd.add.library.dependency.panel.dimension/0.0.1536.824/3840.0.1920.999@3840.0.1920.999" timestamp="1617877837164" />
     <state x="450" y="208" key="psd.add.library.dependency.panel.dimension/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617735374615" />
     <state x="477" y="171" key="refactoring.ChangeSignatureDialog" timestamp="1617553501890">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="477" y="171" key="refactoring.ChangeSignatureDialog/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617553501890" />
-    <state x="427" y="187" key="run.anything.popup" timestamp="1617729947280">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="4375" y="227" width="672" height="677" key="run.anything.popup" timestamp="1617892912720">
+      <screen x="3840" y="0" width="1920" height="999" />
     </state>
+    <state x="4375" y="227" width="672" height="677" key="run.anything.popup/0.0.1536.824/3840.0.1920.999@3840.0.1920.999" timestamp="1617892912720" />
     <state x="427" y="187" key="run.anything.popup/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617729947280" />
-    <state x="678" y="176" width="672" height="678" key="search.everywhere.popup" timestamp="1617752254395">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="428" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1617883745688" />
+    <state x="4688" y="213" width="840" height="822" key="search.everywhere.popup" timestamp="1617892591406">
+      <screen x="3840" y="0" width="1920" height="999" />
     </state>
     <state x="678" y="176" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.-720.1280.639@0.0.1536.824" timestamp="1617668425157" />
     <state x="4688" y="222" width="840" height="856" key="search.everywhere.popup/0.0.1536.824/3840.0.1920.1040@3840.0.1920.1040" timestamp="1617450453368" />
+    <state x="4688" y="213" width="840" height="822" key="search.everywhere.popup/0.0.1536.824/3840.0.1920.999@3840.0.1920.999" timestamp="1617892591406" />
     <state x="678" y="176" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/3840.523.1536.824@0.0.1536.824" timestamp="1617752254395" />
     <state x="2405" y="-432" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1617292693657">
       <screen x="1920" y="-720" width="1280" height="639" />
     </state>
     <state x="2405" y="-432" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1536.824/1920.-720.1280.639@1920.-720.1280.639" timestamp="1617292693657" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo typeName="org.me.gcu.British_GSurvey_EQuake.MainActivity" fieldName="clusterManager" />
+      </pinned-members>
+    </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="app">
+        <watch expression="mainActivity" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
