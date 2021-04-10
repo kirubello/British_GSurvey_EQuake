@@ -8,6 +8,7 @@ import android.Manifest;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,6 +25,7 @@ import android.widget.ViewSwitcher;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.core.util.Pair;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -70,7 +72,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     RecyclerView recyclerView;
     Adapter adapter;
 
-
     //LinkedList<ItemClass> alist = null;
 
     private static final int REQUEST_LOCATION_PERMISSION = 1;
@@ -92,13 +93,12 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         setContentView(R.layout.activity_main);
         //  mapsActivity.onCreate(savedInstanceState);
         //  setContentView(R.layout.content_main);
-        Log.e("MyTag", "in onCreate");
+
         // Set up the raw links to the graphical components
-        rawDataDisplay = (TextView) findViewById(R.id.rawDataDisplay);
-        dateDisplay= findViewById(R.id.dateDisplay);
+        rawDataDisplay = findViewById(R.id.rawDataDisplay);
+        dateDisplay = findViewById(R.id.dateDisplay);
 
 //        startButton = (Button) findViewById(R.id.startButton);
-//
 //        startButton.setOnClickListener(this);
 
         viewSwitcher = findViewById(R.id.vwSwitch);
@@ -113,8 +113,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         s1Button.setOnClickListener(this);
         s2Button.setOnClickListener(this);
 
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.mMap);
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.mMap);
         mapFragment.getMapAsync(this);
 
         spinner = (Spinner) findViewById(R.id.spinner1);
@@ -124,7 +123,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
-        startProgress();
+
 
         dateRange = findViewById(R.id.date_Rangepicker);
 
@@ -148,12 +147,12 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         constraintBuilder.setEnd(today);
         constraintBuilder.setValidator(DateValidatorPointBackward.now());
 
-        MaterialDatePicker.Builder  builder = MaterialDatePicker.Builder.datePicker();
-         builder.setTitleText("select a date");
-         builder.setSelection(today);
-         builder.setCalendarConstraints(constraintBuilder.build());
+        MaterialDatePicker.Builder<Pair<Long, Long>> builder = MaterialDatePicker.Builder.dateRangePicker();
+        builder.setTitleText("select a date");
+        // builder.setSelection(today);
+        builder.setCalendarConstraints(constraintBuilder.build());
 
-       final  MaterialDatePicker materialDatePicker = builder.build();
+        final MaterialDatePicker materialDatePicker = builder.build();
 
         dateRange.setOnClickListener(new View.OnClickListener() {
 
@@ -165,14 +164,15 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         materialDatePicker.addOnPositiveButtonClickListener(new MaterialPickerOnPositiveButtonClickListener() {
             @Override
             public void onPositiveButtonClick(Object selection) {
-dateDisplay.setText("Selected date"+ materialDatePicker.getHeaderText());
+                dateDisplay.setText("Selected date" + materialDatePicker.getHeaderText());
             }
         });
-
+        startProgress();
+        refresh();
     }
 
     public void onClick(View aview) {
-        Log.e("MyTag", "in onClick");
+
         mMap.clear();
         if (aview == s1Button) {
             viewSwitcher.showNext();
@@ -180,6 +180,26 @@ dateDisplay.setText("Selected date"+ materialDatePicker.getHeaderText());
             viewSwitcher.showPrevious();
         }
     }
+
+
+    private void refresh() {
+        final Handler handler = new Handler();
+
+        final Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+
+                mMap.clear();
+                //Do your refreshing
+                startProgress();
+
+            }
+        };
+
+        // update every 10 minutes
+        handler.postDelayed(runnable, 600000);
+    }
+
 
     public void startProgress() {
         // Run network access on a separate thread;
@@ -226,12 +246,9 @@ dateDisplay.setText("Selected date"+ materialDatePicker.getHeaderText());
 
         mMap.setOnCameraIdleListener(clusterManager);
         mMap.setOnMarkerClickListener(clusterManager);
-
         show();
-
         // Position the map.
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(55.8642, -5.2518), 4));
-
     }
 
 

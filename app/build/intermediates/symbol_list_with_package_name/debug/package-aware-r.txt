@@ -2055,7 +2055,6 @@ id home
 id homeAsUp
 id honorRequest
 id hybrid
-id hybridViewRadio
 id icon
 id icon_group
 id icon_only
@@ -2086,7 +2085,6 @@ id list_item
 id location
 id mMap
 id mag
-id mapTypeGroup
 id maptype
 id maptypeHYBRID
 id maptypeNONE
@@ -2162,7 +2160,6 @@ id never
 id noScroll
 id none
 id normal
-id normalViewRadio
 id notification_background
 id notification_main_column
 id notification_main_column_container
@@ -2171,7 +2168,6 @@ id on
 id outline
 id outward
 id packed
-id panZoom
 id parallax
 id parent
 id parentPanel
@@ -2201,7 +2197,6 @@ id right_side
 id rounded
 id row_index_key
 id satellite
-id satelliteViewRadio
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -2209,7 +2204,6 @@ id scale
 id screen
 id screen1Button
 id screen2Button
-id screen2Label
 id scroll
 id scrollIndicatorDown
 id scrollIndicatorUp
@@ -2271,7 +2265,6 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id terrain
-id terrainViewRadio
 id test_checkbox_android_button_tint
 id test_checkbox_app_button_tint
 id test_radiobutton_android_button_tint
@@ -2418,7 +2411,6 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout eq_cardview
-layout filter_eqdata
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider

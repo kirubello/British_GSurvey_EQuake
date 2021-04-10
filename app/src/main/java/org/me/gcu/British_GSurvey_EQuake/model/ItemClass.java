@@ -10,13 +10,15 @@ import androidx.annotation.Nullable;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.maps.android.clustering.ClusterItem;
 
+import java.util.Date;
+
 public class ItemClass implements ClusterItem {
 
 
     private String title;
     private String description;
     private String link;
-    private String pubDate;
+    private Date pubDate;
     private String location;
     private double magnitude;
     private String depth;
@@ -31,7 +33,7 @@ public class ItemClass implements ClusterItem {
         title = "";
         description = "";
         link = "";
-        pubDate ="";
+     //   pubDate ="";
         location= "";
         depth="";
       //  magnitude="";
@@ -39,7 +41,7 @@ public class ItemClass implements ClusterItem {
        // lng;
     }
 
-    public ItemClass(String title, String description, String link, String pubDate,String location, double magnitude,String depth, double lat,double lng,String snippet) {
+    public ItemClass(String title, String description, String link, Date pubDate, String location, double magnitude, String depth, double lat, double lng, String snippet) {
         this.title = title;
         this.description = description;
         this.link = link;
@@ -87,9 +89,9 @@ public class ItemClass implements ClusterItem {
 
     public void setLink(String link)    {        this.link = link;    }
 
-    public String getPubDate() {  return pubDate;   }
+    public Date getPubDate() {  return pubDate;   }
 
-    public void setPubDate(String pubDate) {  this.pubDate = pubDate;  }
+    public void setPubDate(Date  pubDate) {  this.pubDate = pubDate;  }
 
     public double getLat() {   return lat;    }
 

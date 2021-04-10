@@ -41,7 +41,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".model.Details">
+        <activity android:name=".model.DImage">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="org.me.gcu.British_GSurvey_EQuake.MainActivity" />

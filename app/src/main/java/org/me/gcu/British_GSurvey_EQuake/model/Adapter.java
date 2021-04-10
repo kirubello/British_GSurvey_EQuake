@@ -18,6 +18,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import org.me.gcu.British_GSurvey_EQuake.R;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.LinkedList;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
@@ -39,16 +41,17 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         return new ViewHolder(view);
     }
 
+
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
-ItemClass itemClass = alist.get(i);
+        ItemClass itemClass = alist.get(i);
         // bind the textview with data received
 
         String location = itemClass.getLocation();
         viewHolder.textLocation.setText(location);
 
-        String textPubDate = itemClass.getPubDate();
-        viewHolder.textPubDate.setText(textPubDate);
+        Date pubDate = itemClass.getPubDate();
+        viewHolder.pubDate.setText(new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss").format(pubDate));
 
         String textMag = " " + Double.toString(itemClass.getMagnitude());
         viewHolder.textMag.setText(textMag);
@@ -66,16 +69,15 @@ ItemClass itemClass = alist.get(i);
 
             mConstraintLayout.setBackground(ContextCompat.getDrawable(viewHolder.itemViewContext, R.drawable.backgroundgreen));
 
-
         } else if (itemClass.getMagnitude() >= 1 && itemClass.getMagnitude() <= 2) {
 
             mConstraintLayout.setBackground(ContextCompat.getDrawable(viewHolder.itemViewContext, R.drawable.backgroundyellow));
 
-        } else if (itemClass.getMagnitude() > 2 && itemClass.getMagnitude() < 3 ) {
+        } else if (itemClass.getMagnitude() > 2 && itemClass.getMagnitude() < 3) {
 
             mConstraintLayout.setBackground(ContextCompat.getDrawable(viewHolder.itemViewContext, R.drawable.backgroundorange));
 
-        } else if (itemClass.getMagnitude() >= 3 && itemClass.getMagnitude()<= 5) {
+        } else if (itemClass.getMagnitude() >= 3 && itemClass.getMagnitude() <= 5) {
 
             mConstraintLayout.setBackground(ContextCompat.getDrawable(viewHolder.itemViewContext, R.drawable.backgroundred));
 
@@ -97,7 +99,8 @@ ItemClass itemClass = alist.get(i);
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView textPubDate, textLocation, textMag, textDepth, textCat, textLatLng;
+        TextView pubDate, textLocation, textMag, textDepth, textCat, textLatLng;
+
         Context itemViewContext;
 
         public ViewHolder(@NonNull View itemView) {
@@ -107,22 +110,22 @@ ItemClass itemClass = alist.get(i);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent i = new Intent(v.getContext(),Details.class);
+                    Intent i = new Intent(v.getContext(), DImage.class);
                     i.putExtra("location", alist.get(getAdapterPosition()).getLocation());
-                    i.putExtra("link",alist.get(getAdapterPosition()).getLink());
-                    i.putExtra("pubdate",alist.get(getAdapterPosition()).getPubDate());
+                    i.putExtra("link", alist.get(getAdapterPosition()).getLink());
+                    i.putExtra("pubdate", alist.get(getAdapterPosition()).getPubDate());
                     v.getContext().startActivity(i);
                 }
             });
-            mConstraintLayout =  itemView.findViewById(R.id.eq_card);
-            textPubDate = itemView.findViewById(R.id.pubdate);
+            mConstraintLayout = itemView.findViewById(R.id.eq_card);
+            pubDate = itemView.findViewById(R.id.pubdate);
             textLocation = itemView.findViewById(R.id.location);
             textMag = itemView.findViewById(R.id.mag);
             textDepth = itemView.findViewById(R.id.depth);
             textCat = itemView.findViewById(R.id.cat);
             textLatLng = itemView.findViewById(R.id.latlng);
         }
-        
-        
+
+
     }
 }

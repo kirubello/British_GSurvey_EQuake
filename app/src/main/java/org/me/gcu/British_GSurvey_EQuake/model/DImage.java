@@ -3,6 +3,7 @@ package org.me.gcu.British_GSurvey_EQuake.model;
     Student Name : Kirubel Afework
 *   Student No: S1732434
 */
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -14,7 +15,8 @@ import com.squareup.picasso.Picasso;
 
 import org.me.gcu.British_GSurvey_EQuake.R;
 
-public class Details extends AppCompatActivity {
+public class DImage extends AppCompatActivity {
+
     TextView textTitle;
 
     @Override
@@ -26,7 +28,10 @@ public class Details extends AppCompatActivity {
         Intent i = getIntent();
         String title = i.getStringExtra("location");
         String link = i.getStringExtra("link");
-        String pubdate= i.getStringExtra("pubdate");
+
+      //  Date newDate=null;
+       // Date pubdate= i.getExtras().getString("pubdate");
+
 
 
         ImageView imageView=findViewById(R.id.imageView2);
@@ -39,6 +44,6 @@ public class Details extends AppCompatActivity {
         textTitle = findViewById(R.id.detailTitle);
         textTitle.setText(title);
         textTitle = findViewById(R.id.pubdate);
-        textTitle.setText(pubdate);
+   //     textTitle.setText(new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss").format(pubdate));
     }
 }

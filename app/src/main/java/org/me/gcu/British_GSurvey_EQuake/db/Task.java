@@ -14,6 +14,9 @@ import java.io.InputStreamReader;
 import java.io.StringReader;
 import java.net.URL;
 import java.net.URLConnection;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.LinkedList;
 
 public class Task implements Runnable {
@@ -40,15 +43,9 @@ public class Task implements Runnable {
             aurl = new URL(url);
             yc = aurl.openConnection();
             in = new BufferedReader(new InputStreamReader(yc.getInputStream()));
-    
-            //
-            // Now read the data. Make sure that there are no specific hedrs
-            // in the data file that you need to ignore.
-            // The useful data that you need is in each of the item entries
-            //
+
             while ((inputLine = in.readLine()) != null) {
                 result = result + inputLine;
-
             }
             list(result);
 
@@ -58,17 +55,8 @@ public class Task implements Runnable {
             Log.e("MyTag", "ioexception in run");
         }
 
-        //
-        // Now that you have the xml data you can parse it
-        //
-
-        // Now update the TextView to display raw XML data
-        // Probably not the best way to update TextView
-        // but we are just getting started !
-
         mainActivity.runOnUiThread(new Runnable() {
             public void run() {
-
 
                 //  mainActivity.rawDataDisplay.setText(result);
 
@@ -140,12 +128,20 @@ public class Task implements Runnable {
                                 // Check which Tag we have
                                 if (xpp.getName().equalsIgnoreCase("pubDate")) {
                                     // Now just get the associated text
-                                    String temp = xpp.nextText();
-                                    // Do something with text
+                                    String temp = xpp.nextText().trim();
 
-//                                    if (!temp.equals("Recent UK seismic events recorded by the BGS Seismology team")) {
-                                    itemClass.setPubDate(temp);
-//                                    }
+                                    // Do something with text
+                                  //  SimpleDateFormat formatterOut;
+                                    Date date = null;
+
+                                    try {
+                                       date = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss").parse(temp);
+                                       
+
+                                    } catch (ParseException e) {
+                                        e.printStackTrace();
+                                    }
+                                    itemClass.setPubDate(date);
                                 } else
                                     // Check which Tag we have
                                     if (xpp.getName().equalsIgnoreCase("lat")) {

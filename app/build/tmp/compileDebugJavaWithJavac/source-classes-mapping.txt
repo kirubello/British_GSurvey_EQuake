@@ -1,15 +1,15 @@
 org/me/gcu/British_GSurvey_EQuake/model/CustomClusterRenderer.java
  org.me.gcu.British_GSurvey_EQuake.model.CustomClusterRenderer
-org/me/gcu/British_GSurvey_EQuake/model/Details.java
- org.me.gcu.British_GSurvey_EQuake.model.Details
+org/me/gcu/British_GSurvey_EQuake/model/ItemClass.java
+ org.me.gcu.British_GSurvey_EQuake.model.ItemClass
 org/me/gcu/British_GSurvey_EQuake/BuildConfig.java
  org.me.gcu.British_GSurvey_EQuake.BuildConfig
+org/me/gcu/British_GSurvey_EQuake/model/DImage.java
+ org.me.gcu.British_GSurvey_EQuake.model.DImage
 org/me/gcu/British_GSurvey_EQuake/model/Adapter.java
  org.me.gcu.British_GSurvey_EQuake.model.Adapter
  org.me.gcu.British_GSurvey_EQuake.model.Adapter$ViewHolder
  org.me.gcu.British_GSurvey_EQuake.model.Adapter$ViewHolder$1
-org/me/gcu/British_GSurvey_EQuake/model/ItemClass.java
- org.me.gcu.British_GSurvey_EQuake.model.ItemClass
 org/me/gcu/British_GSurvey_EQuake/db/Task.java
  org.me.gcu.British_GSurvey_EQuake.db.Task
  org.me.gcu.British_GSurvey_EQuake.db.Task$1
@@ -18,3 +18,4 @@ org/me/gcu/British_GSurvey_EQuake/MainActivity.java
  org.me.gcu.British_GSurvey_EQuake.MainActivity$1
  org.me.gcu.British_GSurvey_EQuake.MainActivity$2
  org.me.gcu.British_GSurvey_EQuake.MainActivity$3
+ org.me.gcu.British_GSurvey_EQuake.MainActivity$4

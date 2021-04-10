@@ -91,9 +91,9 @@
 59-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:41:27-74
 60            </intent-filter>
 61        </activity>
-62        <activity android:name="org.me.gcu.British_GSurvey_EQuake.model.Details" >
+62        <activity android:name="org.me.gcu.British_GSurvey_EQuake.model.DImage" >
 62-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:44:9-48:20
-62-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:44:19-48
+62-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:44:19-47
 63            <meta-data
 63-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:45:13-47:82
 64                android:name="android.support.PARENT_ACTIVITY"
