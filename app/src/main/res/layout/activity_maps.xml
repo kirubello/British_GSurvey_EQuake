@@ -15,19 +15,6 @@
         map:uiRotateGestures="true"
         map:uiScrollGestures="true"
         map:uiTiltGestures="true"
-        map:uiZoomGestures="true"
+        map:uiZoomGestures="true" />
 
-    tools:context=".MapsActivity"  />
-
-<!--    map:cameraBearing="112.5"-->
-<!--    map:cameraTargetLat="-33.796923"-->
-<!--    map:cameraTargetLng="150.922433"-->
-<!--    map:cameraTilt="30"-->
-<!--    map:cameraZoom="13"-->
-<!--    map:mapType="normal"-->
-<!--    map:uiCompass="false"-->
-<!--    map:uiRotateGestures="true"-->
-<!--    map:uiScrollGestures="false"-->
-<!--    map:uiTiltGestures="true"-->
-<!--    map:uiZoomControls="false"-->
-<!--    map:uiZoomGestures="true"-->
+<!--    tools:context=".MapsActivity"-->

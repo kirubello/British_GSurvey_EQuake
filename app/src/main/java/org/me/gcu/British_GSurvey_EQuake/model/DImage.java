@@ -29,21 +29,18 @@ public class DImage extends AppCompatActivity {
         String title = i.getStringExtra("location");
         String link = i.getStringExtra("link");
 
-      //  Date newDate=null;
-       // Date pubdate= i.getExtras().getString("pubdate");
-
-
+        String pubdate= i.getExtras().getString("pubdate");
 
         ImageView imageView=findViewById(R.id.imageView2);
         String a =link.replace(".html", ".jpg.0");
         Picasso.get().load(a)
-              .placeholder(R.drawable.bg_grey)
+                .placeholder(R.drawable.bg_grey)
                 .into(imageView);
-
 
         textTitle = findViewById(R.id.detailTitle);
         textTitle.setText(title);
         textTitle = findViewById(R.id.pubdate);
-   //     textTitle.setText(new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss").format(pubdate));
+        textTitle.setText(pubdate);
+
     }
 }

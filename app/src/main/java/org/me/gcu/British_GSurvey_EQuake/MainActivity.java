@@ -8,6 +8,7 @@ import android.Manifest;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.util.Log;
 import android.view.Menu;
@@ -22,6 +23,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewSwitcher;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -35,13 +37,14 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.datepicker.CalendarConstraints;
 import com.google.android.material.datepicker.DateValidatorPointBackward;
 import com.google.android.material.datepicker.MaterialDatePicker;
 import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener;
 import com.google.maps.android.clustering.ClusterManager;
 
-import org.me.gcu.British_GSurvey_EQuake.db.Task;
+import org.me.gcu.British_GSurvey_EQuake.controller.Task;
 import org.me.gcu.British_GSurvey_EQuake.model.Adapter;
 import org.me.gcu.British_GSurvey_EQuake.model.CustomClusterRenderer;
 import org.me.gcu.British_GSurvey_EQuake.model.ItemClass;
@@ -60,6 +63,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
 
     public TextView rawDataDisplay;
     private TextView dateDisplay;
+    private TextView lastUpdate;
+    private int counter;
+     private long timeleftinmillseconds = 600000;
+
 
     private Button dateRange;
     private String result = "";
@@ -68,23 +75,15 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     private Button s1Button;
     private Button s2Button;
     private ViewSwitcher viewSwitcher;
+    Thread Thread1;
 
     RecyclerView recyclerView;
     Adapter adapter;
 
-    //LinkedList<ItemClass> alist = null;
-
     private static final int REQUEST_LOCATION_PERMISSION = 1;
 
-    // private MapsActivity mapsActivity = new MapsActivity();
+
     private GoogleMap mMap;
-    //   private static final LatLng glasgow = new LatLng(55.860916, -4.251433);
-    //   private static LatLng melbourneLocation;
-
-    private LatLng try1 = new LatLng(-27.47093, 153.0235);
-    // protected LatLng mCenterLocation = new LatLng( 39.7392, -104.9903 );
-
-    private Marker mtry;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,6 +96,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         // Set up the raw links to the graphical components
         rawDataDisplay = findViewById(R.id.rawDataDisplay);
         dateDisplay = findViewById(R.id.dateDisplay);
+        lastUpdate = findViewById(R.id.lastUpdate);
 
 //        startButton = (Button) findViewById(R.id.startButton);
 //        startButton.setOnClickListener(this);
@@ -116,13 +116,17 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.mMap);
         mapFragment.getMapAsync(this);
 
-        spinner = (Spinner) findViewById(R.id.spinner1);
+        spinner =  findViewById(R.id.spinner1);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(MainActivity.this,
                 android.R.layout.simple_spinner_item, paths);
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
+
+        startProgress();
+        refresh();
+        timer();
 
 
         dateRange = findViewById(R.id.date_Rangepicker);
@@ -154,12 +158,12 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
 
         final MaterialDatePicker materialDatePicker = builder.build();
 
-        dateRange.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View v) {
-                materialDatePicker.show(getSupportFragmentManager(), "date_picker");
-            }
-        });
+//        dateRange.setOnClickListener(new View.OnClickListener() {
+//
+//            public void onClick(View v) {
+//                materialDatePicker.show(getSupportFragmentManager(), "date_picker");
+//            }
+//        });
 
         materialDatePicker.addOnPositiveButtonClickListener(new MaterialPickerOnPositiveButtonClickListener() {
             @Override
@@ -167,8 +171,36 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
                 dateDisplay.setText("Selected date" + materialDatePicker.getHeaderText());
             }
         });
-        startProgress();
-        refresh();
+
+        BottomNavigationView navigation = findViewById(R.id.bottom_navigation);
+        navigation.bringToFront();
+        navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case (R.id.navigation_home):
+                        viewSwitcher.showNext();
+                        item.setEnabled(false);
+                        item.getIcon().setAlpha(130);
+
+                        return true;
+                    case R.id.more_details:
+                        viewSwitcher.showPrevious();
+                        item.setEnabled(false);
+
+                        if (R.id.more_details == item.getItemId()) {
+                            //       onNavigationItemSelectedR.id.navigation_home
+
+                        }
+                        //   startActivity(new Intent(getApplicationContext(), barcodeActivity.class));
+                        return true;
+                    case R.id.filter:
+                        viewSwitcher.showPrevious();
+                        //      startActivity(new Intent(getApplicationContext(), friendActivity.class));
+                        return true;
+                }
+                return false;
+            }
+        });
     }
 
     public void onClick(View aview) {
@@ -179,6 +211,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         } else if (aview == s2Button) {
             viewSwitcher.showPrevious();
         }
+
     }
 
 
@@ -188,12 +221,17 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         final Runnable runnable = new Runnable() {
             @Override
             public void run() {
-
                 mMap.clear();
+                timeleftinmillseconds=600000;
+
                 //Do your refreshing
                 startProgress();
+               timer();
+
 
             }
+
+
         };
 
         // update every 10 minutes
@@ -201,9 +239,41 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     }
 
 
+    private void timer() {
+        new CountDownTimer(600000, 1000) {
+            @Override
+            public void onTick(long l) {
+                timeleftinmillseconds =l;
+                updateTimer();
+            }
+
+            public void onFinish() {
+                //  timer();
+                //  lastUpdate.setText("Finsh");
+                timer();
+                refresh();
+            }
+        }.start();
+    }
+
+    private void updateTimer() {
+        int minutes = (int) timeleftinmillseconds / 60000;
+        int seconds = (int) timeleftinmillseconds % 60000 / 1000;
+        String timeleft;
+
+        timeleft = "" + minutes;
+        timeleft += ":";
+        if (seconds < 10) timeleft += "0";
+
+        timeleft += seconds;
+        lastUpdate.setText("Information update in " + timeleft);
+
+    }
+
     public void startProgress() {
         // Run network access on a separate thread;
-        new Thread(new Task(urlSource, this)).start();
+        Thread1 = new Thread(new Task(urlSource, this));
+        Thread1.start();
     }
 
     @Override

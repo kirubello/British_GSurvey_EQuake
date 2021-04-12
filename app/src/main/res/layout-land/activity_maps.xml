@@ -20,9 +20,7 @@
     map:uiTiltGestures="true"
     map:uiZoomControls="true"
     map:uiZoomGestures="true"
-
-
-        tools:context=".MapsActivity"  />
+    tools:context=".MapsActivity"  />
 
 <!--    tools:context=".MainActivity" />-->
     <!--    map:cameraBearing="112.5"-->

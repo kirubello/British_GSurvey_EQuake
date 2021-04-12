@@ -1933,7 +1933,6 @@ id always
 id amu_text
 id animateToEnd
 id animateToStart
-id app_bar_switch
 id arc
 id asConfigured
 id async
@@ -1947,6 +1946,7 @@ id beginOnFirstDraw
 id beginning
 id blocking
 id bottom
+id bottom_navigation
 id bounce
 id buttonPanel
 id cache_measures
@@ -2033,6 +2033,7 @@ id fill
 id fill_horizontal
 id fill_vertical
 id filled
+id filter
 id fitToContents
 id fixed
 id flip
@@ -2071,6 +2072,7 @@ id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
 id labeled
+id lastUpdate
 id latlng
 id latlng2
 id layout
@@ -2085,6 +2087,7 @@ id list_item
 id location
 id mMap
 id mag
+id mainLinearLayout
 id maptype
 id maptypeHYBRID
 id maptypeNONE
@@ -2121,6 +2124,7 @@ id month_navigation_fragment_toggle
 id month_navigation_next
 id month_navigation_previous
 id month_title
+id more_details
 id motion_base
 id mtrl_anchor_parent
 id mtrl_calendar_day_selector_frame
@@ -2394,6 +2398,7 @@ layout activity_maps
 layout amu_info_window
 layout amu_text_bubble
 layout amu_webview
+layout bottom_bar_nav
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2411,6 +2416,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout eq_cardview
+layout filter_eq
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider
@@ -2464,7 +2470,6 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
-layout switch_item
 layout test_action_chip
 layout test_chip_zero_corner_radius
 layout test_design_checkbox
@@ -2546,9 +2551,12 @@ string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string filter
+string filter_date_period
 string google_maps_key
 string goto_map_screen
 string hide_bottom_view_on_scroll_behavior
+string home
 string icon_content_description
 string item_clustering
 string item_view_role_description
@@ -2573,6 +2581,7 @@ string material_timepicker_minute
 string material_timepicker_pm
 string material_timepicker_select_time
 string material_timepicker_text_input_mode_description
+string more_details
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description
 string mtrl_exceed_max_badge_number_content_description
@@ -2618,6 +2627,7 @@ string path_password_strike_through
 string search_menu_title
 string status_bar_notification_info_overflow
 string text_location_permission
+string textview
 string title_activity_main2
 string title_activity_maps
 string title_dashboard
