@@ -64,6 +64,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="org.me.gcu.British_GSurvey_EQuake.MainActivity" />
         </activity>
+        <activity android:name="org.me.gcu.British_GSurvey_EQuake.controller.Filter_eq" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.me.gcu.British_GSurvey_EQuake.MainActivity" />
+        </activity>
         <!-- Needs to be explicitly declared on P+ -->
         <uses-library
             android:name="org.apache.http.legacy"

@@ -6,6 +6,7 @@ package org.me.gcu.British_GSurvey_EQuake;
 
 import android.Manifest;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -44,6 +45,7 @@ import com.google.android.material.datepicker.MaterialDatePicker;
 import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener;
 import com.google.maps.android.clustering.ClusterManager;
 
+import org.me.gcu.British_GSurvey_EQuake.controller.Filter_eq;
 import org.me.gcu.British_GSurvey_EQuake.controller.Task;
 import org.me.gcu.British_GSurvey_EQuake.model.Adapter;
 import org.me.gcu.British_GSurvey_EQuake.model.CustomClusterRenderer;
@@ -102,7 +104,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
 //        startButton.setOnClickListener(this);
 
         viewSwitcher = findViewById(R.id.vwSwitch);
-
         if (viewSwitcher == null) {
             Toast.makeText(getApplicationContext(), "Null ViewSwicther", Toast.LENGTH_LONG);
             Log.e(getPackageName(), "null pointer");
@@ -179,24 +180,32 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
                 switch (item.getItemId()) {
                     case (R.id.navigation_home):
                         viewSwitcher.showNext();
-                        item.setEnabled(false);
+                       // item.setEnabled(false);
                         item.getIcon().setAlpha(130);
 
-                        return true;
+                       break;
                     case R.id.more_details:
                         viewSwitcher.showPrevious();
-                        item.setEnabled(false);
+                      //  item.setEnabled(false);
+
 
                         if (R.id.more_details == item.getItemId()) {
                             //       onNavigationItemSelectedR.id.navigation_home
 
                         }
+
                         //   startActivity(new Intent(getApplicationContext(), barcodeActivity.class));
-                        return true;
+                     break;
                     case R.id.filter:
-                        viewSwitcher.showPrevious();
+
+                     startActivity( new Intent(getApplicationContext(), Filter_eq.class));
+                   //    i.putExtra("location", alist.get().getLocation());
+//                        i.putExtra("link", alist.get(getAdapterPosition()).getLink());
+//                        i.putExtra("pubdate", alist.get(getAdapterPosition()).getPubDate());
+//                        v.getContext().startActivity(i);
+
                         //      startActivity(new Intent(getApplicationContext(), friendActivity.class));
-                        return true;
+                      break;
                 }
                 return false;
             }
@@ -227,11 +236,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
                 //Do your refreshing
                 startProgress();
                timer();
-
-
             }
-
-
         };
 
         // update every 10 minutes
@@ -286,15 +291,14 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
 
     public void show() {
 
-        for (int i = 0; i < alist.size(); i++) {
+        for (int i = 0; i < alist.size(); i++)
+        {
 
             double lat = alist.get(i).getLat();
             double lng = alist.get(i).getLng();
             String Title = alist.get(i).getLocation();
 
             String Magnitude = String.valueOf(alist.get(i).getMagnitude() + alist.get(i).getLng());
-
-
             ItemClass offsetItem = new ItemClass(lat, lng, "" + Title, "Magnitude:" + Magnitude, alist.get(i).getMagnitude());
             clusterManager.addItem(offsetItem);
 
@@ -303,7 +307,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new Adapter(this, alist);
         recyclerView.setAdapter(adapter);
-
         clusterManager.cluster();
     }
 
@@ -321,19 +324,14 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(55.8642, -5.2518), 4));
     }
 
-
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
         // Add a marker in Glasgow and move the camera
         LatLng glasgow = new LatLng(55.8642, 4.2518);
-
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(glasgow, 1));
-
         mMap.setTrafficEnabled(true);
-
-
         mMap.getMinZoomLevel();
         mMap.setTrafficEnabled(true);
         mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);

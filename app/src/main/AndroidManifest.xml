@@ -46,6 +46,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="org.me.gcu.British_GSurvey_EQuake.MainActivity" />
         </activity>
+        <activity android:name=".controller.Filter_eq">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.me.gcu.British_GSurvey_EQuake.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

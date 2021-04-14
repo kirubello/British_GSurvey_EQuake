@@ -37,7 +37,7 @@
 24-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\2d547673e05a0f4359ea410021e8e7c2\jetified-play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
 25
 26    <application
-26-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:13:5-49:19
+26-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:13:5-54:19
 27        android:allowBackup="true"
 27-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:14:9-35
 28        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -101,49 +101,59 @@
 65                android:value="org.me.gcu.British_GSurvey_EQuake.MainActivity" />
 65-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:47:17-79
 66        </activity>
-67        <!-- Needs to be explicitly declared on P+ -->
-68        <uses-library
-68-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\2d547673e05a0f4359ea410021e8e7c2\jetified-play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
-69            android:name="org.apache.http.legacy"
-69-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\2d547673e05a0f4359ea410021e8e7c2\jetified-play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
-70            android:required="false" />
-70-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\2d547673e05a0f4359ea410021e8e7c2\jetified-play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
-71
-72        <meta-data
-72-->[com.google.maps.android:android-maps-utils:2.2.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\254a692456f89a4b6d8d6da5c57b7ed6\jetified-android-maps-utils-2.2.0\AndroidManifest.xml:12:9-14:69
-73            android:name="com.google.android.gms.version"
-73-->[com.google.maps.android:android-maps-utils:2.2.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\254a692456f89a4b6d8d6da5c57b7ed6\jetified-android-maps-utils-2.2.0\AndroidManifest.xml:13:13-58
-74            android:value="@integer/google_play_services_version" />
-74-->[com.google.maps.android:android-maps-utils:2.2.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\254a692456f89a4b6d8d6da5c57b7ed6\jetified-android-maps-utils-2.2.0\AndroidManifest.xml:14:13-66
-75
-76        <provider
-76-->[com.squareup.picasso:picasso:2.71828] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\1d67ea8a7b43679528dac81250f1cc65\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
-77            android:name="com.squareup.picasso.PicassoProvider"
-77-->[com.squareup.picasso:picasso:2.71828] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\1d67ea8a7b43679528dac81250f1cc65\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
-78            android:authorities="org.me.gcu.British_GSurvey_EQuake.com.squareup.picasso"
-78-->[com.squareup.picasso:picasso:2.71828] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\1d67ea8a7b43679528dac81250f1cc65\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
-79            android:exported="false" />
-79-->[com.squareup.picasso:picasso:2.71828] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\1d67ea8a7b43679528dac81250f1cc65\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+67        <activity android:name="org.me.gcu.British_GSurvey_EQuake.controller.Filter_eq" >
+67-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:49:9-53:20
+67-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:49:19-55
+68            <meta-data
+68-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:45:13-47:82
+69                android:name="android.support.PARENT_ACTIVITY"
+69-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:46:17-63
+70                android:value="org.me.gcu.British_GSurvey_EQuake.MainActivity" />
+70-->E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:47:17-79
+71        </activity>
+72        <!-- Needs to be explicitly declared on P+ -->
+73        <uses-library
+73-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\2d547673e05a0f4359ea410021e8e7c2\jetified-play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
+74            android:name="org.apache.http.legacy"
+74-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\2d547673e05a0f4359ea410021e8e7c2\jetified-play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
+75            android:required="false" />
+75-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\2d547673e05a0f4359ea410021e8e7c2\jetified-play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
+76
+77        <meta-data
+77-->[com.google.maps.android:android-maps-utils:2.2.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\254a692456f89a4b6d8d6da5c57b7ed6\jetified-android-maps-utils-2.2.0\AndroidManifest.xml:12:9-14:69
+78            android:name="com.google.android.gms.version"
+78-->[com.google.maps.android:android-maps-utils:2.2.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\254a692456f89a4b6d8d6da5c57b7ed6\jetified-android-maps-utils-2.2.0\AndroidManifest.xml:13:13-58
+79            android:value="@integer/google_play_services_version" />
+79-->[com.google.maps.android:android-maps-utils:2.2.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\254a692456f89a4b6d8d6da5c57b7ed6\jetified-android-maps-utils-2.2.0\AndroidManifest.xml:14:13-66
 80
-81        <activity
-81-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\af7ff4cdb9585a03f0fe804445629944\jetified-play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
-82            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-82-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\af7ff4cdb9585a03f0fe804445629944\jetified-play-services-base-17.0.0\AndroidManifest.xml:24:13-79
-83            android:exported="false"
-83-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\af7ff4cdb9585a03f0fe804445629944\jetified-play-services-base-17.0.0\AndroidManifest.xml:25:13-37
-84            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-84-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\af7ff4cdb9585a03f0fe804445629944\jetified-play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+81        <provider
+81-->[com.squareup.picasso:picasso:2.71828] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\1d67ea8a7b43679528dac81250f1cc65\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+82            android:name="com.squareup.picasso.PicassoProvider"
+82-->[com.squareup.picasso:picasso:2.71828] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\1d67ea8a7b43679528dac81250f1cc65\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+83            android:authorities="org.me.gcu.British_GSurvey_EQuake.com.squareup.picasso"
+83-->[com.squareup.picasso:picasso:2.71828] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\1d67ea8a7b43679528dac81250f1cc65\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+84            android:exported="false" />
+84-->[com.squareup.picasso:picasso:2.71828] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\1d67ea8a7b43679528dac81250f1cc65\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
 85
-86        <provider
-86-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\cc1b78387f68e50f131a6131e4d6d2b5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
-87            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-87-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\cc1b78387f68e50f131a6131e4d6d2b5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
-88            android:authorities="org.me.gcu.British_GSurvey_EQuake.lifecycle-process"
-88-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\cc1b78387f68e50f131a6131e4d6d2b5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
-89            android:exported="false"
-89-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\cc1b78387f68e50f131a6131e4d6d2b5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
-90            android:multiprocess="true" />
-90-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\cc1b78387f68e50f131a6131e4d6d2b5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
-91    </application>
-92
-93</manifest>
+86        <activity
+86-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\af7ff4cdb9585a03f0fe804445629944\jetified-play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+87            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+87-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\af7ff4cdb9585a03f0fe804445629944\jetified-play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+88            android:exported="false"
+88-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\af7ff4cdb9585a03f0fe804445629944\jetified-play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+89            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+89-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\af7ff4cdb9585a03f0fe804445629944\jetified-play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+90
+91        <provider
+91-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\cc1b78387f68e50f131a6131e4d6d2b5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+92            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+92-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\cc1b78387f68e50f131a6131e4d6d2b5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
+93            android:authorities="org.me.gcu.British_GSurvey_EQuake.lifecycle-process"
+93-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\cc1b78387f68e50f131a6131e4d6d2b5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+94            android:exported="false"
+94-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\cc1b78387f68e50f131a6131e4d6d2b5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+95            android:multiprocess="true" />
+95-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\cc1b78387f68e50f131a6131e4d6d2b5\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+96    </application>
+97
+98</manifest>

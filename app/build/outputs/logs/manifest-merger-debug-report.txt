@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:2:1-51:12
-INJECTED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:2:1-51:12
-INJECTED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:2:1-51:12
-INJECTED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:2:1-51:12
+ADDED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:2:1-56:12
 MERGED from [androidx.navigation:navigation-ui:2.3.4] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\e86e09275252e593849731a82eb201cd\navigation-ui-2.3.4\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.4.0-alpha02] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\de87d616bcaf975c5d13319ffe486016\material-1.4.0-alpha02\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\9570f34841c72a34d773388f89286f55\constraintlayout-2.0.4\AndroidManifest.xml:2:1-11:12
@@ -56,20 +56,20 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\afewo\.gradle\ca
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\7b69e6173655717e69f5c7f6f1302d3b\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\8fe2a3deec1ef3dd659aa5f55d73edd7\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\adf8d4ec58c98f5b37616cb4b06b74f4\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-INJECTED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:2:1-51:12
-INJECTED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:2:1-51:12
-INJECTED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:2:1-56:12
 	package
 		ADDED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:3:5-48
 		INJECTED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml
 		INJECTED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml
-		ADDED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:2:1-51:12
+		ADDED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:2:1-56:12
 		INJECTED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml
-		ADDED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:2:1-51:12
+		ADDED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:2:1-56:12
 		INJECTED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:2:11-69
@@ -88,7 +88,7 @@ MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\afewo\.g
 	android:name
 		ADDED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:11:22-64
 application
-ADDED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:13:5-49:19
+ADDED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:13:5-54:19
 MERGED from [com.google.android.material:material:1.4.0-alpha02] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\de87d616bcaf975c5d13319ffe486016\material-1.4.0-alpha02\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.4.0-alpha02] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\de87d616bcaf975c5d13319ffe486016\material-1.4.0-alpha02\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\afewo\.gradle\caches\transforms-2\files-2.1\9570f34841c72a34d773388f89286f55\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
@@ -159,6 +159,10 @@ ADDED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mob
 		ADDED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:47:17-79
 	android:name
 		ADDED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:46:17-63
+activity#org.me.gcu.British_GSurvey_EQuake.controller.Filter_eq
+ADDED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:49:9-53:20
+	android:name
+		ADDED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:49:19-55
 uses-sdk
 INJECTED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml
