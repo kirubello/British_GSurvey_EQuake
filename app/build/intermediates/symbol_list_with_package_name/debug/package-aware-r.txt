@@ -1324,8 +1324,6 @@ dimen abc_text_size_subtitle_material_toolbar
 dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
 dimen action_bar_size
-dimen activity_horizontal_margin
-dimen activity_vertical_margin
 dimen appcompat_dialog_background_inset
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
@@ -1797,6 +1795,7 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable ic_baseline_filter_alt_24
 drawable ic_bb_eq
 drawable ic_bl_eq
 drawable ic_clock_black_24dp
@@ -1811,7 +1810,6 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
-drawable ic_notifications_black_24dp
 drawable ic_o_eq
 drawable ic_r_eq
 drawable ic_rb_eq
@@ -1978,6 +1976,7 @@ id clip_vertical
 id clockwise
 id collapseActionView
 id confirm_button
+id constraintLayout
 id container
 id content
 id contentPanel
@@ -2077,8 +2076,6 @@ id ignore
 id ignoreRequest
 id image
 id imageView2
-id include2
-id include3
 id info
 id invisible
 id inward
@@ -2135,6 +2132,7 @@ id material_timepicker_mode_button
 id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
+id menu
 id message
 id middle
 id mini
@@ -2227,8 +2225,6 @@ id save_overlay_view
 id sawtooth
 id scale
 id screen
-id screen1Button
-id screen2Button
 id scroll
 id scrollIndicatorDown
 id scrollIndicatorUp

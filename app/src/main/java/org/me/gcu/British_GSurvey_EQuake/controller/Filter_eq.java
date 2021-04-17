@@ -8,6 +8,8 @@ package org.me.gcu.British_GSurvey_EQuake.controller;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -43,43 +45,31 @@ import java.util.TimeZone;
 
 public class Filter_eq extends AppCompatActivity implements GoogleMap.OnMarkerClickListener, OnMapReadyCallback, View.OnClickListener {
 
+    public ClusterManager<ItemClass> clusterManager;
 
+    private GoogleMap mMap;
     private TextView textTitle;
     private Button dateRange;
     private Button northerly;
     private Button southerly;
     private Button easterly;
     private Button westerly;
-    AlertDialog.Builder builder;
-
-    private TextView dateDisplay;
+      private TextView dateDisplay;
     private LinkedList<ItemClass> alist;
+
     LinkedList<ItemClass> f_Alist;
-
-    private double min;
-    public ClusterManager<ItemClass> clusterManager;
-
-    private GoogleMap mMap;
+    AlertDialog.Builder builder;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.filter_eq);
-        // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         this.alist = new LinkedList<>(MainActivity.alist);
-//        if (f_Alist == null || f_Alist.size() == 0) {
-//
-//            f_Alist==alist;
-//        }
-
-        // textTitle = findViewById(R.id.location1);
-        // textTitle.setText(findMax());
-
 
         dateRange = findViewById(R.id.date_Rangepicker);
         dateDisplay = findViewById(R.id.dateDisplay);
-
 
         northerly = findViewById(R.id.Northerly);
         northerly.setOnClickListener(this);
@@ -90,12 +80,8 @@ public class Filter_eq extends AppCompatActivity implements GoogleMap.OnMarkerCl
         westerly = findViewById(R.id.Westerly);
         westerly.setOnClickListener(this);
 
-//        startButton.setOnClickListener(this);
-
-
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.mMap);
         mapFragment.getMapAsync(this);
-
 
         Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("UTC"));
         calendar.clear();
@@ -116,11 +102,8 @@ public class Filter_eq extends AppCompatActivity implements GoogleMap.OnMarkerCl
         constraintBuilder.setValidator(DateValidatorPointBackward.now());
 
         MaterialDatePicker.Builder<Pair<Long, Long>> rangeDate = MaterialDatePicker.Builder.dateRangePicker();
-        rangeDate.setTitleText("select a date");
-        //      builder.setSelection(today);
-
+        rangeDate.setTitleText("Selected Date Range");
         rangeDate.setCalendarConstraints(constraintBuilder.build());
-
 
         final MaterialDatePicker materialDatePicker = rangeDate.build();
 
@@ -132,11 +115,8 @@ public class Filter_eq extends AppCompatActivity implements GoogleMap.OnMarkerCl
         });
 
         materialDatePicker.addOnPositiveButtonClickListener(new MaterialPickerOnPositiveButtonClickListener() {
-
             @Override
             public void onPositiveButtonClick(Object selection) {
-                //   dateDisplay.setText("Selected date" + materialDatePicker.getHeaderText());
-
                 //                Get the selected DATE RANGE
                 Pair selectedDates = (Pair) materialDatePicker.getSelection();
 //              then obtain the startDate & endDate from the range
@@ -147,10 +127,10 @@ public class Filter_eq extends AppCompatActivity implements GoogleMap.OnMarkerCl
 //              Format the dates in ur desired display mode
                 SimpleDateFormat simpleFormat = new SimpleDateFormat("dd MMM yyyy");
 //              Display it by setText
-                dateDisplay.setText("SELECTED DATE : " + simpleFormat.format(startDate) + " Second : " + simpleFormat.format(endDate));
-
+                dateDisplay.setText("SELECTED DATE : " + simpleFormat.format(startDate) + " --- " + simpleFormat.format(endDate));
 
                 f_Alist = new LinkedList<>();
+
                 if (f_Alist != null || f_Alist.size() != 0) {
                     f_Alist.clear();
                     mMap.clear();
@@ -158,39 +138,70 @@ public class Filter_eq extends AppCompatActivity implements GoogleMap.OnMarkerCl
                 }
                 if (f_Alist == null || f_Alist.size() == 0) {
 
-
                     for (ItemClass itemClass : alist) {
                         if (itemClass.getPubDate().after(startDate) && itemClass.getPubDate().before(endDate)) {
 
                             f_Alist.add(itemClass);
-
                         }
                     }
 
                     show(f_Alist);
-                    findMaxMin(f_Alist);
+                    displayMaxMin(f_Alist);
                     displayMag(f_Alist);
-
                 }
-
             }
         });
 
 
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.top_app_bar, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.maptypeHYBRID:
+                if (mMap != null) {
+                    mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+                    return true;
+                }
+            case R.id.maptypeNONE:
+                if (mMap != null) {
+                    mMap.setMapType(GoogleMap.MAP_TYPE_NONE);
+                    return true;
+                }
+            case R.id.maptypeNORMAL:
+                if (mMap != null) {
+                    mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+                    return true;
+                }
+            case R.id.maptypeSATELLITE:
+                if (mMap != null) {
+                    mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+                    return true;
+                }
+            case R.id.maptypeTERRAIN:
+                if (mMap != null) {
+                    mMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
+                    return true;
+                }
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
-
-    public Double findMaxMin(LinkedList<ItemClass> f_Alist) {
+    public void displayMaxMin(LinkedList<ItemClass> f_Alist) {
 
         ArrayList<ItemClass> itemClassArrayList = new ArrayList<>(f_Alist);
-        Collections.sort(itemClassArrayList,ItemClass.compareDepth);
+        Collections.sort(itemClassArrayList, ItemClass.compareDepth);
 
         //depth Shallowest
         textTitle = findViewById(R.id.location2);
         textTitle.setText(itemClassArrayList.get(0).getLocation());
 
         textTitle = findViewById(R.id.coordinate2);
-        textTitle.setText(itemClassArrayList.get(0).getLat()+" , " +itemClassArrayList.get(0).getLng());
+        textTitle.setText(itemClassArrayList.get(0).getLat() + " , " + itemClassArrayList.get(0).getLng());
 
         textTitle = findViewById(R.id.depth2);
         textTitle.setText((Double.toString(itemClassArrayList.get(0).getDepth())));
@@ -199,7 +210,7 @@ public class Filter_eq extends AppCompatActivity implements GoogleMap.OnMarkerCl
         textTitle.setText((Double.toString(itemClassArrayList.get(0).getMagnitude())));
 
         textTitle = findViewById(R.id.date2);
-        textTitle.setText( new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss").format(itemClassArrayList.get(0).getPubDate()));
+        textTitle.setText(new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss").format(itemClassArrayList.get(0).getPubDate()));
 
 
         //depth Deepest
@@ -208,7 +219,7 @@ public class Filter_eq extends AppCompatActivity implements GoogleMap.OnMarkerCl
         textTitle.setText(itemClassArrayList.get(maxIndex).getLocation());
 
         textTitle = findViewById(R.id.coordinates3);
-        textTitle.setText(itemClassArrayList.get(maxIndex).getLat()+" , " +itemClassArrayList.get(maxIndex).getLng());
+        textTitle.setText(itemClassArrayList.get(maxIndex).getLat() + " , " + itemClassArrayList.get(maxIndex).getLng());
 
         textTitle = findViewById(R.id.depth3);
         textTitle.setText((Double.toString(itemClassArrayList.get(maxIndex).getDepth())));
@@ -217,26 +228,20 @@ public class Filter_eq extends AppCompatActivity implements GoogleMap.OnMarkerCl
         textTitle.setText((Double.toString(itemClassArrayList.get(maxIndex).getMagnitude())));
 
         textTitle = findViewById(R.id.date3);
-        textTitle.setText( new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss").format(itemClassArrayList.get(maxIndex).getPubDate()));
-
-
-        //
-
-        return min;
+        textTitle.setText(new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss").format(itemClassArrayList.get(maxIndex).getPubDate()));
     }
 
     private void displayMag(LinkedList<ItemClass> f_Alist) {
-
         ArrayList<ItemClass> itemClassMagList = new ArrayList<>(f_Alist);
+        Collections.sort(itemClassMagList, ItemClass.compareMag);
 
-        Collections.sort(itemClassMagList,ItemClass.compareDepth);
-
+        // Display the largest magnitude
         int maxIndex = itemClassMagList.size() - 1;
         textTitle = findViewById(R.id.location1);
         textTitle.setText(itemClassMagList.get(maxIndex).getLocation());
 
         textTitle = findViewById(R.id.coordinates1);
-        textTitle.setText(itemClassMagList.get(maxIndex).getLat()+" , " +itemClassMagList.get(maxIndex).getLng());
+        textTitle.setText(itemClassMagList.get(maxIndex).getLat() + " , " + itemClassMagList.get(maxIndex).getLng());
 
         textTitle = findViewById(R.id.depth1);
         textTitle.setText((Double.toString(itemClassMagList.get(maxIndex).getDepth())));
@@ -245,8 +250,7 @@ public class Filter_eq extends AppCompatActivity implements GoogleMap.OnMarkerCl
         textTitle.setText((Double.toString(itemClassMagList.get(maxIndex).getMagnitude())));
 
         textTitle = findViewById(R.id.date1);
-        textTitle.setText( new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss").format(itemClassMagList.get(maxIndex).getPubDate()));
-
+        textTitle.setText(new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss").format(itemClassMagList.get(maxIndex).getPubDate()));
     }
 
     @Override
@@ -267,7 +271,7 @@ public class Filter_eq extends AppCompatActivity implements GoogleMap.OnMarkerCl
 
         googleMap.setOnCameraIdleListener(clusterManager);
         googleMap.setOnMarkerClickListener(clusterManager);
-        //  show();
+
         // Position the map.
         googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(55.8642, -5.2518), 4));
     }
@@ -280,12 +284,10 @@ public class Filter_eq extends AppCompatActivity implements GoogleMap.OnMarkerCl
             double lng = itemClassLinkedList.get(i).getLng();
             String Title = itemClassLinkedList.get(i).getLocation();
 
-            String Magnitude = String.valueOf(itemClassLinkedList.get(i).getMagnitude() + itemClassLinkedList.get(i).getLng());
+            String Magnitude = String.valueOf(itemClassLinkedList.get(i).getMagnitude() +" Depth: "+ itemClassLinkedList.get(i).getDepth()+ " Date: "+ itemClassLinkedList.get(i).getPubDate());
             ItemClass offsetItem = new ItemClass(lat, lng, "" + Title, "Magnitude:" + Magnitude, itemClassLinkedList.get(i).getMagnitude());
             clusterManager.addItem(offsetItem);
-
         }
-
         clusterManager.cluster();
     }
 
@@ -340,6 +342,7 @@ public class Filter_eq extends AppCompatActivity implements GoogleMap.OnMarkerCl
                 case "N":
                     if (compass[0].equals("N")) {
                         compassList.add(f_Alist.get(i));
+
                     }
                     break;
                 case "S":

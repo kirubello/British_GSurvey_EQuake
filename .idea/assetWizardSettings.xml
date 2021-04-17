@@ -16,10 +16,24 @@
                   <entry key="vectorAssetStep">
                     <value>
                       <PersistentState>
+                        <option name="children">
+                          <map>
+                            <entry key="clipartAsset">
+                              <value>
+                                <PersistentState>
+                                  <option name="values">
+                                    <map>
+                                      <entry key="url" value="jar:file:/C:/Users/afewo/AppData/Local/JetBrains/Toolbox/apps/AndroidStudio/ch-0/201.7199119/plugins/android/lib/android.jar!/images/material/icons/materialicons/filter_alt/baseline_filter_alt_24.xml" />
+                                    </map>
+                                  </option>
+                                </PersistentState>
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
                         <option name="values">
                           <map>
-                            <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_r_eq" />
+                            <entry key="outputName" value="ic_baseline_filter_alt_24" />
                             <entry key="sourceFile" value="E:\severeEQ.svg" />
                           </map>
                         </option>

@@ -44,10 +44,10 @@ public class ItemClass implements ClusterItem, Parcelable {
     public static Comparator<ItemClass> compareMag = new Comparator<ItemClass>() {
         @Override
         public int compare(ItemClass o1, ItemClass o2) {
-            Double o1Depth = o1.getMagnitude();
-            Double o2Depth = o2.getMagnitude();
+            Double o1Magnitude = o1.getMagnitude();
+            Double o2Magnitude = o2.getMagnitude();
 
-            return o1Depth.compareTo(o2Depth);
+            return o1Magnitude.compareTo(o2Magnitude);
         }
     };
     public ItemClass()

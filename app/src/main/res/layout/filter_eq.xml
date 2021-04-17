@@ -67,32 +67,24 @@
         android:id="@+id/dateDisplay"
         android:layout_width="205dp"
         android:layout_height="46dp"
-        android:text="select Dates"
+        android:text="selected Range Date"
         android:textColor="@color/black"
+        android:gravity="center"
+        android:background="@drawable/rounded_edit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/date_Rangepicker"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
 
-        android:id="@+id/include2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <include
+
+        layout="@layout/activity_maps"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Southerly">
-
-
-        <include
-
-            layout="@layout/activity_maps"
-            android:layout_width="398dp"
-            android:layout_height="282dp"
-            android:layout_marginTop="1dp" />
-    </LinearLayout>
-
+        app:layout_constraintTop_toBottomOf="@+id/Southerly" />
 
     <TableLayout
         android:id="@+id/tableLayout"
@@ -101,10 +93,9 @@
         android:background="@drawable/cell_shape"
         android:stretchColumns="1"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/include3"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include2"
         tools:visibility="visible">
 
         <TableRow
@@ -125,9 +116,8 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:background="@drawable/cell_shape"
-
                 android:text="Largest Magnitude"
                 android:textColor="@color/black" />
 
@@ -175,7 +165,7 @@
                 android:background="@drawable/cell_shape"
                 android:gravity="center"
                 android:padding="3dip"
-                android:text="location1"
+                android:text="-"
                 android:textColor="@color/black" />
 
             <TextView
@@ -185,7 +175,7 @@
                 android:background="@drawable/cell_shape"
                 android:gravity="center"
                 android:padding="3dip"
-                android:text="location2"
+                android:text="-"
                 android:textColor="@color/black" />
 
             <TextView
@@ -195,7 +185,7 @@
                 android:background="@drawable/cell_shape"
                 android:gravity="center"
                 android:padding="3dip"
-                android:text="location3"
+                android:text="-"
                 android:textColor="@color/black" />
 
 
@@ -224,7 +214,7 @@
                 android:background="@drawable/cell_shape"
                 android:gravity="center"
                 android:padding="3dip"
-                android:text="coordinates1"
+                android:text="-"
                 android:textColor="@color/black" />
 
             <TextView
@@ -234,7 +224,7 @@
                 android:background="@drawable/cell_shape"
                 android:gravity="center"
                 android:padding="3dip"
-                android:text="coordinate2"
+                android:text="-"
                 android:textColor="@color/black" />
 
             <TextView
@@ -244,7 +234,7 @@
                 android:background="@drawable/cell_shape"
                 android:gravity="center"
                 android:padding="3dip"
-                android:text="coordinate3"
+                android:text="-"
                 android:textColor="@color/black" />
 
 
@@ -273,7 +263,7 @@
                 android:background="@drawable/cell_shape"
                 android:gravity="center"
                 android:padding="3dip"
-                android:text="depth1"
+                android:text="-"
                 android:textColor="@color/black" />
 
             <TextView
@@ -283,7 +273,7 @@
                 android:background="@drawable/cell_shape"
                 android:gravity="center"
                 android:padding="3dip"
-                android:text="depth2"
+                android:text="-"
                 android:textColor="@color/black" />
 
             <TextView
@@ -293,7 +283,7 @@
                 android:background="@drawable/cell_shape"
                 android:gravity="center"
                 android:padding="3dip"
-                android:text="depth3"
+                android:text="-"
                 android:textColor="@color/black" />
 
 
@@ -322,7 +312,7 @@
                 android:background="@drawable/cell_shape"
                 android:gravity="center"
                 android:padding="3dip"
-                android:text="mag1"
+                android:text="-"
                 android:textColor="@color/black" />
 
             <TextView
@@ -332,7 +322,7 @@
                 android:background="@drawable/cell_shape"
                 android:gravity="center"
                 android:padding="3dip"
-                android:text="mag2"
+                android:text="-"
                 android:textColor="@color/black" />
 
             <TextView
@@ -342,7 +332,7 @@
                 android:background="@drawable/cell_shape"
                 android:gravity="center"
                 android:padding="3dip"
-                android:text="mag3"
+                android:text="-"
                 android:textColor="@color/black" />
 
 
@@ -362,7 +352,7 @@
                 android:padding="3dip"
                 android:text=" Date"
                 android:textColor="@color/black"
-                android:textSize="10dp" />
+                android:textSize="10sp" />
 
             <TextView
                 android:id="@+id/date1"
@@ -371,7 +361,7 @@
                 android:background="@drawable/cell_shape"
                 android:gravity="center"
                 android:padding="3dip"
-                android:text="date1"
+                android:text="-"
                 android:textColor="@color/black" />
 
             <TextView
@@ -381,7 +371,7 @@
                 android:background="@drawable/cell_shape"
                 android:gravity="center"
                 android:padding="3dip"
-                android:text="date2"
+                android:text="-"
                 android:textColor="@color/black" />
 
             <TextView
@@ -391,7 +381,7 @@
                 android:background="@drawable/cell_shape"
                 android:gravity="center"
                 android:padding="3dip"
-                android:text="date3"
+                android:text="-"
                 android:textColor="@color/black" />
 
 
@@ -400,24 +390,24 @@
     </TableLayout>
 
 
-
-
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tableLayout">
+        app:layout_constraintStart_toStartOf="parent">
 
-    <include
-        layout="@layout/bottom_bar_nav"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+        <include
+            layout="@layout/bottom_bar_nav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+            app:layout_constraintVertical_bias="1.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

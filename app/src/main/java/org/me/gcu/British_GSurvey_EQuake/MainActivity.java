@@ -16,7 +16,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewSwitcher;
@@ -56,8 +55,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     private String result = "";
     private String url1 = "";
     private String urlSource = "http://quakes.bgs.ac.uk/feeds/MhSeismology.xml";
-    private Button s1Button;
-    private Button s2Button;
+//    private Button s1Button;
+//    private Button s2Button;
     private ViewSwitcher viewSwitcher;
     private GoogleMap mMap;
 
@@ -80,10 +79,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
             Toast.makeText(getApplicationContext(), "Null ViewSwicther", Toast.LENGTH_LONG);
 
         }
-        s1Button = findViewById(R.id.screen1Button);
-        s2Button = findViewById(R.id.screen2Button);
-        s1Button.setOnClickListener(this);
-        s2Button.setOnClickListener(this);
+//        s1Button = findViewById(R.id.screen1Button);
+//        s2Button = findViewById(R.id.screen2Button);
+//        s1Button.setOnClickListener(this);
+//        s2Button.setOnClickListener(this);
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.mMap);
         mapFragment.getMapAsync(this);
@@ -123,13 +122,13 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     }
 
     public void onClick(View aview) {
-
-        mMap.clear();
-        if (aview == s1Button) {
-            viewSwitcher.showNext();
-        } else if (aview == s2Button) {
-            viewSwitcher.showPrevious();
-        }
+//
+//        mMap.clear();
+//        if (aview == s1Button) {
+//            viewSwitcher.showNext();
+//        } else if (aview == s2Button) {
+//            viewSwitcher.showPrevious();
+//        }
 
     }
 
@@ -148,11 +147,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
                 timer();
             }
         };
-
         // update every 10 minutes
         handler.postDelayed(runnable, 600000);
     }
-
 
     private void timer() {
         new CountDownTimer(600000, 1000) {
@@ -206,7 +203,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
             double lng = alist.get(i).getLng();
             String Title = alist.get(i).getLocation();
 
-            String Magnitude = String.valueOf(alist.get(i).getMagnitude() + alist.get(i).getLng());
+            String Magnitude = String.valueOf(alist.get(i).getMagnitude() +" Depth: "+ alist.get(i).getDepth()+ " Date: "+ alist.get(i).getPubDate());
             ItemClass offsetItem = new ItemClass(lat, lng, "" + Title, "Magnitude:" + Magnitude, alist.get(i).getMagnitude());
             clusterManager.addItem(offsetItem);
 

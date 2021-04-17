@@ -10,7 +10,13 @@
     <LinearLayout
         android:id="@+id/mainLinearLayout"
         android:layout_width="match_parent"
-        android:layout_height="513dp"
+        android:layout_height="match_parent"
+        android:layout_above="@id/menu"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
         android:orientation="vertical">
 
         <ViewSwitcher
@@ -32,13 +38,13 @@
                     android:textSize="20sp" />
 
 
-                <Button
-                    android:id="@+id/screen1Button"
+                <!--                <Button-->
+                <!--                    android:id="@+id/screen1Button"-->
 
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/view_data_details"
-                    android:textSize="8dp"/>
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:text="@string/view_data_details"-->
+                <!--                    android:textSize="8dp" />-->
 
                 <include
                     layout="@layout/activity_maps"
@@ -53,7 +59,6 @@
                 android:orientation="vertical">
 
 
-
                 <TextView
                     android:id="@+id/acknowledgement"
                     android:layout_width="fill_parent"
@@ -62,13 +67,13 @@
                     android:textSize="16sp" />
 
 
-                <Button
-                    android:id="@+id/screen2Button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/goto_map_screen"
-                    android:textSize="14sp" />
+<!--                <Button-->
+<!--                    android:id="@+id/screen2Button"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:text="@string/goto_map_screen"-->
+<!--                    android:textSize="14sp" />-->
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerView"
@@ -81,14 +86,14 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/mainLinearLayout"
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="0dp"
-        android:layout_marginTop="15dp"
         android:layout_marginRight="0dp"
         android:layout_marginBottom="0dp"
+        android:gravity="bottom"
         android:orientation="vertical">
 
         <include
