@@ -5,6 +5,8 @@ package org.me.gcu.British_GSurvey_EQuake.controller;
 *   Student No: S1732434
 */
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -39,11 +41,17 @@ import java.util.LinkedList;
 import java.util.TimeZone;
 
 
-public class Filter_eq extends AppCompatActivity implements GoogleMap.OnMarkerClickListener, OnMapReadyCallback {
+public class Filter_eq extends AppCompatActivity implements GoogleMap.OnMarkerClickListener, OnMapReadyCallback, View.OnClickListener {
 
 
     private TextView textTitle;
     private Button dateRange;
+    private Button northerly;
+    private Button southerly;
+    private Button easterly;
+    private Button westerly;
+    AlertDialog.Builder builder;
+
     private TextView dateDisplay;
     private LinkedList<ItemClass> alist;
     LinkedList<ItemClass> f_Alist;
@@ -51,13 +59,6 @@ public class Filter_eq extends AppCompatActivity implements GoogleMap.OnMarkerCl
     private double min;
     public ClusterManager<ItemClass> clusterManager;
 
-
-    private Marker markerPerth;
-    private Marker markerSydney;
-    private Marker markerBrisbane;
-    private final LatLng PERTH = new LatLng(-31.952854, 115.857342);
-    private final LatLng SYDNEY = new LatLng(-33.87365, 151.20689);
-    private final LatLng BRISBANE = new LatLng(-27.47093, 153.0235);
     private GoogleMap mMap;
 
 
@@ -72,12 +73,25 @@ public class Filter_eq extends AppCompatActivity implements GoogleMap.OnMarkerCl
 //            f_Alist==alist;
 //        }
 
-        textTitle = findViewById(R.id.location1);
+        // textTitle = findViewById(R.id.location1);
         // textTitle.setText(findMax());
 
 
         dateRange = findViewById(R.id.date_Rangepicker);
         dateDisplay = findViewById(R.id.dateDisplay);
+
+
+        northerly = findViewById(R.id.Northerly);
+        northerly.setOnClickListener(this);
+        southerly = findViewById(R.id.Southerly);
+        southerly.setOnClickListener(this);
+        easterly = findViewById(R.id.Easterly);
+        easterly.setOnClickListener(this);
+        westerly = findViewById(R.id.Westerly);
+        westerly.setOnClickListener(this);
+
+//        startButton.setOnClickListener(this);
+
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.mMap);
         mapFragment.getMapAsync(this);
@@ -151,50 +165,88 @@ public class Filter_eq extends AppCompatActivity implements GoogleMap.OnMarkerCl
                             f_Alist.add(itemClass);
 
                         }
-
                     }
 
-                    show();
+                    show(f_Alist);
+                    findMaxMin(f_Alist);
+                    displayMag(f_Alist);
+
                 }
 
             }
         });
 
-        findMaxMin(alist);
-
-
-
-
 
     }
 
 
-    public Double findMaxMin(LinkedList<ItemClass> alist) {
-        ArrayList<Double> sortedlist = new ArrayList<>();
-        // check list is empty or not
-        if (alist == null || alist.size() == 0) {
-            return Double.MIN_VALUE;
-        }
+    public Double findMaxMin(LinkedList<ItemClass> f_Alist) {
 
+        ArrayList<ItemClass> itemClassArrayList = new ArrayList<>(f_Alist);
+        Collections.sort(itemClassArrayList,ItemClass.compareDepth);
 
-        for (int i = 0; i < alist.size(); i++) {
-            if (min > alist.get(i).getDepth()) {
-                min = alist.get(i).getDepth();
-            }
-            sortedlist.add(alist.get(i).getDepth());
+        //depth Shallowest
+        textTitle = findViewById(R.id.location2);
+        textTitle.setText(itemClassArrayList.get(0).getLocation());
 
-        }
-        Collections.sort(sortedlist);
-
-        textTitle = findViewById(R.id.depth3);
-        textTitle.setText((Double.toString(sortedlist.get(0))));
-        int maxIndex = sortedlist.size() - 1;
-
+        textTitle = findViewById(R.id.coordinate2);
+        textTitle.setText(itemClassArrayList.get(0).getLat()+" , " +itemClassArrayList.get(0).getLng());
 
         textTitle = findViewById(R.id.depth2);
-        textTitle.setText((Double.toString(sortedlist.get(maxIndex))));
+        textTitle.setText((Double.toString(itemClassArrayList.get(0).getDepth())));
+
+        textTitle = findViewById(R.id.mag2);
+        textTitle.setText((Double.toString(itemClassArrayList.get(0).getMagnitude())));
+
+        textTitle = findViewById(R.id.date2);
+        textTitle.setText( new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss").format(itemClassArrayList.get(0).getPubDate()));
+
+
+        //depth Deepest
+        int maxIndex = itemClassArrayList.size() - 1;
+        textTitle = findViewById(R.id.location3);
+        textTitle.setText(itemClassArrayList.get(maxIndex).getLocation());
+
+        textTitle = findViewById(R.id.coordinates3);
+        textTitle.setText(itemClassArrayList.get(maxIndex).getLat()+" , " +itemClassArrayList.get(maxIndex).getLng());
+
+        textTitle = findViewById(R.id.depth3);
+        textTitle.setText((Double.toString(itemClassArrayList.get(maxIndex).getDepth())));
+
+        textTitle = findViewById(R.id.mag3);
+        textTitle.setText((Double.toString(itemClassArrayList.get(maxIndex).getMagnitude())));
+
+        textTitle = findViewById(R.id.date3);
+        textTitle.setText( new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss").format(itemClassArrayList.get(maxIndex).getPubDate()));
+
+
+        //
 
         return min;
+    }
+
+    private void displayMag(LinkedList<ItemClass> f_Alist) {
+
+        ArrayList<ItemClass> itemClassMagList = new ArrayList<>(f_Alist);
+
+        Collections.sort(itemClassMagList,ItemClass.compareDepth);
+
+        int maxIndex = itemClassMagList.size() - 1;
+        textTitle = findViewById(R.id.location1);
+        textTitle.setText(itemClassMagList.get(maxIndex).getLocation());
+
+        textTitle = findViewById(R.id.coordinates1);
+        textTitle.setText(itemClassMagList.get(maxIndex).getLat()+" , " +itemClassMagList.get(maxIndex).getLng());
+
+        textTitle = findViewById(R.id.depth1);
+        textTitle.setText((Double.toString(itemClassMagList.get(maxIndex).getDepth())));
+
+        textTitle = findViewById(R.id.mag1);
+        textTitle.setText((Double.toString(itemClassMagList.get(maxIndex).getMagnitude())));
+
+        textTitle = findViewById(R.id.date1);
+        textTitle.setText( new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss").format(itemClassMagList.get(maxIndex).getPubDate()));
+
     }
 
     @Override
@@ -220,16 +272,16 @@ public class Filter_eq extends AppCompatActivity implements GoogleMap.OnMarkerCl
         googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(55.8642, -5.2518), 4));
     }
 
-    public void show() {
+    public void show(LinkedList<ItemClass> itemClassLinkedList) {
 
-        for (int i = 0; i < f_Alist.size(); i++) {
+        for (int i = 0; i < itemClassLinkedList.size(); i++) {
 
-            double lat = f_Alist.get(i).getLat();
-            double lng = f_Alist.get(i).getLng();
-            String Title = f_Alist.get(i).getLocation();
+            double lat = itemClassLinkedList.get(i).getLat();
+            double lng = itemClassLinkedList.get(i).getLng();
+            String Title = itemClassLinkedList.get(i).getLocation();
 
-            String Magnitude = String.valueOf(f_Alist.get(i).getMagnitude() + f_Alist.get(i).getLng());
-            ItemClass offsetItem = new ItemClass(lat, lng, "" + Title, "Magnitude:" + Magnitude, f_Alist.get(i).getMagnitude());
+            String Magnitude = String.valueOf(itemClassLinkedList.get(i).getMagnitude() + itemClassLinkedList.get(i).getLng());
+            ItemClass offsetItem = new ItemClass(lat, lng, "" + Title, "Magnitude:" + Magnitude, itemClassLinkedList.get(i).getMagnitude());
             clusterManager.addItem(offsetItem);
 
         }
@@ -242,5 +294,99 @@ public class Filter_eq extends AppCompatActivity implements GoogleMap.OnMarkerCl
         return false;
     }
 
+    @Override
+    public void onClick(View view) {
+        if (f_Alist != null) {
+
+            switch (view.getId()) {
+                case (R.id.Northerly):
+                    filterListByCompass("N");
+                    break;
+                case (R.id.Southerly):
+                    filterListByCompass("S");
+                    break;
+                case (R.id.Easterly):
+                    filterListByCompass("E");
+                    break;
+                case (R.id.Westerly):
+                    filterListByCompass("W");
+                    break;
+            }
+        } else {
+            builder = new AlertDialog.Builder(this);
+            builder.setMessage("Please select date range")
+                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    dialog.cancel();
+                                }
+                            }
+                    );
+            AlertDialog alert = builder.create();
+            //   alert.setTitle("Please select date range?");
+            alert.show();
+
+
+        }
+
+    }
+
+    private void filterListByCompass(String filterBy) {
+        LinkedList<ItemClass> compassList = new LinkedList<>();
+        for (int i = 0; i < f_Alist.size(); i++) {
+            String[] compass = getCompass(f_Alist.get(i).getLat(), f_Alist.get(i).getLng());
+            // Use LatDegree for this
+            assert compass != null;
+            switch (filterBy) {
+                case "N":
+                    if (compass[0].equals("N")) {
+                        compassList.add(f_Alist.get(i));
+                    }
+                    break;
+                case "S":
+                    if (compass[0].equals("S")) {
+                        compassList.add(f_Alist.get(i));
+                    }
+                    break;
+                case "E":
+                    if (compass[1].equals("E")) {
+                        compassList.add(f_Alist.get(i));
+                    }
+                    break;
+                case "W":
+                    if (compass[1].equals("W")) {
+                        compassList.add(f_Alist.get(i));
+                    }
+                    break;
+
+            }
+        }
+
+        assert compassList != null;
+        mMap.clear();
+        clusterManager.clearItems();
+        show(compassList);
+    }
+
+    private String[] getCompass(double latitude, double longitude) {
+        try {
+            int latSeconds = (int) Math.round(latitude * 3600);
+            int latDegrees = latSeconds / 3600;
+            latSeconds = Math.abs(latSeconds % 3600);
+            int latMinutes = latSeconds / 60;
+            latSeconds %= 60;
+
+            int longSeconds = (int) Math.round(longitude * 3600);
+            int longDegrees = longSeconds / 3600;
+            longSeconds = Math.abs(longSeconds % 3600);
+            int longMinutes = longSeconds / 60;
+            longSeconds %= 60;
+            String latDegree = latDegrees >= 0 ? "N" : "S";
+            String lonDegrees = longDegrees >= 0 ? "E" : "W";
+
+            return new String[]{latDegree, lonDegrees};
+        } catch (Exception e) {
+            return null;
+        }
+    }
 
 }

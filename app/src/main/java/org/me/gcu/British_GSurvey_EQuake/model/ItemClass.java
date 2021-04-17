@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.maps.android.clustering.ClusterItem;
 
+import java.util.Comparator;
 import java.util.Date;
 
 public class ItemClass implements ClusterItem, Parcelable {
@@ -30,7 +31,25 @@ public class ItemClass implements ClusterItem, Parcelable {
     private  String snippet;
     private  LatLng position;
 
+    public static Comparator<ItemClass> compareDepth = new Comparator<ItemClass>() {
+        @Override
+        public int compare(ItemClass o1, ItemClass o2) {
+            Double o1Depth = o1.getDepth();
+            Double o2Depth = o2.getDepth();
 
+            return o1Depth.compareTo(o2Depth);
+        }
+    };
+
+    public static Comparator<ItemClass> compareMag = new Comparator<ItemClass>() {
+        @Override
+        public int compare(ItemClass o1, ItemClass o2) {
+            Double o1Depth = o1.getMagnitude();
+            Double o2Depth = o2.getMagnitude();
+
+            return o1Depth.compareTo(o2Depth);
+        }
+    };
     public ItemClass()
     {
         title = "";

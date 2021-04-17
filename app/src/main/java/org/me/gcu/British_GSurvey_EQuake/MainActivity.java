@@ -16,9 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewSwitcher;
@@ -52,56 +50,36 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     public static LinkedList<ItemClass> alist;
     public ClusterManager<ItemClass> clusterManager;
 
-    private Spinner spinner;
-    private static final String[] paths = {"All Earthquakes", "1.0+ Earthquakes", "2.5+ Earthquakes", "4.5+ Earthquakes", "Significant Earthquakes"};
-
-    public TextView rawDataDisplay;
-    private TextView dateDisplay;
     private TextView lastUpdate;
-    private int counter;
     private long timeleftinmillseconds = 600000;
 
-
-    private Button dateRange;
     private String result = "";
     private String url1 = "";
     private String urlSource = "http://quakes.bgs.ac.uk/feeds/MhSeismology.xml";
     private Button s1Button;
     private Button s2Button;
     private ViewSwitcher viewSwitcher;
-    Thread Thread1;
+    private GoogleMap mMap;
 
+    Thread Thread1;
     RecyclerView recyclerView;
     Adapter adapter;
-    Filter_eq filter_eq;
 
     private static final int REQUEST_LOCATION_PERMISSION = 1;
-
-
-    private GoogleMap mMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-        //  mapsActivity.onCreate(savedInstanceState);
-        //  setContentView(R.layout.content_main);
 
-        // Set up the raw links to the graphical components
-        rawDataDisplay = findViewById(R.id.rawDataDisplay);
-        //  dateDisplay = findViewById(R.id.dateDisplay);
         lastUpdate = findViewById(R.id.lastUpdate);
-
-//        startButton = (Button) findViewById(R.id.startButton);
-//        startButton.setOnClickListener(this);
 
         viewSwitcher = findViewById(R.id.vwSwitch);
         if (viewSwitcher == null) {
             Toast.makeText(getApplicationContext(), "Null ViewSwicther", Toast.LENGTH_LONG);
 
         }
-
         s1Button = findViewById(R.id.screen1Button);
         s2Button = findViewById(R.id.screen2Button);
         s1Button.setOnClickListener(this);
@@ -109,14 +87,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.mMap);
         mapFragment.getMapAsync(this);
-
-        spinner = findViewById(R.id.spinner1);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(MainActivity.this,
-                android.R.layout.simple_spinner_item, paths);
-
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
-        spinner.setOnItemSelectedListener(this);
 
         startProgress();
         refresh();
@@ -139,18 +109,12 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
 
 
                         if (R.id.more_details == item.getItemId()) {
-                            //       onNavigationItemSelectedR.id.navigation_home
 
                         }
-
-
                         break;
                     case R.id.filter:
-//                        public void onClick(View v){
                         Intent i = new Intent(getApplicationContext(), Filter_eq.class);
-
                         startActivity(i);
-
                         break;
                 }
                 return false;
@@ -199,8 +163,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
             }
 
             public void onFinish() {
-                //  timer();
-                //  lastUpdate.setText("Finsh");
+
                 timer();
                 refresh();
             }
