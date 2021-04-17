@@ -117,7 +117,8 @@ public class Task implements Runnable {
                                     itemClass.setDescription(temp);
                                     String[] description = temp.split(";");
                                     itemClass.setLocation(description[1].split(":")[1]);
-                                    itemClass.setDepth(description[3].split(":")[1]);
+
+                                    itemClass.setDepth(Double.parseDouble(description[3].replace(" km","").split(":")[1]));
                                     itemClass.setMagnitude(Double.parseDouble(description[4].split(":")[1]));
                                 }
                             } else

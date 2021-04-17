@@ -41,7 +41,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         return new ViewHolder(view);
     }
 
-
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         ItemClass itemClass = alist.get(i);
@@ -56,7 +55,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         String textMag = " " + Double.toString(itemClass.getMagnitude());
         viewHolder.textMag.setText(textMag);
 
-        String depth = itemClass.getDepth();
+        String depth = Double.toString(itemClass.getDepth());
         viewHolder.textDepth.setText(depth);
 
         String cat = "EQ UK";

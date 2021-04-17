@@ -1,11 +1,11 @@
 [
     {
-        "merged": "E:\\OneDrive\\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\\4_year_study\\mobile\\earthquake21\\British_GSurvey_EQuake\\app\\build\\intermediates\\res\\merged\\debug\\drawable_severe.xml.flat",
-        "source": "E:\\OneDrive\\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\\4_year_study\\mobile\\earthquake21\\British_GSurvey_EQuake\\app\\src\\main\\res\\drawable\\severe.xml"
-    },
-    {
         "merged": "E:\\OneDrive\\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\\4_year_study\\mobile\\earthquake21\\British_GSurvey_EQuake\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_dashboard_black_24dp.xml.flat",
         "source": "E:\\OneDrive\\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\\4_year_study\\mobile\\earthquake21\\British_GSurvey_EQuake\\app\\src\\main\\res\\drawable\\ic_dashboard_black_24dp.xml"
+    },
+    {
+        "merged": "E:\\OneDrive\\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\\4_year_study\\mobile\\earthquake21\\British_GSurvey_EQuake\\app\\build\\intermediates\\res\\merged\\debug\\drawable_severe.xml.flat",
+        "source": "E:\\OneDrive\\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\\4_year_study\\mobile\\earthquake21\\British_GSurvey_EQuake\\app\\src\\main\\res\\drawable\\severe.xml"
     },
     {
         "merged": "E:\\OneDrive\\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\\4_year_study\\mobile\\earthquake21\\British_GSurvey_EQuake\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cell_shape.xml.flat",
@@ -64,12 +64,12 @@
         "source": "E:\\OneDrive\\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\\4_year_study\\mobile\\earthquake21\\British_GSurvey_EQuake\\app\\src\\main\\res\\menu\\top_app_bar.xml"
     },
     {
-        "merged": "E:\\OneDrive\\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\\4_year_study\\mobile\\earthquake21\\British_GSurvey_EQuake\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_home_black_24dp.xml.flat",
-        "source": "E:\\OneDrive\\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\\4_year_study\\mobile\\earthquake21\\British_GSurvey_EQuake\\app\\src\\main\\res\\drawable\\ic_home_black_24dp.xml"
-    },
-    {
         "merged": "E:\\OneDrive\\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\\4_year_study\\mobile\\earthquake21\\British_GSurvey_EQuake\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_details.xml.flat",
         "source": "E:\\OneDrive\\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\\4_year_study\\mobile\\earthquake21\\British_GSurvey_EQuake\\app\\src\\main\\res\\layout\\activity_details.xml"
+    },
+    {
+        "merged": "E:\\OneDrive\\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\\4_year_study\\mobile\\earthquake21\\British_GSurvey_EQuake\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_home_black_24dp.xml.flat",
+        "source": "E:\\OneDrive\\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\\4_year_study\\mobile\\earthquake21\\British_GSurvey_EQuake\\app\\src\\main\\res\\drawable\\ic_home_black_24dp.xml"
     },
     {
         "merged": "E:\\OneDrive\\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\\4_year_study\\mobile\\earthquake21\\British_GSurvey_EQuake\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",

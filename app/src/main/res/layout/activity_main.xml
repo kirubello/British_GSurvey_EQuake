@@ -9,8 +9,8 @@
 
     <LinearLayout
         android:id="@+id/mainLinearLayout"
-        android:layout_width="491dp"
-        android:layout_height="660dp"
+        android:layout_width="match_parent"
+        android:layout_height="513dp"
         android:orientation="vertical">
 
         <ViewSwitcher
@@ -32,17 +32,18 @@
                     android:textSize="20sp" />
 
 
-
                 <Button
                     android:id="@+id/screen1Button"
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/view_data_details" />
+                    android:text="@string/view_data_details"
+                    android:textSize="8dp"/>
 
                 <include
                     layout="@layout/activity_maps"
                     android:layout_width="fill_parent"
-                    android:layout_height="523dp" />
+                    android:layout_height="match_parent" />
 
             </LinearLayout>
 
@@ -85,7 +86,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/mainLinearLayout"
         android:layout_alignParentBottom="true"
@@ -97,7 +98,7 @@
 
         <include
             layout="@layout/bottom_bar_nav"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 </RelativeLayout>

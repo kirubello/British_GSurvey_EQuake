@@ -28,7 +28,6 @@ public class DImage extends AppCompatActivity {
         Intent i = getIntent();
         String title = i.getStringExtra("location");
         String link = i.getStringExtra("link");
-
         String pubdate= i.getExtras().getString("pubdate");
 
         ImageView imageView=findViewById(R.id.imageView2);

@@ -11,7 +11,6 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -28,7 +27,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-import androidx.core.util.Pair;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -39,10 +37,6 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.datepicker.CalendarConstraints;
-import com.google.android.material.datepicker.DateValidatorPointBackward;
-import com.google.android.material.datepicker.MaterialDatePicker;
-import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener;
 import com.google.maps.android.clustering.ClusterManager;
 
 import org.me.gcu.British_GSurvey_EQuake.controller.Filter_eq;
@@ -51,13 +45,11 @@ import org.me.gcu.British_GSurvey_EQuake.model.Adapter;
 import org.me.gcu.British_GSurvey_EQuake.model.CustomClusterRenderer;
 import org.me.gcu.British_GSurvey_EQuake.model.ItemClass;
 
-import java.util.Calendar;
 import java.util.LinkedList;
-import java.util.TimeZone;
 
 public class MainActivity extends AppCompatActivity implements OnClickListener, OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener, AdapterView.OnItemSelectedListener {
 
-    public LinkedList<ItemClass> alist;
+    public static LinkedList<ItemClass> alist;
     public ClusterManager<ItemClass> clusterManager;
 
     private Spinner spinner;
@@ -67,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     private TextView dateDisplay;
     private TextView lastUpdate;
     private int counter;
-     private long timeleftinmillseconds = 600000;
+    private long timeleftinmillseconds = 600000;
 
 
     private Button dateRange;
@@ -81,6 +73,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
 
     RecyclerView recyclerView;
     Adapter adapter;
+    Filter_eq filter_eq;
 
     private static final int REQUEST_LOCATION_PERMISSION = 1;
 
@@ -97,7 +90,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
 
         // Set up the raw links to the graphical components
         rawDataDisplay = findViewById(R.id.rawDataDisplay);
-        dateDisplay = findViewById(R.id.dateDisplay);
+        //  dateDisplay = findViewById(R.id.dateDisplay);
         lastUpdate = findViewById(R.id.lastUpdate);
 
 //        startButton = (Button) findViewById(R.id.startButton);
@@ -106,7 +99,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         viewSwitcher = findViewById(R.id.vwSwitch);
         if (viewSwitcher == null) {
             Toast.makeText(getApplicationContext(), "Null ViewSwicther", Toast.LENGTH_LONG);
-            Log.e(getPackageName(), "null pointer");
+
         }
 
         s1Button = findViewById(R.id.screen1Button);
@@ -117,7 +110,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.mMap);
         mapFragment.getMapAsync(this);
 
-        spinner =  findViewById(R.id.spinner1);
+        spinner = findViewById(R.id.spinner1);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(MainActivity.this,
                 android.R.layout.simple_spinner_item, paths);
 
@@ -129,50 +122,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         refresh();
         timer();
 
-
-        dateRange = findViewById(R.id.date_Rangepicker);
-
-
-        Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("UTC"));
-        calendar.clear();
-
-        long today = MaterialDatePicker.todayInUtcMilliseconds();
-
-
-        calendar.setTimeInMillis(today);
-
-        calendar.set(Calendar.MONTH, Calendar.JANUARY);
-        long january = calendar.getTimeInMillis();
-
-        calendar.set(Calendar.MONTH, Calendar.DECEMBER);
-        long december = calendar.getTimeInMillis();
-
-        CalendarConstraints.Builder constraintBuilder = new CalendarConstraints.Builder();
-        constraintBuilder.setStart(january);
-        constraintBuilder.setEnd(today);
-        constraintBuilder.setValidator(DateValidatorPointBackward.now());
-
-        MaterialDatePicker.Builder<Pair<Long, Long>> builder = MaterialDatePicker.Builder.dateRangePicker();
-        builder.setTitleText("select a date");
-        // builder.setSelection(today);
-        builder.setCalendarConstraints(constraintBuilder.build());
-
-        final MaterialDatePicker materialDatePicker = builder.build();
-
-//        dateRange.setOnClickListener(new View.OnClickListener() {
-//
-//            public void onClick(View v) {
-//                materialDatePicker.show(getSupportFragmentManager(), "date_picker");
-//            }
-//        });
-
-        materialDatePicker.addOnPositiveButtonClickListener(new MaterialPickerOnPositiveButtonClickListener() {
-            @Override
-            public void onPositiveButtonClick(Object selection) {
-                dateDisplay.setText("Selected date" + materialDatePicker.getHeaderText());
-            }
-        });
-
         BottomNavigationView navigation = findViewById(R.id.bottom_navigation);
         navigation.bringToFront();
         navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -180,13 +129,13 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
                 switch (item.getItemId()) {
                     case (R.id.navigation_home):
                         viewSwitcher.showNext();
-                       // item.setEnabled(false);
+                        // item.setEnabled(false);
                         item.getIcon().setAlpha(130);
 
-                       break;
+                        break;
                     case R.id.more_details:
                         viewSwitcher.showPrevious();
-                      //  item.setEnabled(false);
+                        //  item.setEnabled(false);
 
 
                         if (R.id.more_details == item.getItemId()) {
@@ -194,18 +143,15 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
 
                         }
 
-                        //   startActivity(new Intent(getApplicationContext(), barcodeActivity.class));
-                     break;
+
+                        break;
                     case R.id.filter:
+//                        public void onClick(View v){
+                        Intent i = new Intent(getApplicationContext(), Filter_eq.class);
 
-                     startActivity( new Intent(getApplicationContext(), Filter_eq.class));
-                   //    i.putExtra("location", alist.get().getLocation());
-//                        i.putExtra("link", alist.get(getAdapterPosition()).getLink());
-//                        i.putExtra("pubdate", alist.get(getAdapterPosition()).getPubDate());
-//                        v.getContext().startActivity(i);
+                        startActivity(i);
 
-                        //      startActivity(new Intent(getApplicationContext(), friendActivity.class));
-                      break;
+                        break;
                 }
                 return false;
             }
@@ -231,11 +177,11 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
             @Override
             public void run() {
                 mMap.clear();
-                timeleftinmillseconds=600000;
+                timeleftinmillseconds = 600000;
 
                 //Do your refreshing
                 startProgress();
-               timer();
+                timer();
             }
         };
 
@@ -248,7 +194,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         new CountDownTimer(600000, 1000) {
             @Override
             public void onTick(long l) {
-                timeleftinmillseconds =l;
+                timeleftinmillseconds = l;
                 updateTimer();
             }
 
@@ -291,8 +237,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
 
     public void show() {
 
-        for (int i = 0; i < alist.size(); i++)
-        {
+        for (int i = 0; i < alist.size(); i++) {
 
             double lat = alist.get(i).getLat();
             double lng = alist.get(i).getLng();
@@ -357,17 +302,14 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         }
         mMap.setMyLocationEnabled(true);
         mMap.getUiSettings().setMyLocationButtonEnabled(true);
-
-
         mMap.getUiSettings().setCompassEnabled(true);
         mMap.getUiSettings().setRotateGesturesEnabled(true);
         mMap.getUiSettings().setTiltGesturesEnabled(true);
 
-
         // Enable location tracking.
         //  setMapLongClick(mMap); // Set a long click listener for the map;
 
-        googleMap.setOnInfoWindowClickListener(this);
+        mMap.setOnInfoWindowClickListener(this);
 
     }
 

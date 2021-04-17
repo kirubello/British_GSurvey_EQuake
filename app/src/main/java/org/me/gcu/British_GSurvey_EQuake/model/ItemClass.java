@@ -4,6 +4,9 @@ package org.me.gcu.British_GSurvey_EQuake.model;
 *   Student No: S1732434
 */
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
@@ -12,7 +15,7 @@ import com.google.maps.android.clustering.ClusterItem;
 
 import java.util.Date;
 
-public class ItemClass implements ClusterItem {
+public class ItemClass implements ClusterItem, Parcelable {
 
 
     private String title;
@@ -21,7 +24,7 @@ public class ItemClass implements ClusterItem {
     private Date pubDate;
     private String location;
     private double magnitude;
-    private String depth;
+    private double depth;
     private double lat;
     private double lng;
     private  String snippet;
@@ -35,13 +38,13 @@ public class ItemClass implements ClusterItem {
         link = "";
      //   pubDate ="";
         location= "";
-        depth="";
+      //  depth="";
       //  magnitude="";
         // lat;
        // lng;
     }
 
-    public ItemClass(String title, String description, String link, Date pubDate, String location, double magnitude, String depth, double lat, double lng, String snippet) {
+    public ItemClass(String title, String description, String link, Date pubDate, String location, double magnitude, double  depth, double lat, double lng, String snippet) {
         this.title = title;
         this.description = description;
         this.link = link;
@@ -64,6 +67,31 @@ public class ItemClass implements ClusterItem {
     public ItemClass(LatLng latLng) {
         position = new LatLng(lat, lng);
     }
+
+    protected ItemClass(Parcel in) {
+        title = in.readString();
+        description = in.readString();
+        link = in.readString();
+        location = in.readString();
+        magnitude = in.readDouble();
+        depth = in.readDouble();
+        lat = in.readDouble();
+        lng = in.readDouble();
+        snippet = in.readString();
+        position = in.readParcelable(LatLng.class.getClassLoader());
+    }
+
+    public static final Creator<ItemClass> CREATOR = new Creator<ItemClass>() {
+        @Override
+        public ItemClass createFromParcel(Parcel in) {
+            return new ItemClass(in);
+        }
+
+        @Override
+        public ItemClass[] newArray(int size) {
+            return new ItemClass[size];
+        }
+    };
 
     @NonNull
     @Override
@@ -109,10 +137,31 @@ public class ItemClass implements ClusterItem {
 
     public void setMagnitude(double magnitude) {        this.magnitude = magnitude;    }
 
-    public String getDepth() {        return depth;    }
+    public double getDepth() {        return depth;    }
 
-    public void setDepth(String depth) {        this.depth = depth;    }
+    public void setDepth(double depth) {        this.depth = depth;    }
 
     public String toString()    {        String temp;        temp = title + " " + description + " " + link;  return temp;    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int i) {
+
+        dest.writeString(title);
+        dest.writeString(description);
+        dest.writeString(link);
+       //dest.writeString(String.valueOf(pubDate));
+        dest.writeString(location);
+        dest.writeDouble(magnitude);
+        dest.writeDouble(depth);
+        dest.writeDouble(lat);
+        dest.writeDouble(lng);
+
+
+    }
 }
 
