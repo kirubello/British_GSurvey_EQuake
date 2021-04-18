@@ -1,5 +1,8 @@
 package org.me.gcu.British_GSurvey_EQuake.controller;
-
+/* Mobile Platform Development Assignment Session 2020/2021 MHI322959/MHI325105
+    Student Name : Kirubel Afework
+*   Student No: S1732434
+*/
 import android.util.Log;
 
 import org.me.gcu.British_GSurvey_EQuake.MainActivity;
