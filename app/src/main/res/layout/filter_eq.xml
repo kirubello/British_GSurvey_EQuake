@@ -8,11 +8,21 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="#FFFAFA"
-    tools:context=".controller.Filter_eq">
+    tools:context=".Filter_eq">
+
+    <include
+
+        layout="@layout/activity_maps"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_Rangepicker" />
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,7 +30,7 @@
 
         <TableLayout
             android:id="@+id/tableLayout"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/cell_shape"
             android:stretchColumns="1"
@@ -28,7 +38,7 @@
             tools:visibility="visible">
 
             <TableRow
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/cell_shape"
                 android:textColor="@color/black">
@@ -38,22 +48,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/cell_shape"
-                    android:padding="3dip"
                     android:text="@string/eq_type"
-                    android:textStyle="bold"
                     android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:background="@drawable/cell_shape"
                     android:backgroundTint="#d6e7ff"
                     android:gravity="center"
                     android:text="@string/largest_magnitude"
                     android:textColor="@color/black"
                     android:textSize="12sp"
-                    android:textStyle="bold"
-                    android:background="@drawable/cell_shape"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="84dp"
@@ -93,8 +102,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:backgroundTint="#d6e7ff"
                     android:background="@drawable/cell_shape"
+                    android:backgroundTint="#d6e7ff"
                     android:padding="3dip"
                     android:text="@string/location"
                     android:textColor="@color/black"
@@ -103,7 +112,7 @@
 
                 <TextView
                     android:id="@+id/location1"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:background="@drawable/cell_shape"
                     android:gravity="center"
@@ -141,8 +150,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:backgroundTint="#d6e7ff"
                     android:background="@drawable/cell_shape"
+                    android:backgroundTint="#d6e7ff"
                     android:padding="3dip"
                     android:text="@string/coordiants"
                     android:textColor="@color/black"
@@ -192,8 +201,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:backgroundTint="#d6e7ff"
                     android:background="@drawable/cell_shape"
+                    android:backgroundTint="#d6e7ff"
                     android:padding="3dip"
                     android:text="Depth"
                     android:textColor="@color/black"
@@ -243,8 +252,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:backgroundTint="#d6e7ff"
                     android:background="@drawable/cell_shape"
+                    android:backgroundTint="#d6e7ff"
                     android:padding="3dip"
                     android:text="@string/magnitude"
                     android:textColor="@color/black"
@@ -294,8 +303,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:backgroundTint="#d6e7ff"
                     android:background="@drawable/cell_shape"
+                    android:backgroundTint="#d6e7ff"
                     android:padding="3dip"
                     android:text="@string/date"
                     android:textColor="@color/black"
@@ -341,6 +350,7 @@
         android:id="@+id/Northerly"
         android:layout_width="89dp"
         android:layout_height="35dp"
+        android:layout_marginStart="8dp"
         android:text="@string/northrly"
         android:textSize="9sp"
         android:textStyle="bold"
@@ -351,7 +361,7 @@
         android:id="@+id/Southerly"
         android:layout_width="88dp"
         android:layout_height="35dp"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="8dp"
         android:text="@string/southrly"
         android:textSize="9sp"
         android:textStyle="bold"
@@ -362,7 +372,7 @@
         android:id="@+id/Westerly"
         android:layout_width="92dp"
         android:layout_height="36dp"
-        android:layout_marginStart="9dp"
+        android:layout_marginStart="8dp"
         android:text="@string/westerly"
         android:textSize="9sp"
         android:textStyle="bold"
@@ -373,17 +383,18 @@
         android:id="@+id/Easterly"
         android:layout_width="88dp"
         android:layout_height="36dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:text="@string/easterly"
         android:textSize="9sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Westerly"
         app:layout_constraintTop_toBottomOf="@+id/dateDisplay" />
 
     <Button
         android:id="@+id/date_Rangepicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:text="@string/filter_date_period"
         android:textSize="10sp"
         android:textStyle="bold"
@@ -402,17 +413,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/date_Rangepicker"
         app:layout_constraintTop_toTopOf="parent" />
-
-
-    <include
-
-        layout="@layout/activity_maps"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/date_Rangepicker" />
 
 
     <androidx.constraintlayout.widget.ConstraintLayout

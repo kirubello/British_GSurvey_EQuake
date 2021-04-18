@@ -25,6 +25,7 @@
             android:layout_height="match_parent">
 
             <LinearLayout
+                android:id="@+id/mapViewLinearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
@@ -34,10 +35,10 @@
                     android:id="@+id/lastUpdate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/regular_updated"
                     android:backgroundTint="#d6e7ff"
-                    android:textStyle="bold"
-                    android:textSize="20sp" />
+                    android:text="@string/regular_updated"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
 
                 <!--                <Button-->
@@ -56,6 +57,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/listViewLinearLayout"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:orientation="vertical">
@@ -65,19 +67,19 @@
                     android:id="@+id/acknowledgement"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:background="#d6e7ff"
                     android:text="@string/contains_british_geological_survey_materials_nerc_2019"
                     android:textSize="15sp"
-                    android:textStyle="bold"
-                    android:background="#d6e7ff"/>
+                    android:textStyle="bold" />
 
 
-<!--                <Button-->
-<!--                    android:id="@+id/screen2Button"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_gravity="center"-->
-<!--                    android:text="@string/goto_map_screen"-->
-<!--                    android:textSize="14sp" />-->
+                <!--                <Button-->
+                <!--                    android:id="@+id/screen2Button"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_gravity="center"-->
+                <!--                    android:text="@string/goto_map_screen"-->
+                <!--                    android:textSize="14sp" />-->
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerView"

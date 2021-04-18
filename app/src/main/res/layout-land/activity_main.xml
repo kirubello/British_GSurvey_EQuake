@@ -1,90 +1,108 @@
 <!--    Mobile Platform Development Assignment Session 2020/2021 MHI322959/MHI325105-->
 <!--    Student Name : Kirubel Afework-->
 <!--    Student No: S1732434-->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="horizontal">
+    android:layout_height="fill_parent">
 
     <LinearLayout
-        android:layout_width="368dp"
+        android:id="@+id/mainLinearLayout"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@id/menu"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
         android:orientation="vertical">
 
-        <!--        <LinearLayout-->
-        <!--            android:layout_width="354dp"-->
-        <!--            android:layout_height="40dp"-->
-        <!--            android:layout_alignParentTop="true"-->
-        <!--            android:layout_margin="8dp"-->
-        <!--            android:background="@drawable/rounded_edit">-->
-
-        <!--            <Button-->
-        <!--                android:layout_width="32dp"-->
-        <!--                android:layout_height="40dp"-->
-        <!--                android:background="@drawable/search"-->
-        <!--                android:onClick="onSearch" />-->
-
-        <!--            <EditText-->
-        <!--                android:id="@+id/editLocation"-->
-        <!--                android:layout_width="302dp"-->
-        <!--                android:layout_height="40dp"-->
-        <!--                android:layout_weight="1"-->
-        <!--                android:hint="Type Location" />-->
-
-        <!--        </LinearLayout>-->
-
-        <LinearLayout
+        <ViewSwitcher
+            android:id="@+id/vwSwitch"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-
-            <include
-                layout="@layout/activity_maps"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="319dp" />
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/lastUpdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/regular_updated"
+                    android:backgroundTint="#d6e7ff"
+                    android:textStyle="bold"
+                    android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/acknowledgement"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Contains British Geological Survey materials ©NERC 2019"
-            android:textSize="14dp" />
+
+                <!--                <Button-->
+                <!--                    android:id="@+id/screen1Button"-->
+
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:text="@string/view_data_details"-->
+                <!--                    android:textSize="8dp" />-->
+
+                <include
+                    layout="@layout/activity_maps"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/acknowledgement"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/contains_british_geological_survey_materials_nerc_2019"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:background="#d6e7ff"/>
+
+
+<!--                <Button-->
+<!--                    android:id="@+id/screen2Button"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:text="@string/goto_map_screen"-->
+<!--                    android:textSize="14sp" />-->
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+            </LinearLayout>
+        </ViewSwitcher>
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp"
+        android:gravity="bottom"
         android:orientation="vertical">
 
-        <Spinner
-            android:id="@+id/spinner1"
-            android:layout_width="106dp"
-            android:layout_height="wrap_content"
-            android:background="@android:drawable/btn_dropdown"
-            android:spinnerMode="dropdown" />
-
-        <Button
-            android:id="@+id/startButton"
-            android:layout_width="wrap_content"
-            android:layout_height="31dp"
-            android:text="Press to get data"
-            android:textSize="10sp" />
-
-        <TextView
-            android:id="@+id/rawDataDisplay"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Raw Data is Displayed here"
-            android:textSize="14sp" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
+        <include
+            layout="@layout/bottom_bar_nav"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="wrap_content" />
     </LinearLayout>
-</LinearLayout>
+</RelativeLayout>

@@ -36,7 +36,6 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.maps.android.clustering.ClusterManager;
 
-import org.me.gcu.British_GSurvey_EQuake.controller.Filter_eq;
 import org.me.gcu.British_GSurvey_EQuake.controller.Task;
 import org.me.gcu.British_GSurvey_EQuake.model.Adapter;
 import org.me.gcu.British_GSurvey_EQuake.model.CustomClusterRenderer;
@@ -55,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     private String result = "";
     private String url1 = "";
     private String urlSource = "http://quakes.bgs.ac.uk/feeds/MhSeismology.xml";
-//    private Button s1Button;
+    //    private Button s1Button;
 //    private Button s2Button;
     private ViewSwitcher viewSwitcher;
     private GoogleMap mMap;
@@ -73,12 +72,19 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         setContentView(R.layout.activity_main);
 
         lastUpdate = findViewById(R.id.lastUpdate);
-
         viewSwitcher = findViewById(R.id.vwSwitch);
-        if (viewSwitcher == null) {
-            Toast.makeText(getApplicationContext(), "Null ViewSwicther", Toast.LENGTH_LONG);
 
+
+        Intent i = getIntent();
+        String switchTo = i.getStringExtra("switchTo");
+
+        if (switchTo != null && switchTo.equals("details")) {
+            if (viewSwitcher != null) {
+                viewSwitcher.showNext();
+            }
         }
+
+
 //        s1Button = findViewById(R.id.screen1Button);
 //        s2Button = findViewById(R.id.screen2Button);
 //        s1Button.setOnClickListener(this);
@@ -93,26 +99,21 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
 
         BottomNavigationView navigation = findViewById(R.id.bottom_navigation);
         navigation.bringToFront();
-            navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-                            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                                switch (item.getItemId()) {
-                                    case (R.id.navigation_home):
-                                        viewSwitcher.showNext();
-                                        // item.setEnabled(false);
-                                        item.getIcon().setAlpha(130);
-
-                                        break;
-                                    case R.id.more_details:
-                                        viewSwitcher.showPrevious();
-                                        //  item.setEnabled(false);
-
-
-                                        if (R.id.more_details == item.getItemId()) {
-
-                                        }
-                                        break;
-                                    case R.id.filter:
-                                        Intent i = new Intent(getApplicationContext(), Filter_eq.class);
+        navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case (R.id.navigation_home):
+                        if (viewSwitcher.getCurrentView().getId() != R.id.mapViewLinearLayout) {
+                            viewSwitcher.showNext();
+                        }
+                        break;
+                    case R.id.more_details:
+                        if (viewSwitcher.getCurrentView().getId() != R.id.listViewLinearLayout) {
+                            viewSwitcher.showNext();
+                        }
+                        break;
+                    case R.id.filter:
+                        Intent i = new Intent(getApplicationContext(), Filter_eq.class);
                         startActivity(i);
                         break;
                 }
@@ -203,7 +204,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
             double lng = alist.get(i).getLng();
             String Title = alist.get(i).getLocation();
 
-            String Magnitude = String.valueOf(alist.get(i).getMagnitude() +" Depth: "+ alist.get(i).getDepth()+ " Date: "+ alist.get(i).getPubDate());
+            String Magnitude = String.valueOf(alist.get(i).getMagnitude() + " Depth: " + alist.get(i).getDepth() + " Date: " + alist.get(i).getPubDate());
             ItemClass offsetItem = new ItemClass(lat, lng, "" + Title, "Magnitude:" + Magnitude, alist.get(i).getMagnitude());
             clusterManager.addItem(offsetItem);
 

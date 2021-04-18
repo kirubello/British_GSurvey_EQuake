@@ -23,9 +23,7 @@
     <string name="regular_updated">Regular Updated</string>
     <string name="todo">TODO</string>
     <string name="published_date">published date</string>
-    <string name="location">Location</string>
     <string name="mag">Mag</string>
-    <string name="published_date">published date</string>
     <string name="category">category</string>
     <string name="depth">Depth:</string>
     <string name="x_y">(X,Y):</string>
@@ -39,7 +37,6 @@
     <string name="largest_magnitude">Largest Magnitude</string>
     <string name="westerly">Westerly</string>
     <string name="easterly">Easterly</string>
-    <string name="dash">-</string>
     <string name="dash">-</string>
     <string name="location">Location</string>
     <string name="magnitude">Magnitude</string>
