@@ -1,0 +1,150 @@
+@startuml
+class org.me.gcu.British_GSurvey_EQuake.model.CustomClusterRenderer {
+- IconGenerator mClusterIconGenerator
+- Context mContext
+# void onBeforeClusterItemRendered(ItemClass,MarkerOptions)
+# void onBeforeClusterRendered(Cluster<ItemClass>,MarkerOptions)
+- BitmapDescriptor bitmapDescriptorFromVector(CustomClusterRenderer,int)
+}
+class org.me.gcu.British_GSurvey_EQuake.model.DImage {
+~ TextView textTitle
+# void onCreate(Bundle)
+}
+class org.me.gcu.British_GSurvey_EQuake.MainActivity {
++ {static} LinkedList<ItemClass> alist
++ ClusterManager<ItemClass> clusterManager
+- TextView lastUpdate
+- long timeleftinmillseconds
+- String result
+- String url1
+- String urlSource
+- ViewSwitcher viewSwitcher
+- GoogleMap mMap
+~ Thread Thread1
+~ RecyclerView recyclerView
+~ Adapter adapter
+- {static} int REQUEST_LOCATION_PERMISSION
+# void onCreate(Bundle)
++ void onClick(View)
+- void refresh()
+- void timer()
+- void updateTimer()
++ void startProgress()
++ void onInfoWindowClick(Marker)
++ void show()
++ void setUpClusterer()
++ void onMapReady(GoogleMap)
++ boolean onCreateOptionsMenu(Menu)
++ boolean onOptionsItemSelected(MenuItem)
++ void onItemSelected(AdapterView<?>,View,int,long)
++ void onNothingSelected(AdapterView<?>)
++ boolean onMarkerClick(Marker)
+}
+class org.me.gcu.British_GSurvey_EQuake.controller.Filter_eq {
++ ClusterManager<ItemClass> clusterManager
+- GoogleMap mMap
+- TextView textTitle
+- Button dateRange
+- Button northerly
+- Button southerly
+- Button easterly
+- Button westerly
+- TextView dateDisplay
+- LinkedList<ItemClass> alist
+- ViewSwitcher viewSwitcher
+~ LinkedList<ItemClass> f_Alist
+~ AlertDialog.Builder builder
+- BottomNavigationView.OnNavigationItemSelectedListener navListener
+# void onCreate(Bundle)
++ boolean onCreateOptionsMenu(Menu)
++ boolean onOptionsItemSelected(MenuItem)
++ void displayMaxMin(LinkedList<ItemClass>)
+- void displayMag(LinkedList<ItemClass>)
++ void onMapReady(GoogleMap)
++ void show(LinkedList<ItemClass>)
++ boolean onMarkerClick(Marker)
++ void onClick(View)
+- void filterListByCompass(String)
+- String[] getCompass(double,double)
+}
+class org.me.gcu.British_GSurvey_EQuake.model.ItemClass {
+- String title
+- String description
+- String link
+- Date pubDate
+- String location
+- double magnitude
+- double depth
+- double lat
+- double lng
+- String snippet
+- LatLng position
++ {static} Comparator<ItemClass> compareDepth
++ {static} Comparator<ItemClass> compareMag
++ {static} Creator<ItemClass> CREATOR
++ LatLng getPosition()
++ String getTitle()
++ void setSnippet(String)
++ void setPosition(LatLng)
++ String getSnippet()
++ void setTitle(String)
++ String getDescription()
++ void setDescription(String)
++ String getLink()
++ void setLink(String)
++ Date getPubDate()
++ void setPubDate(Date)
++ double getLat()
++ double getLng()
++ void setLat(double)
++ void setLng(double)
++ String getLocation()
++ void setLocation(String)
++ double getMagnitude()
++ void setMagnitude(double)
++ double getDepth()
++ void setDepth(double)
++ String toString()
++ int describeContents()
++ void writeToParcel(Parcel,int)
+}
+class org.me.gcu.British_GSurvey_EQuake.model.Adapter {
+- LayoutInflater layoutInflater
+- LinkedList<ItemClass> alist
+- ConstraintLayout mConstraintLayout
++ ViewHolder onCreateViewHolder(ViewGroup,int)
++ void onBindViewHolder(ViewHolder,int)
++ int getItemCount()
+}
+class org.me.gcu.British_GSurvey_EQuake.model.Adapter.ViewHolder {
+~ TextView pubDate
+~ Context itemViewContext
+}
+class org.me.gcu.British_GSurvey_EQuake.controller.Task {
+- String result
+- String url
+~ MainActivity mainActivity
++ void run()
+- void list(String)
+- LinkedList<ItemClass> parseData(String)
+}
+
+
+com.google.maps.android.clustering.view.DefaultClusterRenderer <|-- org.me.gcu.British_GSurvey_EQuake.model.CustomClusterRenderer
+androidx.appcompat.app.AppCompatActivity <|-- org.me.gcu.British_GSurvey_EQuake.model.DImage
+android.view.View.OnClickListener <|.. org.me.gcu.British_GSurvey_EQuake.MainActivity
+com.google.android.gms.maps.OnMapReadyCallback <|.. org.me.gcu.British_GSurvey_EQuake.MainActivity
+org.me.gcu.British_GSurvey_EQuake.OnInfoWindowClickListener <|.. org.me.gcu.British_GSurvey_EQuake.MainActivity
+org.me.gcu.British_GSurvey_EQuake.OnItemSelectedListener <|.. org.me.gcu.British_GSurvey_EQuake.MainActivity
+androidx.appcompat.app.AppCompatActivity <|-- org.me.gcu.British_GSurvey_EQuake.MainActivity
+org.me.gcu.British_GSurvey_EQuake.controller.OnMarkerClickListener <|.. org.me.gcu.British_GSurvey_EQuake.controller.Filter_eq
+com.google.android.gms.maps.OnMapReadyCallback <|.. org.me.gcu.British_GSurvey_EQuake.controller.Filter_eq
+org.me.gcu.British_GSurvey_EQuake.controller.OnClickListener <|.. org.me.gcu.British_GSurvey_EQuake.controller.Filter_eq
+androidx.appcompat.app.AppCompatActivity <|-- org.me.gcu.British_GSurvey_EQuake.controller.Filter_eq
+com.google.maps.android.clustering.ClusterItem <|.. org.me.gcu.British_GSurvey_EQuake.model.ItemClass
+android.os.Parcelable <|.. org.me.gcu.British_GSurvey_EQuake.model.ItemClass
+org.me.gcu.British_GSurvey_EQuake.model.Adapter <|-- org.me.gcu.British_GSurvey_EQuake.model.Adapter
+org.me.gcu.British_GSurvey_EQuake.model.Adapter +.. org.me.gcu.British_GSurvey_EQuake.model.Adapter.ViewHolder
+org.me.gcu.British_GSurvey_EQuake.model.ViewHolder <|-- org.me.gcu.British_GSurvey_EQuake.model.Adapter.ViewHolder
+org.me.gcu.British_GSurvey_EQuake.controller.Runnable <|.. org.me.gcu.British_GSurvey_EQuake.controller.Task
+@enduml
