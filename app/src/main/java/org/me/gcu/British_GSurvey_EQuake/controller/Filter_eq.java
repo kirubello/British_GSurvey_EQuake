@@ -7,13 +7,18 @@ package org.me.gcu.British_GSurvey_EQuake.controller;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.ViewSwitcher;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.util.Pair;
 
@@ -23,6 +28,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.datepicker.CalendarConstraints;
 import com.google.android.material.datepicker.DateValidatorPointBackward;
 import com.google.android.material.datepicker.MaterialDatePicker;
@@ -54,8 +60,9 @@ public class Filter_eq extends AppCompatActivity implements GoogleMap.OnMarkerCl
     private Button southerly;
     private Button easterly;
     private Button westerly;
-      private TextView dateDisplay;
+    private TextView dateDisplay;
     private LinkedList<ItemClass> alist;
+    private ViewSwitcher viewSwitcher;
 
     LinkedList<ItemClass> f_Alist;
     AlertDialog.Builder builder;
@@ -65,7 +72,7 @@ public class Filter_eq extends AppCompatActivity implements GoogleMap.OnMarkerCl
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.filter_eq);
-         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         this.alist = new LinkedList<>(MainActivity.alist);
 
         dateRange = findViewById(R.id.date_Rangepicker);
@@ -73,12 +80,27 @@ public class Filter_eq extends AppCompatActivity implements GoogleMap.OnMarkerCl
 
         northerly = findViewById(R.id.Northerly);
         northerly.setOnClickListener(this);
+        northerly.getBackground().setAlpha(200);
+        northerly.setBackgroundColor(Color.WHITE);
+        northerly.setTextColor(Color.BLACK);
+
         southerly = findViewById(R.id.Southerly);
         southerly.setOnClickListener(this);
+        southerly.getBackground().setAlpha(200);
+        southerly.setBackgroundColor(Color.WHITE);
+        southerly.setTextColor(Color.BLACK);
+
         easterly = findViewById(R.id.Easterly);
         easterly.setOnClickListener(this);
+        easterly.getBackground().setAlpha(200);
+        easterly.setBackgroundColor(Color.WHITE);
+        easterly.setTextColor(Color.BLACK);
+
         westerly = findViewById(R.id.Westerly);
         westerly.setOnClickListener(this);
+        westerly.getBackground().setAlpha(200);
+        westerly.setBackgroundColor(Color.WHITE);
+        westerly.setTextColor(Color.BLACK);
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.mMap);
         mapFragment.getMapAsync(this);
@@ -152,13 +174,59 @@ public class Filter_eq extends AppCompatActivity implements GoogleMap.OnMarkerCl
             }
         });
 
+        viewSwitcher = findViewById(R.id.vwSwitch);
+        if (viewSwitcher == null) {
+            Toast.makeText(getApplicationContext(), "Null ViewSwicther", Toast.LENGTH_LONG);
+
+        }
+
+        BottomNavigationView navigation = findViewById(R.id.bottom_navigation);
+        navigation.bringToFront();
+        navigation.setOnNavigationItemSelectedListener(navListener);
+
 
     }
+
+    private BottomNavigationView.OnNavigationItemSelectedListener navListener =
+            new BottomNavigationView.OnNavigationItemSelectedListener()
+            {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem item)
+                {
+                    switch (item.getItemId())
+                    {
+                        case (R.id.navigation_home):
+                            viewSwitcher.showNext();
+                            // item.setEnabled(false);
+                            item.getIcon().setAlpha(130);
+
+                            break;
+                        case R.id.more_details:
+                            viewSwitcher.showPrevious();
+                            //  item.setEnabled(false);
+
+
+                            if (R.id.more_details == item.getItemId()) {
+
+                            }
+                            break;
+                        case R.id.filter:
+                            Intent i = new Intent(getApplicationContext(), Filter_eq.class);
+                            startActivity(i);
+                            break;
+                    }
+                    return false;
+                }
+            };
+
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.top_app_bar, menu);
         return super.onCreateOptionsMenu(menu);
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -284,7 +352,7 @@ public class Filter_eq extends AppCompatActivity implements GoogleMap.OnMarkerCl
             double lng = itemClassLinkedList.get(i).getLng();
             String Title = itemClassLinkedList.get(i).getLocation();
 
-            String Magnitude = String.valueOf(itemClassLinkedList.get(i).getMagnitude() +" Depth: "+ itemClassLinkedList.get(i).getDepth()+ " Date: "+ itemClassLinkedList.get(i).getPubDate());
+            String Magnitude = String.valueOf(itemClassLinkedList.get(i).getMagnitude() + " Depth: " + itemClassLinkedList.get(i).getDepth() + " Date: " + itemClassLinkedList.get(i).getPubDate());
             ItemClass offsetItem = new ItemClass(lat, lng, "" + Title, "Magnitude:" + Magnitude, itemClassLinkedList.get(i).getMagnitude());
             clusterManager.addItem(offsetItem);
         }

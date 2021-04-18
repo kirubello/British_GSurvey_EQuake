@@ -118,7 +118,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\af
 	android:supportsRtl
 		ADDED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:18:9-35
 	android:label
-		ADDED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:16:9-57
+		ADDED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:16:9-41
 	android:roundIcon
 		ADDED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:17:9-54
 	android:icon
@@ -126,7 +126,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\af
 	android:allowBackup
 		ADDED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:14:9-35
 	android:theme
-		ADDED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:19:9-56
+		ADDED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:19:9-60
 	android:usesCleartextTraffic
 		ADDED from E:\OneDrive\OneDrive - GLASGOW CALEDONIAN UNIVERSITY\4_year_study\mobile\earthquake21\British_GSurvey_EQuake\app\src\main\AndroidManifest.xml:20:9-44
 meta-data#com.google.android.geo.API_KEY

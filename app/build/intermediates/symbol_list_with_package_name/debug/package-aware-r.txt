@@ -1055,6 +1055,9 @@ color background_floating_material_light
 color background_material_dark
 color background_material_light
 color black
+color blue_200
+color blue_500
+color blue_700
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -2067,6 +2070,7 @@ id hideable
 id home
 id homeAsUp
 id honorRequest
+id horizontalScrollView
 id hybrid
 id icon
 id icon_group

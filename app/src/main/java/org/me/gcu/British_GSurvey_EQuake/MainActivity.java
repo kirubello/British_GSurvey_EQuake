@@ -93,26 +93,26 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
 
         BottomNavigationView navigation = findViewById(R.id.bottom_navigation);
         navigation.bringToFront();
-        navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case (R.id.navigation_home):
-                        viewSwitcher.showNext();
-                        // item.setEnabled(false);
-                        item.getIcon().setAlpha(130);
+            navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+                            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                                switch (item.getItemId()) {
+                                    case (R.id.navigation_home):
+                                        viewSwitcher.showNext();
+                                        // item.setEnabled(false);
+                                        item.getIcon().setAlpha(130);
 
-                        break;
-                    case R.id.more_details:
-                        viewSwitcher.showPrevious();
-                        //  item.setEnabled(false);
+                                        break;
+                                    case R.id.more_details:
+                                        viewSwitcher.showPrevious();
+                                        //  item.setEnabled(false);
 
 
-                        if (R.id.more_details == item.getItemId()) {
+                                        if (R.id.more_details == item.getItemId()) {
 
-                        }
-                        break;
-                    case R.id.filter:
-                        Intent i = new Intent(getApplicationContext(), Filter_eq.class);
+                                        }
+                                        break;
+                                    case R.id.filter:
+                                        Intent i = new Intent(getApplicationContext(), Filter_eq.class);
                         startActivity(i);
                         break;
                 }
